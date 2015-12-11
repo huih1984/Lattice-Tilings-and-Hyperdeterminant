@@ -1,0 +1,850 @@
+\documentclass[twoside,a4paper,CCT]{cctart}   % 这是Li Dongfeng改的文件头
+\usepackage{amsmath,amsthm,vatola,makeidx,amssymb,amscd,headrule}     % 这是Li Dongfeng改的文件头
+\usepackage{amsfonts}                     % 这是Li Dongfeng改的文件头
+%\documentstyle[twoside,headrule,vatola]{carticle} %这是原来的文件头
+%\input amssym.def
+\usepackage{graphicx}                              %这是原来的文件头
+\usepackage{epsf}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage{amsmath}
+\input scrload.tex    %调用花体字: {\scr A,B,C,...}
+%--------------------------Page Format--------------------------
+\headsep 0.2 true cm \topmargin 0pt \oddsidemargin 0pt \footskip
+2mm \evensidemargin 0pt \textheight 21 true cm \textwidth 14.7
+true cm \setcounter{page}{1}
+%\parskip 0.2cm
+\parindent 2\ccwd
+\nofiles
+%---------------------------------------------------------------
+\def\sec#1{
+\vskip.12in \noindent{\Large\bf\zihao{-4}\heiti #1} \vskip.1in}
+\def\subsec#1{
+\vskip.1in \flushpar{\zihao{5}\heiti #1} \vskip.1in}
+\def\de#1{{\heiti\bf #1}\quad}
+
+\begin{document}
+\TagsOnRight \abovedisplayskip=10.0pt plus 2.0pt minus 2.0pt
+\belowdisplayskip=10.0pt plus 2.0pt minus 2.0pt
+%====================================================================
+\catcode`@=11 \long\def\@makefntext#1{\parindent 1em\noindent
+\hbox to 0pt{\hss$^{}$}#1} \catcode`\@=12
+%====================================================================
+
+\renewcommand{\baselinestretch}{1.0}
+
+
+\newfont{\htxt}{eufm10 scaled \magstep0}
+%\newfam\euffam
+\font\tenthxt=eufm10 scaled \magstep0 \font\tenBbb=msbm10 scaled
+\magstep0 \font\tencyr=wncyr10 scaled \magstep0 \font\tenrm=cmr10
+scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
+
+
+\def\cyr{\tencyr}
+%\def\cyw{\eightcyr}
+%\def\Bbb{\tenBbb}
+%\def\bbb{\eightcyr}
+%\def\txt{\tenthxt}
+
+\def\ST{\songti\rm\relax}
+\def\HT{\heiti\bf\relax}
+\def\FS{\fangsong\relax}
+\def\KS{\kaishu\relax}
+\def\text#1{\hbox{\,#1\,}}
+\def\pmb#1{\mbox{\boldmath $#1$}}
+\def\Cal#1{{\cal #1}}
+
+\def\CA{\Cal A}
+\def\CB{\Cal B}
+\def\cC{\Cal C}
+\def\CD{\Cal D}
+\def\CE{\Cal E}
+\def\CF{\Cal F}
+\def\CG{\Cal G}
+\def\CH{\Cal H}
+\def\CI{\Cal I}
+\def\CJ{\Cal J}
+\def\CK{\Cal K}
+\def\CL{\Cal L}
+\def\CM{\Cal M}
+\def\CN{\Cal N}
+\def\CO{\Cal O}
+\def\CP{\Cal P}
+\def\CQ{\Cal Q}
+\def\CR{\Cal R}
+\def\CS{\Cal S}
+\def\CT{\Cal T}
+\def\CU{\Cal U}
+\def\CV{\Cal V}
+\def\CW{\Cal W}
+\def\CX{\Cal X}
+\def\CY{\Cal Y}
+\def\CZ{\Cal Z}
+\def\BA {\hbox{\Bbb A}}
+\def\BB {\hbox{\Bbb B}}
+\def\BC {\hbox{\Bbb C}}
+\def\BD {\hbox{\Bbb D}}
+\def\BE {\hbox{\Bbb E}}
+\def\BF {\hbox{\Bbb F}}
+\def\BG {\hbox{\Bbb G}}
+\def\BI {\hbox{\Bbb I}}
+\def\BJ {\hbox{\Bbb J}}
+\def\BK {\hbox{\Bbb K}}
+\def\BL {\hbox{\Bbb L}}
+\def\BM {\hbox{\Bbb M}}
+\def\BN {\hbox{\Bbb N}}
+\def\BO {\hbox{\Bbb O}}
+\def\BP {\hbox{\Bbb P}}
+\def\BQ {\hbox{\Bbb Q}}
+\def\BR {\hbox{\Bbb R}}
+\def\BS {\hbox{\Bbb S}}
+\def\BT {\hbox{\Bbb T}}
+\def\BU {\hbox{\Bbb U}}
+\def\BV {\hbox{\Bbb V}}
+\def\BW {\hbox{\Bbb W}}
+\def\BX {\hbox{\Bbb X}}
+\def\BY {\hbox{\Bbb Y}}
+\def\BZ {\hbox{\Bbb Z}}
+\def\Gh{\hbox{\htxt\char'150}}
+\def\GG{\hbox{\htxt\char'107}}
+
+\def\text#1{\hbox{\,#1\,}}
+\def\pmb#1{\mbox{\boldmath $#1$}}
+\def\Cal#1{{\cal #1}}
+
+\newcommand{\orp}{\overline{\BR}_+}
+\newcommand{\opm}{{\rm op}^{\frac{1}{2}-\delta}_M}
+\newcommand{\wot}{\widehat{\otimes}_\pi}
+
+%-----------------------作者定义
+
+
+%-----------------------作者定义结束
+\def\binom#1#2{{#1\choose#2}}
+\def\qed{\hfill\raisebox{0.1truecm}{\framebox[0.2truecm]{\ } } }
+\def\su{\mathop{\sum}\limits}
+\def\Cal#1{ {\cal #1 \rm}  }
+%---------------------------------------------------------------
+\def\evenhead{{\protect\small{\zihao{-5}\songti \hfill \qquad\qquad
+\qquad} \hfill {\zihao{-5}\songti }}}
+\def\oddhead{{\protect\small {\zihao{-5}\songti }
+\hfill {\small\zihao{-5}\songti }\hfill}}
+%---------------------------------------------------------------
+
+\vspace*{-13mm}
+
+\thispagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ziju{0.025} \vspace*{.26in}
+
+\centerline{\heiti\bf\zihao{2} 双重维数矩阵的定义及其几何意义的探讨} \vskip .1in
+
+%-------------------------------------------------------------------------
+
+ %\footnotetext{基金项目: 国家自然科学基金资助课题(No. 10271026),
+%福建省自然科学基金资助项目(No. F0310010).}
+
+\footnotetext{E-mail: $*$ huih1984@163.com}
+
+%-------------------------------------------------------------------------
+
+\centerline{\fangsong\large\zihao{4} 惠慧$^{1}$ } \vskip.12in
+
+
+\centerline{\small\zihao{-5}(1.南京大学数学系,南京,江苏, 210093)}
+
+\vskip.25in
+
+{\narrower\fangsong\zihao{-5}\small {\zihao{-5}\heiti 摘要:}\ \
+本文从$1\times4$骨牌的多米诺覆盖问题出发，延伸出对矩阵概念的推广，定义了内维数矩阵，并据此给出行列式的概念，重点证明了
+行列式在$1\times4$骨牌的多米诺覆盖计算中的等价关系，并在此基础上从外积的概念出发，重新定义了这种形式的矩阵，并探讨其几何意义。
+
+{\zihao{-5}\heiti\tenbf 关键词:}\ \ 双重维数矩阵; 内维数; 多米诺覆盖; 外积; pfaffian; dimer;tetramer;
+
+%{\tenbf\zihao{-5}\heiti MR(2000) 主题分类:}\ \ 54C10; 54D55 /
+%{\tenbf\zihao{-5}\heiti 中图分类号:} O189.1
+
+
+ }
+
+\normalsize
+
+\baselineskip 15pt \vskip.15in
+
+\sec{0 引言}
+
+%Pan$^{[2]}$研究了广义线性模型的缺失数据问题....
+在文章Kasteleyn$^{[1]}$中，Kasteleyn开创性研究了dimers on a square lattice的问题，后来也被称为Domino tiling 。后续有很多数学工作者对这个问题进行了比较深入的研究和探讨，诸如Cohn$^{[3]}$对Domino tiling的$2-adic$进行了分析，一些综述文章如Richard Kenyon$^{[2]}$,Henry Cohn$^{[4]}$。本人在攻读硕士阶段在导师指导下完成的毕业论文中对tetramers on a square lattice 进行了表示方法的研究，并据此类比dimer的情况，对矩阵的定义和pfaffian的定义进行了推广,但是没能建立起矩阵和pfaffian的等价关系。 此后，经过一段长时间的反复尝试和计算，本人终于找到了如何去建立起等价关系，这里总结成此文，并对矩阵的行列式给出一些定理。
+\sec{1 双重维数矩阵}
+
+{\bf 定义 1.1}\quad 双重维数矩阵
+$\begin{bmatrix}
+a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$,$n$称为内维数，$m$称为外维数。
+
+此篇余下只考虑内维数为4的双重维数矩阵,行列式、pfaffian的定义都是指内维数为4的情况。之所以不考虑内维数为3的情况是因为3的情况是会产生矛盾的，相应的trimer on a square lattice的计算也无法沿用Kasteleyn的方法。
+比如：
+$$
+  \begin{bmatrix}
+  \begin{bmatrix}
+ 0&1&0\\ 0&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 1&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&0&0\\ 0&0&1\\
+ \end{bmatrix}
+  \end{bmatrix}\\
+,$$
+一种变换方式为一次得到单位矩阵
+$$
+  \begin{bmatrix}
+  \begin{bmatrix}
+ 1&0&0\\ 0&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&1&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&0&0\\ 0&0&1\\
+ \end{bmatrix}
+  \end{bmatrix}\\
+,$$
+
+而另一种方式为
+$$
+  \begin{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 1&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&1&0\\ 0&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&0&0\\ 0&0&1\\
+ \end{bmatrix}
+  \end{bmatrix}\\
+,$$
+再
+$$
+  \begin{bmatrix}
+  \begin{bmatrix}
+ 1&0&0\\ 0&0&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&1&0\\ 0&0&0\\
+ \end{bmatrix}
+  \begin{bmatrix}
+ 0&0&0\\ 0&0&0\\ 0&0&1\\
+ \end{bmatrix}
+  \end{bmatrix}\\
+,$$
+下面给出行列式的四条性质。
+\newcounter{Lcount}
+\begin{list}{\Roman{Lcount}}
+{\usecounter{Lcount}
+\setlength{\rightmargin}{\leftmargin}}
+\item
+\begin{align*}
+k det
+  \begin{bmatrix}
+  \begin{bmatrix}
+ a_{1111}& a_{2111}&\cdots&a_{n111}\\
+ a_{1211}& a_{2211}&\cdots&a_{n211}\\
+ \cdots\\
+a_{1n11}& a_{2n11}&\cdots&a_{nn11}\\
+ \end{bmatrix}
+\cdots
+\begin{bmatrix}
+a_{11n1}& a_{21n1}&\cdots&a_{n1n1}\\
+a_{12n1}& a_{22n1}&\cdots&a_{n2n1}\\
+ \cdots\\
+a_{1nn1}& a_{2nn1}&\cdots&a_{nnn1}\\
+\end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+\cdots\\
+a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+\cdots\\
+a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}\\
+\\
+=det
+  \begin{bmatrix}
+  \begin{bmatrix}
+ ka_{1111}& ka_{2111}&\cdots&ka_{n111}\\
+ ka_{1211}& ka_{2211}&\cdots&ka_{n211}\\
+ \cdots\\
+ka_{1n11}& ka_{2n11}&\cdots&ka_{nn11}\\
+ \end{bmatrix}
+\cdots
+\begin{bmatrix}
+ka_{11n1}& ka_{21n1}&\cdots&ka_{n1n1}\\
+ka_{12n1}& ka_{22n1}&\cdots&ka_{n2n1}\\
+ \cdots\\
+ka_{1nn1}& ka_{2nn1}&\cdots&ka_{nnn1}\\
+\end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+\cdots\\
+a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+\cdots\\
+a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}
+ \end{align*}
+ 同样，对其它指标也成立。
+ \item
+\begin{align*}
+det
+  \begin{bmatrix}
+\vdots\\
+ \begin{bmatrix}
+ a_{111i}& a_{211i}&\cdots&a_{n11i}\\
+ a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+ \cdots\\
+a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
+  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+ \cdots\\
+ a_{1nni}& a_{2nni}&\cdots&a_{nnni}\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111j}& a_{211j}&\cdots&a_{n11j}\\
+  a_{121j}& a_{221j}&\cdots&a_{n21j}\\
+   \cdots\\
+   a_{1n1j}& a_{2n1j}&\cdots&a_{nn1j}\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nj}& a_{21nj}&\cdots&a_{n1nj}\\
+  a_{12nj}& a_{22nj}&\cdots&a_{n2nj}\\
+   \cdots\\
+   a_{1nnj }& a_{2nnj}&\cdots&a_{nnnj}\\
+   \end{bmatrix}\\
+\vdots\\
+    \end{bmatrix}\\
+=-det
+  \begin{bmatrix}
+\vdots\\
+ \begin{bmatrix}
+   a_{111j}& a_{211j}&\cdots&a_{n11j}\\
+   a_{121j}& a_{221j}&\cdots&a_{n21j}\\
+    \cdots\\
+   a_{1n1j}& a_{2n1j}&\cdots&a_{nn1j}\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nj}& a_{21nj}&\cdots&a_{n1nj}\\
+  a_{12nj}& a_{22nj}&\cdots&a_{n2nj}\\
+  \cdots\\
+  a_{1nnj }& a_{2nnj}&\cdots&a_{nnnj}\\
+  \end{bmatrix}\\
+\vdots\\
+ \begin{bmatrix}
+   a_{111i}& a_{211i}&\cdots&a_{n11i}\\
+   a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+ \cdots\\
+a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
+  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+ \cdots\\
+  a_{1nni}& a_{2nni}&\cdots&a_{nnni}\\
+  \end{bmatrix}\\
+\vdots\\
+    \end{bmatrix}
+\end{align*}
+ 其它下标的任意两列交换，类似的符号变号。
+ \item
+\begin{align*}
+ det\begin{bmatrix}
+ \begin{bmatrix}\begin{smallmatrix}
+ a_{1111} + a_{1111}^{'}& a_{2111} + a_{2111}^{'}&\cdots&a_{n111} + a_{n111}^{'}\\
+ a_{1211} + a_{1211}^{'}& a_{2211} + a_{2211}^{'}&\cdots&a_{n211} + a_{n211}^{'}\\
+ \cdots\\
+a_{1n11} + a_{1n11}^{'}& a_{2n11} + a_{2n11}^{'}&\cdots&a_{nn11} + a_{nn11}^{'}\\
+\end{smallmatrix}\end{bmatrix}
+\cdots
+\begin{bmatrix}\begin{smallmatrix}
+  a_{11n1} + a_{11n1}^{'}& a_{21n1} + a_{21n1}^{'}&\cdots&a_{n1n1} + a_{n1n1}^{'}\\
+a_{12n1} + a_{12n1}^{'}& a_{22n1} + a_{22n1}^{'}&\cdots&a_{n2n1} + a_{n2n1}^{'}\\
+ \cdots\\
+ a_{1nn1} + a_{1nn1}^{'}& a_{2nn1} + a_{2nn1}^{'}&\cdots&a_{nnn1} + a_{nnn1}^{'}\\
+ \end{smallmatrix}\end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+  \cdots\\
+  a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+  \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+   \cdots\\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}\\
+\\
+=det\begin{bmatrix}
+ \begin{bmatrix}
+   a_{1111}& a_{2111}&\cdots&a_{n111}\\
+   a_{1211}& a_{2211}&\cdots&a_{n211}\\
+ \cdots\\
+a_{1n11}& a_{2n11}&\cdots&a_{nn11}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11n1}& a_{21n1}&\cdots&a_{n1n1}\\
+  a_{12n1}& a_{22n1}&\cdots&a_{n2n1}\\
+ \cdots\\
+ a_{1nn1}& a_{2nn1}&\cdots&a_{nnn1}\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+   \cdots\\
+   a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+   \cdots\\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+   \end{bmatrix}
+    \end{bmatrix}
+  \\+det
+  \begin{bmatrix}
+ \begin{bmatrix}
+   a_{1111}^{'}& a_{2111}^{'}&\cdots&a_{n111}^{'}\\
+   a_{1211}^{'}& a_{2211}^{'}&\cdots&a_{n211}^{'}\\
+ \cdots\\
+a_{1n11}^{'}& a_{2n11}^{'}&\cdots&a_{nn11}^{'}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11n1}^{'}& a_{21n1}^{'}&\cdots&a_{n1n1}^{'}\\
+  a_{12n1}^{'}& a_{22n1}^{'}&\cdots&a_{n2n1}^{'}\\
+ \cdots\\
+ a_{1nn1}^{'}& a_{2nn1}^{'}&\cdots&a_{nnn1}^{'}\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+   \cdots\\
+   a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+   \cdots\\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+   \end{bmatrix}
+    \end{bmatrix}\\
+    \end{align*}
+   其它下标同样可以进行分拆。
+   \item
+$det \begin{bmatrix}
+ \begin{bmatrix}
+   a_{1111}& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&0\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+ \cdots\\
+ 0& 0&\cdots&0\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+   \cdots\\
+   0& 0&\cdots&0\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+   \cdots\\
+   0& 0&\cdots&a_{nnnn}\\
+   \end{bmatrix}
+    \end{bmatrix}
+    =1$
+ \end{list}
+
+由此推导出行列式的表达式为：
+
+{\bf 定理 1.1}\quad 双重维数矩阵的det
+$$det(A_{ijkl})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
+
+{\bf 定理 1.2}\quad
+
+pfaffian的定义，
+
+{\bf 定义 1.2}\quad 反称双重维数矩阵的pfaffian
+    \begin{equation}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
+   ,...,p_{n-3}<p_{n-2}<p_{n-1}<p_{n}\end{equation}
+   \begin{equation}p_{1}<p_{5}<...<p_{n-3}\end{equation}
+   $$pfaffian(A_{ijkl})=\sum\limits_{\sigma=p_{1}p_{2}...p_{n}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{n-3}p_{n-2}p_{n-1}p_{n}}$$
+
+{\bf 定理 1.2}\quad
+矩阵$A_{ijkl}$的下角标写成列向量形式，如果只有$$\begin{pmatrix}i\\i+1\\i+2\\i+3 \end{pmatrix},\begin{pmatrix}i+1\\i+2\\i+3\\i \end{pmatrix},\begin{pmatrix}i+2\\i+3\\i\\i+1 \end{pmatrix},\begin{pmatrix}i+3\\i\\i+1\\i+2 \end{pmatrix}$$和$$\begin{pmatrix}i\\i+4k\\i+8k\\i+12k \end{pmatrix},\begin{pmatrix}i+4k\\i+8k\\i+12k\\i \end{pmatrix},\begin{pmatrix}i+8k\\i+12k\\i\\i+4k \end{pmatrix},\begin{pmatrix}i+12k\\i\\i+4k\\i+8k \end{pmatrix}$$ 存在, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
+
+{\bf 证明}\quad
+首先证明右边元素都落入左边，再证明左边元素都落入右边，最后证明符号相等。\\
+将行列式的和式单项$a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$ 下角标拿出来，构成矩阵:
+\begin{equation}\begin{bmatrix}\sigma(1)&\sigma(2)&...&\sigma(n)\\\tau(1)&\tau(2)&...&\tau(n)\\\gamma(1)&\gamma(2)&...&\gamma(n)\\
+1&2&...&n\end{bmatrix}\end{equation}
+考虑元素的下标，将下标作为列向量写成普通矩阵形式。\\
+将右边和式单项的下角标写成矩阵形式\begin{equation}\begin{bmatrix}p_{1}&p_{5}&...&p_{N-3}\\p_{2}&p_{6}&...&p_{N-2}\\p_{3}&p_{7}&...&p_{N-1}\\p_{4}&p_{8}&...&p_{N}\\\end{bmatrix}\end{equation}
+那么需要证明左边矩阵和右边矩阵的的四次方存在一一对应。\\
+这里的矩阵都忽略列向量的互换，视为无差别。\\\\
+第一步的证明：
+将$1,...,n$进行分组
+\begin{equation}\{1+16ik+4j,4+4k+16ik+4j,3+8k+16ik+4j,2+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
+\begin{equation}\{2+16ik+4j,1+4k+16ik+4j,4+8k+16ik+4j,3+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
+\begin{equation}\{3+16ik+4j,2+4k+16ik+4j,1+8k+16ik+4j,4+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
+\begin{equation}\{4+16ik+4j,3+4k+16ik+4j,2+8k+16ik+4j,1+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
+$(4)$中的$4$行元素从上至下分别对应于分组$(5)(6)(7)(8)$，显然是恰当的。同样的对应于分组
+$$(6)(7)(8)(5),(7)(8)(5)(6),(8)(5)(6)(7),$$也是恰当的。将四次方乘积中的和式单项分别对应于四种不同的分组，恰好就得到一个左边的矩阵元$(3)$。\\
+第二步的证明：将$(3)$中的列向量分成四组，第一组的列元素从上至下分别从属于$(5)(6)(7)(8)$，依次二三四组从属于$(6)(7)(8)(5)$，$(7)(8)(5)(6)$，$(8)(5)(6)(7)$，那么这四组分别对应于一个形式$(3)$，从而左边元落入右边。\\
+第三步的证明：将右边元素看成都是从初始元（即$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$形式）变换过来的，变换的规则为每次只允许进行四个元竖起来，或者四个并行进行左右移动一格。即
+$$\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)\\
+(i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
+i+2&(i+2+4k)&(i+2+8k)&(i+2+12k)\\
+i+3&(i+3+4k)&(i+3+8k)&(i+3+12k)\\\end{bmatrix}$$
+$$\rightarrow\begin{bmatrix}i&(i+1+12k)&(i+2+8k)&(i+3+4k)\\
+(i+4k)&(i+1)&(i+2+12k)&(i+3+8k)\\
+i+8k&(i+1+4k)&(i+2)&(i+3+12k)\\
+i+12k&(i+1+8k)&(i+2+4k)&(i+3)\\\end{bmatrix}$$
+$$\rightarrow\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)&i+4\\
+(i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)&i+4+4k\\
+i+2&(i+2+4k)&(i+2+8k)&(i+2+12k)&i+4+8k\\
+i+3&(i+3+4k)&(i+3+8k)&(i+3+12k)&i+4+12k\\\end{bmatrix}$$
+$$\rightarrow\begin{bmatrix}i&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
+(i+4k)&(i+2+4k)&(i+2+8k)&(i+2+12k)\\
+i+8k&(i+3+4k)&(i+3+8k)&(i+3+12k)\\
+i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ 那么通过这样的变换最终就可以得到最终元，而每一步的变换都不会带来符号上的改变，所以最终符号也是相同的，且这里还都是正号,即证。
+
+证明中关于等式右边的式子$[4]$举例如下：
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.35\textwidth]{c.pdf}
+  \caption{Handwrite}\label{fig:digit}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.35\textwidth]{d.pdf}
+  \caption{Handwrite}\label{fig:digit}
+\end{figure}\\
+图1的矩阵
+$$\begin{bmatrix}
+1&5&12&16&19&23&26&30&33&37&44&48&51&55&58&62\\
+2&6&9&13&20&24&27&31&34&38&41&45&52&56&59&63\\
+3&7&10&14&17&21&28&32&35&39&42&46&49&53&60&64\\
+4&8&11&15&18&22&25&29&36&40&43&47&50&54&57&61\\\end{bmatrix}$$
+图2的矩阵
+$$\begin{bmatrix}
+1&5&33&12&19&26&37&30&23&16&44&48&51&55&58&62\\
+2&6&9&13&20&27&34&38&31&24&41&45&52&56&59&63\\
+3&7&17&10&21&28&35&14&39&32&42&46&49&53&60&64\\
+4&8&25&11&18&29&36&22&15&40&43&47&50&54&57&61\\\end{bmatrix}$$
+
+{\bf 定义 1.3}\quad  双重维数矩阵的叉乘
+
+\begin{align*}
+[B_{ijkl}] \times [A_{ij}]&=
+   \begin{bmatrix}\begin{smallmatrix}
+  \beta_{11}& \beta_{12}& \cdots&\beta_{1n}\\
+  \beta_{21}& \beta_{22}& \cdots&\beta_{2n}\\
+  & & \cdots&\\&\\
+  \beta_{n1}& \beta_{n2}& \cdots&\beta_{nn}\\
+ \end{smallmatrix}\end{bmatrix} \times [A_{ij}]\\
+ &=
+ \begin{bmatrix}\begin{smallmatrix}
+ a_{11}\begin{bmatrix}\begin{smallmatrix}
+  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
+  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
+  & & \cdots&\\&\\
+  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
+ \end{smallmatrix}\end{bmatrix}&
+ \cdots&
+ a_{1n}\begin{bmatrix}\begin{smallmatrix}
+  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
+  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
+  & & \cdots&\\&\\
+  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
+ \end{smallmatrix}\end{bmatrix}\\
+ & \cdots&&\\
+ a_{n1}\begin{bmatrix}\begin{smallmatrix}
+  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
+  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
+  & & \cdots&\\&\\
+  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
+ \end{smallmatrix}\end{bmatrix}&
+ \cdots&
+ a_{nn}\begin{bmatrix}\begin{smallmatrix}
+  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
+  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
+  & & \cdots&\\&\\
+  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
+ \end{smallmatrix}\end{bmatrix}\\
+  \end{smallmatrix}\end{bmatrix}
+\end{align*}\
+类似 Kasteleyn$^{[1]}$中将计算的矩阵表达成
+$D=z(Q_{m}\times E_{n})  +  z^{'} (F_{m} \times Q_{n})$
+这里关于$tetramer$的计算也可以表达成两个类型的和式。
+$$
+  Q = \begin{bmatrix}\begin{smallmatrix}
+  0& 0& 0&
+  \begin{bmatrix}\begin{smallmatrix}
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 1& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ & & \cdots& &\\
+0& 0&0& 0&\cdots&0\\
+ \end{smallmatrix}\end{bmatrix}& 0& 0& 0& \cdots&\\
+ \begin{bmatrix}\begin{smallmatrix}
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 1&0&\cdots&0\\
+ & & \cdots& &\\
+0& 0& 0& 0&\cdots&0\\
+ \end{smallmatrix}\end{bmatrix}&
+ 0& 0& 0&
+ \begin{bmatrix}\begin{smallmatrix}
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 1&0&\cdots&0\\
+ & & \cdots& &\\
+0& 0& 0& 0&\cdots&0\\
+ \end{smallmatrix}\end{bmatrix}&
+ 0& 0& \cdots&\\
+ 0& \begin{bmatrix}\begin{smallmatrix}
+  0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&1&\cdots&0\\
+ & & \cdots& &\\
+0& 0& 0& 0&\cdots&0\\
+ \end{smallmatrix}\end{bmatrix}& 0& 0& 0&
+ \begin{bmatrix}\begin{smallmatrix}
+  0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&0&\cdots&0\\
+ 0& 0& 0&1&\cdots&0\\
+ & & \cdots& &\\
+0& 0& 0& 0&\cdots&0\\
+ \end{smallmatrix}\end{bmatrix}& 0& \cdots&\\
+ 0& 0& \ddots &0 &0 &0 &\ddots \\
+\end{smallmatrix}\end{bmatrix}$$
+
+那么有结果
+$D=z(Q_{m}\times E_{n})  +  z^{'} (F_{m} \times E_{n})$
+这里的$F$的定义类似于$Q$，由于书写繁琐，无法很好的表达出来，所以不写出来了。\\
+为了计算的方便，这里给出双重维数的乘法定义。
+
+{\bf 定义 1.4}\quad  双重维数矩阵的乘法
+   $$[A_{ij}][B_{ijkl}]=[C_{ijkl}]$$
+   $$c_{ijkl} = \Sigma_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
+
+{\bf 定理 1.3}\quad  乘法定理
+
+    $$det([A_{ij}][B_{ijkl}])=det([A_{ij}])det([B_{ijkl}])$$
+
+{\bf 证明}\quad
+
+\begin{align*}
+det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
+&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n}\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det([A_{ij}])\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
+&=det([A_{ij}])det([B_{ijkl}])
+\end{align*}
+
+
+{\bf 定理 1.4}\quad  拉普拉斯定理
+$$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A_{i,j,k,l} $$
+
+{\bf 证明}\quad
+左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
+
+
+推广的命题是，
+$$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
+(-1)^{\sum_{t=1}^{p}(i_{t}+j_{t}+k_{t}+l_{t})}
+M_{\left(\begin{array}{cccc}
+i_{1} & i_{2} & \cdots & i_{p} \\
+j_{1} & j_{2} & \cdots & j_{p} \\
+k_{1} & k_{2} & \cdots & k_{p} \\
+l_{1} & l_{2} & \cdots & l_{p} \\
+\end{array}\right)}
+A_{\left(\begin{array}{cccc}
+i_{p+1} & i_{p+2} & \cdots & i_{n} \\
+j_{p+1} & j_{p+2} & \cdots & j_{n} \\
+k_{p+1} & k_{p+2} & \cdots & k_{n} \\
+l_{p+1} & l_{p+2} & \cdots & l_{n} \\
+\end{array}\right)}$$
+项数上的关系是左边$(n!)^{3}$,右边是$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$
+
+
+ \sec{2 外积下的重定义以及几何解释探讨}
+
+用外积来定义双重维数矩阵的行列式,
+\begin{equation}
+\begin{aligned}
+\omega=
+& \sum_{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}\\
+& a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
+& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}}\\
+& \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}}\\
+& \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}}\\
+& \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
+\end{aligned}\end{equation}
+\begin{equation}
+\omega^{n}
+\begin{aligned}
+& = n! det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n \wedge e_{4}^1\wedge e_{4}^2 \cdots \wedge e_{4}^n
+\end{aligned}\end{equation}
+
+或者
+
+\begin{equation}
+\begin{aligned}
+\omega_{i}=
+& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
+\end{aligned}\end{equation}
+\begin{equation}
+\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
+\begin{aligned}
+& = det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n
+\end{aligned}
+\end{equation}
+从这里可以看出$det(A)$的几何意义，他是外积子空间做外积运算的一个度量。
+
+pfaffian用外积来定义,
+\begin{equation}\omega=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
+\begin{equation}\omega^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
+
+令
+$$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
+$$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
+$$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
+则
+\begin{equation}
+f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
+\begin{aligned}
+& = \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{
+3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
+\end{aligned}
+\end{equation}
+
+在$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n}),(f_{2}^{1},f_{2}^{2},...,f_{2}^{n}),(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})$
+基底下的表示如下：
+\begin{equation}
+\begin{aligned}
+\omega_{i}
+&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}} f_{1}^{j_{\sigma}} \wedge f_{2}^{k_{\sigma}} \wedge f_{3}^{l_{\sigma}} \\
+&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
+\sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}\\
+&= \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}\sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
+x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
+\end{aligned}\end{equation}
+由此
+$a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$
+
+\begin{equation}
+\begin{aligned}
+\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
+& = det(B) f_{1}^1\wedge f_{1}^2 \cdots \wedge f_{1}^n \wedge f_{2}^1\wedge f_{2}^2 \cdots \wedge f_{2}^n
+\wedge f_{3}^1\wedge f_{3}^2 \cdots \wedge f_{3}^n\\
+& = det(B)det(X_{1})det(X_{2})det(X_{3}) \\
+&e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
+\end{aligned}
+\end{equation}
+由此得到$det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
+\\
+
+{\bf 定理 1.5}\quad  若A,B矩阵存在关系
+$a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$，
+记为$A=\frac{B}{X_{1}X_{2}X_{3}}$
+
+则$$det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$$.
+
+同样可以定义前乘积$\frac{X_{1}X_{2}X_{3}}{B}$
+ \sec{参考文献}
+\baselineskip 13pt {\footnotesize
+
+\REF{[1]} P. W. Kasteleyn, The statistics of dimers on a lattice, {\it Physica.}, 1961, 27.
+
+\REF{[2]} Richard Kenyon, Andrei Okounkov,  What is ... a dimer?, {\it Notices of the American Mathematical Society} MARCH 2005 VOLUME 52, NUMBER 3.
+
+\REF{[3]} Henry Cohn, 2-adic behavior of domino tilings, {\it Electronic Journal of Combinatorics}, 6 1999.
+
+\REF{[4]} Henry Cohn, Michael Larsen, James Propp, The shape of a typical boxed plane partition, {\it J of Math}, 1998.
+
+
+\vskip .25in
+
+
+\centerline{\Large\bf  double dimension matrix and it's geometric means }\vskip
+.1in
+
+\centerline{\normalsize\zihao{5} Hui Hui$^{1}$}\vskip .13in
+
+{\small({\it  1. Department of Mathematics, NanJing University, Nanjing,
+Jiangsu, 210093, P. R. China})}\vskip .23in
+
+\baselineskip 14pt \zihao{5}\normalsize {\indent{\bf Abstract:}\ \
+The article extends matrix notion to double dimension matrix, and defining the determinant of it,
+by researching of $1\times4$ domino tiling.The important result of article is to have given the equlity between
+the determinant and the pfaffian, finally, I have define the det and pf of A from wedge product aspect, and discuss
+the geometric means.\\
+{\bf Key words:double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian; dimer; tertramer}\ \
+
+
+}
+\end{document}
