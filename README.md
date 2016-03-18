@@ -1,4 +1,4 @@
-# ddmatrix
+# tetramer and four index matrix
 这是我的研究生毕业论文的延伸。
 在一个长方形的栅格里面用1X4的小方格去覆盖，有多少种覆盖方法？
 已经有人对1X2的覆盖给出了计算结果。
