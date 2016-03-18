@@ -5,7 +5,7 @@
 [Andrei_Okounkov](https://en.wikipedia.org/wiki/Andrei_Okounkov)
 等一些著名数学家对覆盖数给出了非常有趣的结果，
 而且这些结果在物理化学上有重要应用。<br /><br/>
-大概概括一下，就是在一个固定边界的容器里面，分子做布朗运动，但是无论如何运动都相当于一个dimer覆盖，那么分子有多少的自由活动的空间，就和这个覆盖数紧密相关。Andrei_Okounkov等人在这个领域结合统计学和代数几何等理论做了研究，并因此获得了菲尔兹奖。
+大概概括一下，就是在一个固定边界的容器里面，分子做布朗运动，但是无论如何运动都相当于一个dimer覆盖，那么分子有多少的自由活动的空间，就和这个覆盖数紧密相关。Andrei_Okounkov等人在这个领域结合统计学和代数几何等理论做了研究，并因此获得了菲尔兹奖。 <br/><br/>
  ![image](https://github.com/huih1984/tetramer-and-four-index-matrix/blob/master/dimer.png)
  <br/><br/>
  
