@@ -138,24 +138,62 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 
 \thispagestyle{empty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\ziju{0.025} \vspace*{.26in}\centerline{\heiti\bf\zihao{2} $1X4$骨牌覆盖方形栅格的计数表示} \vskip .1in%------------------------------------------------------------------------- %\footnotetext{基金项目: 国家自然科学基金资助课题(No. 10271026),%福建省自然科学基金资助项目(No. F0310010).}\footnotetext{E-mail: $*$ huih1984@163.com}%-------------------------------------------------------------------------\centerline{\fangsong\large\zihao{4} 惠慧$^{1}$ } \vskip.12in\centerline{\small\zihao{-5}(1.南京大学数学系,南京,江苏, 210093)}\vskip.25in{\narrower\fangsong\zihao{-5}\small {\zihao{-5}\heiti 摘要:}\ \文章Kasteleyn$^{[1]}$中，非常巧妙的将1X2骨牌覆盖问题转化成了一个矩阵行列式的问题，最终得到了覆盖数的计算公式，非常漂亮的结构。既然1X2骨牌覆盖的计算公式已经得到，那么1X3骨牌,1X4骨牌覆盖呢？在推广方法到更高阶的情形，情况变得复杂，就像高于五次的方程一般而言没有根式解一样，一个方法在推广到高阶的时候就会变得不那么容易了,甚至没有通解，但好在经过努力，有一些情形是可以扩张的，这让问题变得有趣！作者顺着思路进行写作，中间有很多错误的思路,就是因为高阶变得复杂了，如何延续问题的讨论？错误也是一种探索，所以写下来也是有意义的。本文只讨论四聚物覆盖数的计算公式，因为三维更复杂，并且对pfaffian 和matrix 的理论意义进行适当的探讨。{\zihao{-5}\heiti\tenbf 关键词:}\ \ 双重维数矩阵; 内维数; 多米诺覆盖; 外积; pfaffian; 二聚物; 三聚物; 四聚物;%{\tenbf\zihao{-5}\heiti MR(2000) 主题分类:}\ \ 54C10; 54D55 /%{\tenbf\zihao{-5}\heiti 中图分类号:} O189.1 }\normalsize\baselineskip 15pt \vskip.15in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ziju{0.025} \vspace*{.26in}
+
+\centerline{\heiti\bf\zihao{2} $1X4$骨牌覆盖方形栅格的计数表示} \vskip .1in
+
+%-------------------------------------------------------------------------
+
+ %\footnotetext{基金项目: 国家自然科学基金资助课题(No. 10271026),
+%福建省自然科学基金资助项目(No. F0310010).}
+
+\footnotetext{E-mail: $*$ huih1984@163.com}
+
+%-------------------------------------------------------------------------
+
+\centerline{\fangsong\large\zihao{4} 惠慧$^{1}$ } \vskip.12in
+
+
+\centerline{\small\zihao{-5}(1.南京大学数学系,南京,江苏, 210093)}
+
+\vskip.25in
+
+{\narrower\fangsong\zihao{-5}\small {\zihao{-5}\heiti 摘要:}\ \
+在文章Kasteleyn$^{[1]}$中，Kasteleyn开创性研究了1X2骨牌在栅格上的覆盖数计算问题。那么如果是1X3骨牌或者1X4骨牌甚至更多，结果又是怎样的呢？文章忽略1X3骨牌的讨论，而直接讨论1X4骨牌的情况，因为从方法上可以是相似推广，可以沿用$Kasteleyn^{[1]}$ 中的方法。文章对内维数为2的情形$det(A)=pfaffian^{2}(A)$的结果做了推广，得出本文的一个关键结果即在内维数为4的情况下，定义矩阵和行列式以及$pfaffian$，得到$det(A)=pfaffian^{4}(A)$，最后着重讨论矩阵的计算问题。
+
+{\zihao{-5}\heiti\tenbf 关键词:}\ \ 双重维数矩阵; 内维数; 多米诺覆盖; 外积; pfaffian; 1X2骨牌; 1X3骨牌; 1X4骨牌;
+
+%{\tenbf\zihao{-5}\heiti MR(2000) 主题分类:}\ \ 54C10; 54D55 /
+%{\tenbf\zihao{-5}\heiti 中图分类号:} O189.1
+
+
+ }
+
+\normalsize
+
+\baselineskip 15pt \vskip.15in
 
 
 \sec{0 引言}
+数学公式在推广到更高阶的情形，情况往往变得复杂，比如方程解的问题，在小于五次时，有比较简单根式形式，而高于五次的方程一般而言没有根式解。理论的推广总是这样，去除局限的部分，余下的情形是可以扩张的！本文接下来就讨论1X4骨牌覆盖数的计算公式。
 
-在文章Kasteleyn$^{[1]}$中，Kasteleyn开创性研究了二聚物在栅格上的覆盖数计算问题。那么如果是三聚物或者四聚物覆盖甚至更多，结果又是怎样的呢？在研究中，作者发现四聚物的覆盖可以沿用Kasteleyn$^{[1]}$中的方法，很容易得到类似于pfaffian的表达形式。进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学上的美学，否则也应该可以给出为什么在2的情形下存在，而在其它数字下不存在的结构性解释，庆幸的是经过一番错误的尝试，最终真的找到了相应的矩阵形式。本文写作将从作者最原始的想法开始，一步步展开，当然这中间有很多想法是错误的，但是即便这些错误的想法，还是有很多结构看上去很美的东西在里面，对进一步的研究或许有启发意义。最后，作者将问题拓展到三聚物，发现原来三聚物也是可以很好表达的，虽然方法上不同于Kasteleyn$^{[1]}$，这一定有潜在的结构上的意义有待挖掘，尤其是矩阵推广形式，本人能力有限，希望有更多的研究者参与其中来研究这个问题。
+%很容易得到类似于$pfaffian$的表达形式,进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学符号的形式美，经过一番努力，终于找到了相应的矩阵形式。而这种拓展的矩阵形式本身却更有耐人寻味的结构美，作者没有见过有什么文献对这种形式的矩阵有深入的研究，这里作者只得出了一些少量的结果，作者能力有限，希望有更多的研究者参与其中来研究这种矩阵。
 
-\sec{1 $1\times 4$覆盖数计算公式}
+\sec{1 $1\times 4$覆盖数计数表示}
 
-把问题转化成取每个小方块中点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
+
+把问题转化成取每个小方块的端点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
     其中$(p_{j},p_{j+1},p_{j+2},p_{j+3}),j=4k+1 (k=0,1,...)$为一个tetramer的四个连续点。为了一种覆盖对应于一种表示，要求满足
 
     \begin{equation}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
-   ,...p_{N-3}<p_{N-2}<p_{N-1}<p_{N}\end{equation}
+   ,...,p_{N-3}<p_{N-2}<p_{N-1}<p_{N}\end{equation}
 
    \begin{equation}p_{1}<p_{5}<...<p_{N-3}\end{equation}
 
-   这样的排列与pfaffian的排列不同，所以不再能用pfaffian来计算了。但是从形式上看这些排列与pfaffian要求的排列又很相似，只是
+   这样的排列与$pfaffian$的排列不同，所以不再能用$pfaffian$来计算了。但是从形式上看这些排列与$pfaffian$要求的排列又很相似，只是
    作为一个小组的数字个数由2变成了4，
       \begin{equation}\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
@@ -168,67 +206,9 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
    对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
    这样得到的公式$(3)$，仍然称为$pfaffian(A_{4})$。从形式上讲，这样称呼完全正确！
 
-   相应的给出
-   \begin{equation}det(A_{4})=\sum\limits_{\sigma,\tau,\gamma}sgn\sigma sgn\tau sgn\gamma a_{1\sigma(1)\tau(1)\gamma(1)}a_{2\sigma(2)\tau(2)\gamma(2)}...a_{N\sigma(N)\tau(N)\gamma(N)}\end{equation}
 
-\begin{guess}\quad $det(A_{4})=24^{N/4}pfaffian^{4}(A_{4})$\end{guess}
-   对于N=4的情况，显然是成立的。对于N=8,通过计算机编程，对$det(A)$进行计算，将所有的下标序列枚举出来，写入文本，再将相同项合并计算系数，这是一项比较耗时耗空间的
-   计算，本人在2G内存酷睿2双核 T5550 1.83GHZ的笔记本上运行了2天多，生成的文本文件有200多个G，现将部分序列的系数结果列举如下：
-
-    $$01230123012301234567456745674567  \quad  \quad576$$
-    $$01230123012301243567456745674567    \quad \quad-2304$$
-    $$01230123012301253467456745674567     \quad \quad2304$$
-    $$01230123012301263457456745674567    \quad \quad-2304$$
-    $$01230123012301572346456745674567    \quad \quad-1536  $$
-$$01230123012301572456346745674567     \quad \quad-768$$
-$$01230123012301572467345645674567      \quad \quad768 $$
-$$01230123012301672345456745674567     \quad \quad1536  $$
-$$01250125034704671346135723462567     \quad \quad1920 $$
-$$01250125034704671346135723562467    \quad \quad-2880 $$
-$$01250125034704671346135723672456     \quad \quad2880$$
-$$01250125034704671346136723452567     \quad \quad1920$$
-$$01250234035705671236124614573467    \quad \quad-2112$$
-$$01250234035705671236124614673457     \quad \quad1728$$
-
-$01230123012301572346456745674567    \quad \quad-1536  $这一项不符合上述猜测，右边计算的结果是-2304。
-但是从计算的结果来看，还是有部分下标序列的系数是相同的，而且符号也相同，仔细观察结果，这种刻画是更精细的，更具对称性。
-对此，得到一些结论，但是因为和最终等式的结论不相关，这里只列出结论，不阐述证明过程。
-\begin{lemma}
-行列式的单项
-\begin{equation*}
-sgn\sigma sgn\tau sgn\gamma a_{1\sigma(1)\tau(1)\gamma(1)}a_{2\sigma(2)\tau(2)\gamma(2)}...a_{N\sigma(N)\tau(N)\gamma(N)}
-\tag{1}\end{equation*}如果排列包含奇轮换那么总存在另外一个具有相同正则型的元与其相消。\end{lemma}
-\begin{lemma}
-对于$4 \times 8$，首先考虑下标序列前四列为$1-4$，后四列为$5-8$的情形，那么两个行元的对换,只要是正则型相同,在两个不同行上
-对换,它们的符号都是相同的。结果可以简单的推广到前四列为任意四个元的情况。
-\end{lemma}
-下面是一些错误的猜测：
-\begin{guess}
-任何正则型相同的元素之间都可以通过纵向对换轮换元实现相互转换。
-\end{guess}
-\begin{guess}
-任何正则型相同的单项，如果他们的下标矩阵中任意两行之间都不含有奇轮换，那么可以通过纵向对换轮换元实现相互转换。
-\end{guess}
-\begin{guess}
-任何正则型相同的单项，它们的符号都是相同的。
-\end{guess}
-这个猜测是不对的，反例如此
-$\begin{bmatrix}
-01234567\\
-10652374\\
-23076145\\
-32147056 \end{bmatrix}$
-的符号是$1$,而
-$\begin{bmatrix}
-01234567\\
-10652374\\
-23076145\\
-32147056 \end{bmatrix}$符号为$-1$。
-起初的想法是通过一个余项将多余的部分消去。但是很遗憾这种尝试没得到什么好的结果。
-换个思路是考虑改变$pfaffian$四次方的形式，检验了在外维数为4的情况下直接用二内维数的$pfaffian$求其四次方，看看能得到什么结果，结果不尽如人意。
-
-多番努力失败后，迫使去从性质着手进行思考。
-\sec{1 双重维数矩阵}
+从性质着手进行定义。
+\sec{2 恒等式的证明}
 
 {\bf 定义 1.1}\quad 双重维数矩阵
 $\begin{bmatrix}
@@ -238,6 +218,7 @@ a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$,$n$称为内维数，$m$称为外维数
 \begin{list}{\Roman{Lcount}}
 {\usecounter{Lcount}
 \setlength{\rightmargin}{\leftmargin}}
+\tiny
 \item
 \begin{align*}
 k det
@@ -373,6 +354,43 @@ a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
  其它下标的任意两列交换，类似的符号变号。
  \item
 \begin{align*}
+det
+  \begin{bmatrix}
+\vdots\\
+ \begin{bmatrix}
+ a_{111i}& a_{211i}&\cdots&a_{n11i}\\
+ a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+ \cdots\\
+a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
+  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+ \cdots\\
+ a_{1nni}& a_{2nni}&\cdots&a_{nnni}\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111i}& a_{211i}&\cdots&a_{n11i}\\
+  a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+   \cdots\\
+   a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
+  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+   \cdots\\
+   a_{1nni }& a_{2nni}&\cdots&a_{nnni}\\
+   \end{bmatrix}\\
+\vdots\\
+    \end{bmatrix}\\
+=0\\
+\end{align*}
+
+ \item
+\begin{align*}
  det\begin{bmatrix}
  \begin{bmatrix}\begin{smallmatrix}
  a_{1111} + a_{1111}^{'}& a_{2111} + a_{2111}^{'}&\cdots&a_{n111} + a_{n111}^{'}\\
@@ -467,6 +485,104 @@ a_{1n11}^{'}& a_{2n11}^{'}&\cdots&a_{nn11}^{'}\\
    \item
 $det \begin{bmatrix}
  \begin{bmatrix}
+   1& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&0\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+ \cdots\\
+ 0& 0&\cdots&0\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+   \cdots\\
+   0& 0&\cdots&0\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+   \cdots\\
+   0& 0&\cdots&1\\
+   \end{bmatrix}
+    \end{bmatrix}
+    =1$
+ \end{list}
+
+\begin{theorem} 由上面的性质可以推导出双重维数矩阵的det
+$$det(A_{4})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
+\end{theorem}
+\begin{proof}
+由$\textrm{IV}$ 得到左边等于
+ \tiny \begin{equation}det\begin{bmatrix}
+  \begin{bmatrix}
+   a_{1111}& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&0\\
+\end{bmatrix}
+\cdots
+ \begin{bmatrix}
+   0& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&0\\
+\end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+  \cdots\\
+  a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+  \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+   \cdots\\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}\end{equation}
+$$+ \cdots\\$$
+$$+
+det\begin{bmatrix}
+  \begin{bmatrix}
+   0& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&0\\
+\end{bmatrix}
+\cdots
+ \begin{bmatrix}
+   0& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+ \cdots\\
+0& 0&\cdots&a_{nnn1}\\
+\end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+  \cdots\\
+  a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+  \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+   \cdots\\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}$$
+对$(7)$式再进行分拆，由$I,V$得到
+$det \begin{bmatrix}
+ \begin{bmatrix}
    a_{1111}& 0&\cdots&0\\
    0& 0&\cdots&0\\
  \cdots\\
@@ -493,58 +609,50 @@ $det \begin{bmatrix}
    \cdots\\
    0& 0&\cdots&a_{nnnn}\\
    \end{bmatrix}
-    \end{bmatrix}
-    =1$
- \end{list}
+   \end{bmatrix}
+    =a_{1111}...a_{nnnn}$
 
-由此推导出行列式的表达式为：
 
-\begin{theorem} 由上面的性质可以推导出双重维数矩阵的det
-$$det(A_{4})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
-\end{theorem}
+    和一些其它项，诸如
+    $sgn\sigma sgn\tau sgn\gamma  a_{1111}a_{2\sigma(2)\tau(2)\gamma(2)}...a_{n\sigma(n)\tau(n)\gamma(n)}$
+    的项,可以由$I,II,V$得到。类似对其它项进行展开，即得结论。
+\end{proof}
 
-从性质上来看，这和普通矩阵的性质非常类似。问题出在哪里，为什么没有得到等式呢？
-$4n$ 维的$pfaffian$ 排列的个数$\frac{(4n)!}{(4!)^{n}n!}$和$det$的个数$(4n)^{3}$不是同样的增长方式。这和二内维数相差比较大，$(n!!)^2，n!$。
-不要那么多的项！只保留顺序排列的项，如$p_{1}<p_{2}<p_{3}<p_{4}$,那么不是$4！$个都是存在的，而只保留$(p_{1},p_{2},p_{3},p_{4}),(p_{2},p_{3},p_{4},p_{1}),
-(p_{3},p_{4},p_{1},p_{2}),(p_{4},p_{1},p_{2},p_{3})$,其余的都为0！
-非常令人振奋！
-对于最基本的4情形，显然成立，本人又验证了8情形下的一些项，也都成立！
-这里将$(p_{3},p_{4},p_{1},p_{2})$序关系调整一下，以四为周期的交换，比如$1,5,3,4$。
-\begin{guess}
-$A$为反称矩阵，则$det(A)=pfaffian^{4}(A)$。
-\end{guess}
+作为一个引申，也可以用外积来进行定义，
+用外积来定义双重维数矩阵的行列式,
+\begin{equation}
+\begin{aligned}
+\omega=
+& \sum_{\substack{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}\\ i_{1} < i_{2} < i_{3} < i_{4}}}a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
+& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}} \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}} \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}} \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
+\end{aligned}\end{equation}
+\begin{equation}
+\omega^{\frac{n}{4}}
+\begin{aligned}
+& = \frac{n}{4}! det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n \wedge e_{4}^1\wedge e_{4}^2 \cdots \wedge e_{4}^n
+\end{aligned}\end{equation}
 
-记下标为${\lambda}$，$\lambda$包含四个下标元素，将${\lambda}$按照关联进行分组，此关联是任何元素$\lambda$在组别中存在另外一个$\lambda$，它们之间有一个元素是一样的。任选一个下标元素，这里选取最小的那个下标元素，其所在的四个下标中，按照下标的正则形式（从小到大）相同的组别类型共可以得出$(4),(3,1),(2,2),(2,1,1),(1,1,1,1)$五种类型，每种类型实际对应的变型刚好有$$\frac{4!}{4!},\frac{4!}{3!1!},\frac{4!}{2!2!},\frac{4!}{2!1!1!},\frac{4!}{1!1!1!1!1!}$$种。这和$pfaffian$的四次方刚好一致。所以关于系数，左边刚好等于右边。项数左边刚好全部包含在右边，右边全部落在左边。
-这是一个预计的证明，但是结果事与愿违，还有一些其它情形的存在导致了错误的结论，下面是验证结果做的一些猜测，都是错误的，从这些错误的猜测中能够得出上述猜测的错误！
-\begin{guess}
-将四组$pfaffian$形式的下标元作为左边的下标矩阵的列元（顺序上调整）进行排列，总可以得到至少一个左边下标矩阵的元
-\end{guess}
-\begin{guess}
-将四组$pfaffian$形式的下标元作为左边的下标矩阵的列元（顺序上调整）进行排列，总可以得到至少一个左边下标矩阵的元，而且这样的下标矩阵实际上可以任意排列若干列，只要这若干列是按照规则去排列，都可以延展成一个下标矩阵。
-\end{guess}
-反例：
-\begin{equation}\begin{bmatrix}1\\5\\9\\13 \end{bmatrix}
-\begin{bmatrix}2\\6\\10\\14 \end{bmatrix}
-\begin{bmatrix}3\\7\\11\\15 \end{bmatrix}
-\begin{bmatrix}4\\8\\12\\16 \end{bmatrix}\end{equation}
+或者
 
 \begin{equation}
-\begin{bmatrix}1\\9\\5\\13 \end{bmatrix}
-\begin{bmatrix}2\\10\\6\\14 \end{bmatrix}
-\begin{bmatrix}3\\11\\7\\15 \end{bmatrix}
-\begin{bmatrix}4\\12\\8\\16 \end{bmatrix}
+\begin{aligned}
+\omega_{i}=
+& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
+\end{aligned}\end{equation}
+\begin{equation}
+\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
+\begin{aligned}
+& = det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n
+\end{aligned}
 \end{equation}
-三个(8)型和一个(9)型在一起无法构成一个左边,重新定义一下pfaffian
+从这里可以看出$det(A)$的几何意义，他是外积子空间做外积运算的一个度量。
 
-\begin{define}
- 反称双重维数矩阵的pfaffian
-    \begin{equation}p_{1},p_{2},p_{3},p_{4},p_{5},p_{6},p_{7},p_{8}
-   ,...,p_{n-3},p_{n-2},p_{n-1},p_{n}\end{equation}
-   $p_{i},p_{i+1},p_{i+2},p_{i+3}$的序关系为$p_{i}mod4=1,p_{i}mod4=2,p_{i}mod4=3,p_{i}mod4=4$。
-   \begin{equation}p_{1}<p_{5}<...<p_{n-3}\end{equation}
-   $$pfaffian(A_{ijkl})=\sum\limits_{\sigma=p_{1}p_{2}...p_{n}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{n-3}p_{n-2}p_{n-1}p_{n}}$$
-\end{define}
-恰恰在这么多的错误基础上，终于发现这样是可以得到等式了。
+pfaffian用外积来定义,
+\begin{equation}\delta=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
+\begin{equation}\delta^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
+
 \begin{theorem}
 矩阵$A_{4}$的下角标写成列向量形式，这里将列向量还是按照（1）（2）式的定义来定义了，实际上这不影响结论，只是记法上的差别。如果只有$$\begin{pmatrix}i\\i+1\\i+2\\i+3 \end{pmatrix},\begin{pmatrix}i+1\\i+2\\i+3\\i \end{pmatrix},\begin{pmatrix}i+2\\i+3\\i\\i+1 \end{pmatrix},\begin{pmatrix}i+3\\i\\i+1\\i+2 \end{pmatrix}$$和$$\begin{pmatrix}i\\i+4k\\i+8k\\i+12k \end{pmatrix},\begin{pmatrix}i+4k\\i+8k\\i+12k\\i \end{pmatrix},\begin{pmatrix}i+8k\\i+12k\\i\\i+4k \end{pmatrix},\begin{pmatrix}i+12k\\i\\i+4k\\i+8k \end{pmatrix}$$ 存在, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
@@ -557,16 +665,16 @@ $A$为反称矩阵，则$det(A)=pfaffian^{4}(A)$。
 考虑元素的下标，将下标作为列向量写成普通矩阵形式。\\
 将右边和式单项的下角标写成矩阵形式\begin{equation}\begin{bmatrix}p_{1}&p_{5}&...&p_{N-3}\\p_{2}&p_{6}&...&p_{N-2}\\p_{3}&p_{7}&...&p_{N-1}\\p_{4}&p_{8}&...&p_{N}\\\end{bmatrix}\end{equation}
 那么需要证明左边矩阵和右边矩阵的的四次方存在一一对应。\\
-这里的矩阵都忽略列向量的互换，视为无差别。\\\\
+这里的矩阵都忽略列向量间的互换，视为无差别。\\\\
 第一步的证明：
 将$1,...,n$进行分组
 \begin{equation}\{1+16ik+4j,4+4k+16ik+4j,3+8k+16ik+4j,2+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
 \begin{equation}\{2+16ik+4j,1+4k+16ik+4j,4+8k+16ik+4j,3+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
 \begin{equation}\{3+16ik+4j,2+4k+16ik+4j,1+8k+16ik+4j,4+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
 \begin{equation}\{4+16ik+4j,3+4k+16ik+4j,2+8k+16ik+4j,1+12k+16ik+4j \mid i=0,1,...;j=0,1,...,k-1\}\end{equation}
-$(4)$中的$4$行元素从上至下分别对应于分组$(5)(6)(7)(8)$，显然是恰当的。同样的对应于分组
-$$(6)(7)(8)(5),(7)(8)(5)(6),(8)(5)(6)(7),$$也是恰当的。将四次方乘积中的和式单项分别对应于四种不同的分组，恰好就得到一个左边的矩阵元$(3)$。\\
-第二步的证明：将$(3)$中的列向量分成四组，第一组的列元素从上至下分别从属于$(5)(6)(7)(8)$，依次二三四组从属于$(6)(7)(8)(5)$，$(7)(8)(5)(6)$，$(8)(5)(6)(7)$，那么这四组分别对应于一个形式$(3)$，从而左边元落入右边。\\
+$(15)$中的$4$行元素从上至下分别对应于分组$(16)(17)(18)(19)$，显然是恰当的。同样的对应于分组
+$$(17)(18)(19)(16),(18)(19)(16)(17),(19)(16)(17)(18),$$也是恰当的。将四次方乘积中的和式单项分别对应于四种不同的分组，恰好就得到一个左边的矩阵元$(3)$。\\
+第二步的证明：将$(14)$中的列向量分成四组，第一组的列元素从上至下分别从属于$(16)(17)(18)(19)$，依次二三四组从属于$(17)(18)(19)(16),(18)(19)(16)(17),(19)(16)(17)(18)$，那么这四组分别对应于一个形式$(15)$，从而左边元落入右边。\\
 第三步的证明：将右边元素看成都是从初始元（即$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$形式）变换过来的，变换的规则为每次只允许进行四个元竖起来，或者四个并行进行左右移动一格。即
 $$\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)\\
 (i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
@@ -586,7 +694,7 @@ i+8k&(i+3+4k)&(i+3+8k)&(i+3+12k)\\
 i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ 那么通过这样的变换最终就可以得到最终元，而每一步的变换都不会带来符号上的改变，所以最终符号也是相同的，且这里还都是正号,即证。
 \end{proof}
 
-证明中关于等式右边的式子$[4]$举例如下：
+证明中关于等式右边的式子举例如下：
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.35\textwidth]{c.pdf}
@@ -610,6 +718,11 @@ $$\begin{bmatrix}
 3&7&17&10&21&28&35&14&39&32&42&46&49&53&60&64\\
 4&8&25&11&18&29&36&22&15&40&43&47&50&54&57&61\\\end{bmatrix}$$
 
+很容易验证这里举例的两个角标矩阵是满足证明中的第一步的分组性质的。
+通过计算机编程，可以验证的结果如下：
+方块为$1 \times 4$时，$det(A) = pfaffian(A)^{4} = 1$
+方块为$4 \times4$时，$det(A) = pfaffian(A)^{4} = 16$
+方块为$5 \times4$时，$det(A) = pfaffian(A)^{4} = 81$
 \begin{theorem}
 矩阵$A_{4}$的下角标写成列向量形式，如果每列元素只能是以4为周期的元素连续的顺序向量列之间行元素与行元素的交叉变换得到的列，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
@@ -625,53 +738,145 @@ $$\begin{bmatrix}
 而变换都是可逆的，所以对于原始形式一样可以分解成四个pfaffian形式的列。四个右边可以合并成一个左边是显然的。
 符号相同的证明，对于左边矩阵中的下标元矩阵由原始的正则型变换通过行变换而来，而每次变换都引起一次逆序数。这对于最终分斥的pfaffian形式来说也同样引起一次符号的变换，所以符号相同。
 \end{proof}
-接下来，为了能够得到一些类似Kasteleyn$^{[1]}$中巧妙计算，又定义了一些符号。
-\begin{define} 双重维数矩阵的叉乘
+
+\sec{3 计算}
+
+{\bf 定义 1.4}\quad  双重维数矩阵的乘法
+   $$[A_{ij}][B_{ijkl}]=[C_{ijkl}]$$
+   $$c_{ijkl} = \Sigma_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
+
+\begin{theorem}\quad  乘法定理
+
+    $$det([A_{ij}][B_{ijkl}])=det([A_{ij}])det([B_{ijkl}])$$
+\end{theorem}
+
+{\bf 证明}\quad
+
 \begin{align*}
-[B_{ijkl}] \times [A_{ij}]&=
-   \begin{bmatrix}\begin{smallmatrix}
-  \beta_{11}& \beta_{12}& \cdots&\beta_{1n}\\
-  \beta_{21}& \beta_{22}& \cdots&\beta_{2n}\\
+det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
+&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n}\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det([A_{ij}])\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
+&=det([A_{ij}])det([B_{ijkl}])
+\end{align*}
+
+
+或者通过外积形式证明如下：
+令
+$$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
+$$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
+$$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
+则
+\begin{equation}
+f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
+\begin{aligned}
+& = \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{
+3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
+\end{aligned}
+\end{equation}
+
+在$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n}),(f_{2}^{1},f_{2}^{2},...,f_{2}^{n}),(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})$
+基底下的表示如下：
+\begin{equation}
+\begin{aligned}
+\omega_{i}
+&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}} f_{1}^{j_{\sigma}} \wedge f_{2}^{k_{\sigma}} \wedge f_{3}^{l_{\sigma}} \\
+&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
+\sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}\\
+&= \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}\sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
+x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
+\end{aligned}\end{equation}
+由此
+$a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$
+
+\begin{equation}
+\begin{aligned}
+\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
+& = det(B) f_{1}^1\wedge f_{1}^2 \cdots \wedge f_{1}^n \wedge f_{2}^1\wedge f_{2}^2 \cdots \wedge f_{2}^n
+\wedge f_{3}^1\wedge f_{3}^2 \cdots \wedge f_{3}^n\\
+& = det(B)det(X_{1})det(X_{2})det(X_{3}) \\
+&e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
+\end{aligned}
+\end{equation}
+由此得到$det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
+\\
+
+
+\begin{theorem}  $A_{4}$的拉普拉斯定理
+$$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A_{i,j,k,l} $$
+\end{theorem}
+{\bf 证明}\quad
+左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
+
+
+推广的命题是，
+$$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
+(-1)^{\sum_{t=1}^{p}(i_{t}+j_{t}+k_{t}+l_{t})}
+M_{\left(\begin{array}{cccc}
+i_{1} & i_{2} & \cdots & i_{p} \\
+j_{1} & j_{2} & \cdots & j_{p} \\
+k_{1} & k_{2} & \cdots & k_{p} \\
+l_{1} & l_{2} & \cdots & l_{p} \\
+\end{array}\right)}
+A_{\left(\begin{array}{cccc}
+i_{p+1} & i_{p+2} & \cdots & i_{n} \\
+j_{p+1} & j_{p+2} & \cdots & j_{n} \\
+k_{p+1} & k_{p+2} & \cdots & k_{n} \\
+l_{p+1} & l_{p+2} & \cdots & l_{n} \\
+\end{array}\right)}$$
+项数上的关系是左边$(n!)^{3}$,右边是$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$结论也比较显然。
+
+
+\begin{define}
+矩阵的叉积
+\\
+   $$\begin{bmatrix}\begin{smallmatrix}
+  A_{11}& A_{12}& \cdots&A_{1n}\\
+  A_{21}& A_{22}& \cdots&A_{2n}\\
   & & \cdots&\\&\\
-  \beta_{n1}& \beta_{n2}& \cdots&\beta_{nn}\\
- \end{smallmatrix}\end{bmatrix} \times [A_{ij}]\\
- &=
+  A_{n1}& A_{n2}& \cdots&A_{nn}\\
+ \end{smallmatrix}\end{bmatrix}
+ \times
  \begin{bmatrix}\begin{smallmatrix}
- a_{11}\begin{bmatrix}\begin{smallmatrix}
-  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
-  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
+  B_{11}& B_{12}& \cdots&B_{1m}\\
+  B_{21}& B_{22}& \cdots&B_{2m}\\
   & & \cdots&\\&\\
-  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
- \end{smallmatrix}\end{bmatrix}&
- \cdots&
- a_{1n}\begin{bmatrix}\begin{smallmatrix}
-  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
-  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
-  & & \cdots&\\&\\
-  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
- \end{smallmatrix}\end{bmatrix}\\
- & \cdots&&\\
- a_{n1}\begin{bmatrix}\begin{smallmatrix}
-  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
-  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
-  & & \cdots&\\&\\
-  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
- \end{smallmatrix}\end{bmatrix}&
- \cdots&
- a_{nn}\begin{bmatrix}\begin{smallmatrix}
-  \beta_{11}\times [A_{ij}]& \beta_{12}\times [A_{ij}]& \cdots&\beta_{1n}\times [A_{ij}]\\
-  \beta_{21}\times [A_{ij}]& \beta_{22}\times [A_{ij}]& \cdots&\beta_{2n}\times [A_{ij}]\\
-  & & \cdots&\\&\\
-  \beta_{n1}\times [A_{ij}]& \beta_{n2}\times [A_{ij}]& \cdots&\beta_{nn}\times [A_{ij}]\\
- \end{smallmatrix}\end{bmatrix}\\
-  \end{smallmatrix}\end{bmatrix}
-\end{align*}\
+  B_{m1}& B_{m2}& \cdots&B_{mm}\\
+ \end{smallmatrix}\end{bmatrix}\\$$
+ $$=\\
+ \begin{bmatrix}\begin{smallmatrix}
+  A_{11} \times B_{11}& A_{12} \times B_{11}& \cdots&A_{1n} \times B_{11}
+  & & \cdots&
+  A_{11} \times B_{1m}& A_{12} \times B_{1m}& \cdots&A_{1n} \times B_{1m}\\
+  A_{21} \times B_{11}& A_{22} \times B_{11}& \cdots&A_{2n} \times B_{11}
+  & & \cdots&
+  A_{21} \times B_{1m}& A_{22} \times B_{1m}& \cdots&A_{2n} \times B_{1m}\\
+  & & & & &\cdots& &\\
+  A_{n1} \times B_{11}& A_{n2} \times B_{11}& \cdots&A_{nn} \times B_{11}
+  & & \cdots&
+  A_{n1} \times B_{1m}& A_{n2} \times B_{1m}& \cdots&A_{nn} \times B_{1m}\\
+  \cdots &\cdots &\cdots &\cdots &\cdots  &\cdots  &\cdots &\cdots  &\cdots &\cdots \\
+  A_{11} \times B_{m1}& A_{12} \times B_{m1}& \cdots&A_{1n} \times B_{m1}
+  & & \cdots&
+  A_{11} \times B_{mm}& A_{12} \times B_{mm}& \cdots&A_{1n} \times B_{mm}\\
+  A_{21} \times B_{m1}& A_{22} \times B_{m1}& \cdots&A_{2n} \times B_{m1}
+  & & \cdots&
+  A_{21} \times B_{mm}& A_{22} \times B_{mm}& \cdots&A_{2n} \times B_{mm}\\
+  & & & & &\cdots& &\\
+  A_{n1} \times B_{m1}& A_{n2} \times B_{m1}& \cdots&A_{nn} \times B_{m1}
+  & & \cdots&
+  A_{n1} \times B_{mm}& A_{n2} \times B_{mm}& \cdots&A_{nn} \times B_{mm}\\
+  \end{smallmatrix}\end{bmatrix}$$
 \end{define}
+
+
 类似 Kasteleyn$^{[1]}$中将计算的矩阵表达成
-$D=z(Q_{m}\times E_{n})  +  z^{'} (F_{m} \times Q_{n})$
-这里关于$tetramer$的计算也可以表达成两个类型的和式。
+$D=z(Q_{n}\times E_{m})  +  z^{'} (F_{n} \times Q_{m})$
+由上面的定义，这里关于$tetramer$的计算也可以表达成两个类型的和式。
+假设矩形方块为$n\times m$,
 $$
-  Q = \begin{bmatrix}\begin{smallmatrix}
+  Q_{n} = \begin{bmatrix}\begin{smallmatrix}
   0& 0& 0&
   \begin{bmatrix}\begin{smallmatrix}
  0& 0& 0&0&\cdots&0\\
@@ -719,166 +924,15 @@ $$
  \end{smallmatrix}\end{bmatrix}& 0& \cdots&\\
  0& 0& \ddots &0 &0 &0 &\ddots \\
 \end{smallmatrix}\end{bmatrix}$$
-
+$$= \begin{bmatrix}\begin{smallmatrix}
+ 0& 0& 0& A^{1}_{n} & 0 &\cdots& 0\\
+ A^{2}_{n} & 0& 0& 0& A^{2}_{n} &\cdots& 0\\
+ & & \cdots & &\\
+ 0& 0& 0& \cdots& 0& A^{n}_{n}& 0
+\end{smallmatrix}\end{bmatrix}_{n} $$
+$Q_{n}\times E_{m}$
 那么有结果
-$D=z(Q_{m}\times E_{n})  +  z^{'} (F_{m} \times E_{n})$
-这里的$F$的定义类似于$Q$，由于书写繁琐，无法很好的表达出来，所以不写出来了。\\
-为了计算的方便，这里给出双重维数的乘法定义。
-
-{\bf 定义 1.4}\quad  双重维数矩阵的乘法
-   $$[A_{ij}][B_{ijkl}]=[C_{ijkl}]$$
-   $$c_{ijkl} = \Sigma_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
-
-{\bf 定理 1.3}\quad  乘法定理
-
-    $$det([A_{ij}][B_{ijkl}])=det([A_{ij}])det([B_{ijkl}])$$
-
-{\bf 证明}\quad
-
-\begin{align*}
-det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
-&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n}\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det([A_{ij}])\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
-&=det([A_{ij}])det([B_{ijkl}])
-\end{align*}
-
-
-{\bf 定理 1.4}\quad  拉普拉斯定理
-$$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A_{i,j,k,l} $$
-
-{\bf 证明}\quad
-左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
-
-
-推广的命题是，
-$$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
-(-1)^{\sum_{t=1}^{p}(i_{t}+j_{t}+k_{t}+l_{t})}
-M_{\left(\begin{array}{cccc}
-i_{1} & i_{2} & \cdots & i_{p} \\
-j_{1} & j_{2} & \cdots & j_{p} \\
-k_{1} & k_{2} & \cdots & k_{p} \\
-l_{1} & l_{2} & \cdots & l_{p} \\
-\end{array}\right)}
-A_{\left(\begin{array}{cccc}
-i_{p+1} & i_{p+2} & \cdots & i_{n} \\
-j_{p+1} & j_{p+2} & \cdots & j_{n} \\
-k_{p+1} & k_{p+2} & \cdots & k_{n} \\
-l_{p+1} & l_{p+2} & \cdots & l_{n} \\
-\end{array}\right)}$$
-项数上的关系是左边$(n!)^{3}$,右边是$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$
-
-
- \sec{2 外积下的重定义以及几何解释探讨}
-
-用外积来定义双重维数矩阵的行列式,
-\begin{equation}
-\begin{aligned}
-\omega=
-& \sum_{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}\\
-& a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
-& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}}\\
-& \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}}\\
-& \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}}\\
-& \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
-\end{aligned}\end{equation}
-\begin{equation}
-\omega^{n}
-\begin{aligned}
-& = n! det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n \wedge e_{4}^1\wedge e_{4}^2 \cdots \wedge e_{4}^n
-\end{aligned}\end{equation}
-
-或者
-
-\begin{equation}
-\begin{aligned}
-\omega_{i}=
-& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
-\end{aligned}\end{equation}
-\begin{equation}
-\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
-\begin{aligned}
-& = det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n
-\end{aligned}
-\end{equation}
-从这里可以看出$det(A)$的几何意义，他是外积子空间做外积运算的一个度量。
-
-pfaffian用外积来定义,
-\begin{equation}\omega=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
-\begin{equation}\omega^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
-
-令
-$$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
-$$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
-$$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
-则
-\begin{equation}
-f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
-\begin{aligned}
-& = \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{
-3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
-\end{aligned}
-\end{equation}
-
-在$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n}),(f_{2}^{1},f_{2}^{2},...,f_{2}^{n}),(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})$
-基底下的表示如下：
-\begin{equation}
-\begin{aligned}
-\omega_{i}
-&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}} f_{1}^{j_{\sigma}} \wedge f_{2}^{k_{\sigma}} \wedge f_{3}^{l_{\sigma}} \\
-&= \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
-\sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}\\
-&= \sum_{\xi_{1}}\sum_{\xi_{2}}\sum_{\xi_{3}}\sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
-x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
-\end{aligned}\end{equation}
-由此
-$a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$
-
-\begin{equation}
-\begin{aligned}
-\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
-& = det(B) f_{1}^1\wedge f_{1}^2 \cdots \wedge f_{1}^n \wedge f_{2}^1\wedge f_{2}^2 \cdots \wedge f_{2}^n
-\wedge f_{3}^1\wedge f_{3}^2 \cdots \wedge f_{3}^n\\
-& = det(B)det(X_{1})det(X_{2})det(X_{3}) \\
-&e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
-\end{aligned}
-\end{equation}
-由此得到$det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
-\\
-
-\begin{theorem}  若A,B矩阵存在关系
-$a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$，
-记为$A=B{X_{1}X_{2}X_{3}}$
-\end{theorem}
-则$$det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$$.
-同样可以定义前乘积$X_{1}X_{2}X_{3}{B}$
-
-\sec{3 $1\times 3$覆盖数计算公式}
-
-把问题转化成取每个小方块中点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3})(p_{4},p_{5},p_{6})...(p_{N-2},p_{N-1},p_{N})$.\\
-    其中$(p_{j},p_{j+1},p_{j+2}),j=3k+1 (k=0,1,...)$为一个trimer的三个连续点。为了一种覆盖对应于一种表示，要求满足
-
-    \begin{equation}p_{1}<p_{2}<p_{3},p_{4}<p_{5}<p_{6}
-   ,...p_{N-2}<p_{N-1}<p_{N}\end{equation}
-
-   \begin{equation}p_{1}<p_{4}<...<p_{N-2}\end{equation}
-
-      \begin{equation}\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(27)(28)}sgn\sigma a_{p_{1}p_{2}p_{3}}a_{p_{4}p_{5}p_{6}}...a_{p_{N-2}p_{N-1}p_{N}}\end{equation}
-
-   \begin{equation}a_{(i,j;i+1,j;i+2,j;)}=1,1\leq i \leq m-3,1\leq j\leq n jmod3=1\end{equation}
- \begin{equation}a_{(i,j;i+1,j;i+2,j;)}=-1,1\leq i \leq m-3,1\leq j\leq n jmod3\neq1\end{equation}
-   \begin{equation}a_{(i,j;i,j+1;i,j+2;i,j+3)}=-1,1\leq i \leq m,1\leq j\leq n-3\end{equation}
-
-   \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
-
-   对应的矩阵记为$A_{3}=(a_{ijk})$,满足$a_{jik}=-a_{ijk}$，$i,j,k$的任意一个序关系都满足逆序数正负号。
-   这样得到的公式$(33)$，称为$pfaffian(A_{3})$。
-   验证了部分结果，这样定义的符号都满足了符号相消！但是这里不做结果验证。
-   相应的给出
-   \begin{equation}det(A_{3})=\sum\limits_{\sigma,\tau}sgn\sigma sgn\tau a_{1\sigma(1)\tau(1)}a_{2\sigma(2)\tau(2)}...a_{N\sigma(N)\tau(N)}\end{equation}
+$D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$。\\
 
  \sec{参考文献}
 \baselineskip 13pt {\footnotesize
@@ -894,7 +948,19 @@ $a_{ijkl}=\sum_{j_{\sigma}k_{\sigma}l_{\sigma}}b_{ij_{\sigma}k_{\sigma}l_{\sigma
 
 \vskip .25in
 
-\centerline{\Large\bf  The statistics of tetramers on a lattice }\vskip.1in\centerline{\normalsize\zihao{5} Hui Hui$^{1}$}\vskip .13in{\small({\it  1. Department of Mathematics, NanJing University, Nanjing,Jiangsu, 210093, P. R. China})}\vskip .23in\baselineskip 14pt \zihao{5}\normalsize {\indent{\bf Abstract:}\ \The article Kasteleyn$^{[1]}$ transfer dimer tiling to determinant of matrix ingenious, finally, get formula of it.so, what about of three,four?this is intreseting.this article will written by author's thinking order.first discuss four,and last three.and some geometric means will be discussed also.\\{\bf Key words:double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian;trimer; dimer; tertramer}\ \
+\centerline{\Large\bf  The statistics of tetramers on a lattice }\vskip
+.1in
+
+\centerline{\normalsize\zihao{5} Hui Hui$^{1}$}\vskip .13in
+
+{\small({\it  1. Department of Mathematics, NanJing University, Nanjing,
+Jiangsu, 210093, P. R. China})}\vskip .23in
+
+\baselineskip 14pt \zihao{5}\normalsize {\indent{\bf Abstract:}\ \
+The article Kasteleyn$^{[1]}$ transfer dimer tiling to determinant of matrix ingenious, finally, get formula of it.
+so, what about of three,four?this is intreseting.this article will written by author's thinking order.first discuss four
+,and last three.and some geometric means will be discussed also.\\
+{\bf Key words:double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian;trimer; dimer; tertramer}\ \
 
 }
 \end{document}
