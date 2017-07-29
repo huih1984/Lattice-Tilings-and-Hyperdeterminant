@@ -113,10 +113,10 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 
 %很容易得到类似于$pfaffian$的表达形式,进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学符号的形式美，经过一番努力，终于找到了相应的矩阵形式。而这种拓展的矩阵形式本身却更有耐人寻味的结构美，作者没有见过有什么文献对这种形式的矩阵有深入的研究，这里作者只得出了一些少量的结果，作者能力有限，希望有更多的研究者参与其中来研究这种矩阵。
 
-\sec{1 $1\times 4$覆盖数计数表示}
+\sec{1 表示方法}
 
 
-把问题转化成取每个小方块的端点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
+采用$Kasteleyn^{[1]}$相同的表示方法，把问题转化成取每个小方块的端点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
     其中$(p_{j},p_{j+1},p_{j+2},p_{j+3}),j=4k+1 (k=0,1,...)$为一个tetramer的四个连续点。为了一种覆盖对应于一种表示，要求满足
 
     \begin{equation}\label{1}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
@@ -124,8 +124,6 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 
    \begin{equation}p_{1}<p_{5}<...<p_{N-3}\end{equation}
 
-   这样的排列与$pfaffian$的排列不同，所以不再能用$pfaffian$来计算了。但是从形式上看这些排列与$pfaffian$要求的排列又很相似，只是
-   作为一个小组的数字个数由2变成了4，
       \begin{equation}\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
    \begin{equation}a_{(i,j;i+1,j;i+2,j;i+3,j)}=1,1\leq i \leq m-3,1\leq j\leq n\end{equation}
@@ -135,7 +133,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
    \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
 
    对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
-   这样得到的表达式$(3)$，仍然称为$pfaffian(A_{4})$。从形式上讲，这样称呼完全正确！
+   这样得到的表达式$(3)$，仍然称为$pfaffian(A_{4})$。
 
 
 \sec{2 恒等式的证明}
