@@ -107,7 +107,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 \baselineskip 15pt \vskip.15in
 
 \sec{0 引言}
-关于$dimer$覆盖数的计算问题，起源于$Kasteleyn^{[1]}$的文章，文章给出了$dimer$在$m \times n$的块状上和环面上的覆盖数的计算公式。但是用$tetramer$覆盖的公式却没有研究结果,用$1\times n$覆盖的文章有$Mathar^{[4]}$，但是文章只讨论了$9 \times n$，本文讨论的问题则关注一般性的计算问题。
+关于$dimer$覆盖数的计算问题，起源于$Kasteleyn^{[1]}$的文章，文章给出了$dimer$在$m \times n$的块状上和环面上的覆盖数的计算公式。但是用$tetramer$覆盖的公式却没有研究结果,用$1\times n$覆盖的文章有$Mathar^{[4]}$，但是文章只讨论了被覆盖为$9 \times n$的计算公式，本文讨则关注一般性的计算问题。
 %数学公式在推广到更高阶的情形，情况往往变得复杂，比如方程解的问题，在小于五次时，有比较简单根式形式，而高于五次的方程一般而言没有根式解，给出深刻的约束条件，高阶方程的根式解依然存在，这个
 % 数学历史上的著名问题给人深深的哲思启发。理论的推广几乎总是去除局限的部分，余下的情形就可以拓展开来，发现更多的现象和本质，本文接下来就讨论$1 \times 4$骨牌覆盖数的计算公式。
 
@@ -116,44 +116,77 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 \sec{1 表示方法}
 
 
-采用$Kasteleyn^{[1]}$相同的表示方法，把问题转化成取每个小方块的端点，把一个$1\times 4$ tetramer转化为长为3的直线段。$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
-    其中$(p_{j},p_{j+1},p_{j+2},p_{j+3}),j=4k+1 (k=0,1,...)$为一个tetramer的四个连续点。为了一种覆盖对应于一种表示，要求满足
+\begin{center}
+\begin{tikzpicture}[radius=0.1cm]
+\selectcolormodel{cmyk}
+
+\node[opacity=0.5] at (.25,-.25) {$1$};
+\draw[green, step=.5] (0,0)grid(2,.5);
+\node[opacity=0.5] at (.25,.25) {$p_{1}$};
+\node[opacity=0.5] at (.75,.25) {$p_{2}$};
+\node[opacity=0.5] at (1.25,.25) {$p_{3}$};
+\node[opacity=0.5] at (1.75,.25) {$p_{4}$};
+\draw[red, step=.5] (2,0)grid(2.5,2);
+\node[opacity=0.5] at (2.25,.25) {$p_{5}$};
+\node[opacity=0.5] at (2.25,.75) {$p_{6}$};
+\node[opacity=0.5] at (2.25,1.25) {$p_{7}$};
+\node[opacity=0.5] at (2.25,1.75) {$p_{8}$};
+\draw[orange, step=.5] (0,0.5)grid(2,1);
+\node[opacity=0.5] at (.25,.75) {$p_{9}$};
+\node[opacity=0.5] at (.75,.75) {$p_{10}$};
+\node[opacity=0.5] at (1.25,.75) {$p_{11}$};
+\node[opacity=0.5] at (1.75,.75) {$p_{12}$};
+\draw[blue, step=.5] (0,1)grid(2,1.5);
+\node[opacity=0.5] at (.25,1.25) {$p_{13}$};
+\node[opacity=0.5] at (.75,1.25) {$p_{14}$};
+\node[opacity=0.5] at (1.25,1.25) {$p_{15}$};
+\node[opacity=0.5] at (1.75,1.25) {$p_{16}$};
+\draw[cyan, step=.5] (0,1.5)grid(2,2);
+\node[opacity=0.5] at (.25,1.75) {$p_{17}$};
+\node[opacity=0.5] at (.75,1.75) {$p_{18}$};
+\node[opacity=0.5] at (1.25,1.75) {$p_{19}$};
+\node[opacity=0.5] at (1.75,1.75) {$p_{20}$};
+\node[opacity=0.5] at (2.25,2.25) {$20$};
+\end{tikzpicture}
+\end{center}
+采用$Kasteleyn^{[1]}$相同的表示方法，$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
+    其中$(p_{j},p_{j+1},p_{j+2},p_{j+3})$为一个长方块的四个连续坐标。
 
     \begin{equation}\label{1}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
    ,...,p_{N-3}<p_{N-2}<p_{N-1}<p_{N}\end{equation}
 
    \begin{equation}p_{1}<p_{5}<...<p_{N-3}\end{equation}
 
-      \begin{equation}\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
-
    \begin{equation}a_{(i,j;i+1,j;i+2,j;i+3,j)}=1,1\leq i \leq m-3,1\leq j\leq n\end{equation}
-
    \begin{equation}a_{(i,j;i,j+1;i,j+2;i,j+3)}=1,1\leq i \leq m,1\leq j\leq n-3\end{equation}
-
    \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
 
+   \begin{equation}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
+
    对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
-   这样得到的表达式$(3)$，仍然称为$pfaffian(A_{4})$。
+   这样得到的表达式$(6)$，仍然称为$pfaffian$。
 
 
-\sec{2 恒等式的证明}
+\sec{2 $pfaffian \rightarrow det$的转换}
 
-\begin{define}\quad 双重维数矩阵
-$\begin{bmatrix}
-a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$,$n$称为内维数，$m$称为外维数。此文只考虑$m$为4的情形。
+\begin{define}\quad 矩阵的内维数和外维数:
 \end{define}
-\begin{define}\quad 矩阵行列式
-将$[a_{ijkl}]$表示成矩阵的矩阵形式，内矩阵的指标分别对应于$i,j$，外矩阵对应于指标$k,l$，行列式$det$满足如下性质：
+$\begin{bmatrix}
+a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$为$n$个下指标构成的多维矩阵，每个指标取值为$1,2,\cdots,m$，则$n$称为内维数，$m$称为外维数。此文只考虑$n$为4的情形。
 
+\begin{define}\quad 矩阵行列式:
+\end{define}
+
+将$[a_{ijkl}]$表示成矩阵的矩阵形式，内部子矩阵的指标为$i,j$，外部矩阵指标为$k,l$，行列式$det$满足如下性质：
 \newcounter{Lcount}
 \begin{list}{\Roman{Lcount}}
 {\usecounter{Lcount}
 \setlength{\rightmargin}{\leftmargin}}
 %\scriptsize
 \item
-行列式乘以系数k，与在某个指标中的固定取值上乘以k所得矩阵的行列式相等。如取$l=1$如下：
+系数性质，行列式乘以系数k，与在某个指标中的固定取值上乘以k所得矩阵的行列式相等。如取$l=1$如下：
 \begin{align*}
-k det
+s det
   \begin{bmatrix}
   \begin{bmatrix}
   \  a_{1111}&\  a_{2111}&\cdots&\  a_{n111}\\
@@ -187,17 +220,17 @@ k det
 =det
   \begin{bmatrix}
   \begin{bmatrix}
- ka_{1111}& ka_{2111}&\cdots&ka_{n111}\\
- ka_{1211}& ka_{2211}&\cdots&ka_{n211}\\
+ sa_{1111}& sa_{2111}&\cdots&sa_{n111}\\
+ sa_{1211}& sa_{2211}&\cdots&sa_{n211}\\
   \cdots&\cdots&\cdots &\cdots& \\
-ka_{1n11}& ka_{2n11}&\cdots&ka_{nn11}\\
+sa_{1n11}& sa_{2n11}&\cdots&sa_{nn11}\\
  \end{bmatrix}
 \cdots
 \begin{bmatrix}
-ka_{11n1}& ka_{21n1}&\cdots&ka_{n1n1}\\
-ka_{12n1}& ka_{22n1}&\cdots&ka_{n2n1}\\
+sa_{11n1}& sa_{21n1}&\cdots&sa_{n1n1}\\
+sa_{12n1}& sa_{22n1}&\cdots&sa_{n2n1}\\
   \cdots&\cdots&\cdots &\cdots& \\
-ka_{1nn1}& ka_{2nn1}&\cdots&ka_{nnn1}\\
+sa_{1nn1}& sa_{2nn1}&\cdots&sa_{nnn1}\\
 \end{bmatrix}\\
 \vdots\\
 \begin{bmatrix}
@@ -216,37 +249,37 @@ ka_{1nn1}& ka_{2nn1}&\cdots&ka_{nnn1}\\
 \end{bmatrix}
  \end{align*}
  \item
- 某个指标下的任意两列交换位置，行列式正负号互换，例如下：
+ 符号性质，某个指标下的任意两列交换位置，行列式正负号互换，例如下：
 \begin{align*}
 det
   \begin{bmatrix}
 \vdots\\
  \begin{bmatrix}
- a_{111i}& a_{211i}&\cdots&a_{n11i}\\
- a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+ a_{111\xi}& a_{211\xi}&\cdots&a_{n11\xi}\\
+ a_{121\xi}& a_{221\xi}&\cdots&a_{n21\xi}\\
   \cdots&\cdots&\cdots &\cdots& \\
-a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
 \end{bmatrix}
 \cdots
 \begin{bmatrix}
-  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
-  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+  a_{11n\xi}& a_{21n\xi}&\cdots&a_{n1n\xi}\\
+  a_{12n\xi}& a_{22n\xi}&\cdots&a_{n2n\xi}\\
   \cdots&\cdots&\cdots &\cdots& \\
- a_{1nni}& a_{2nni}&\cdots&a_{nnni}\\
+ a_{1nn\xi}& a_{2nn\xi}&\cdots&a_{nnn\xi}\\
  \end{bmatrix}\\
 \vdots\\
 \begin{bmatrix}
-  a_{111j}& a_{211j}&\cdots&a_{n11j}\\
-  a_{121j}& a_{221j}&\cdots&a_{n21j}\\
+  a_{111\eta}& a_{211\eta}&\cdots&a_{n11\eta}\\
+  a_{121\eta}& a_{221\eta}&\cdots&a_{n21\eta}\\
   \cdots&\cdots&\cdots &\cdots& \\
-   a_{1n1j}& a_{2n1j}&\cdots&a_{nn1j}\\
+   a_{1n1\eta}& a_{2n1\eta}&\cdots&a_{nn1\eta}\\
    \end{bmatrix}
 \cdots
 \begin{bmatrix}
-  a_{11nj}& a_{21nj}&\cdots&a_{n1nj}\\
-  a_{12nj}& a_{22nj}&\cdots&a_{n2nj}\\
+  a_{11n\eta}& a_{21n\eta}&\cdots&a_{n1n\eta}\\
+  a_{12n\eta}& a_{22n\eta}&\cdots&a_{n2n\eta}\\
   \cdots&\cdots&\cdots &\cdots& \\
-   a_{1nnj }& a_{2nnj}&\cdots&a_{nnnj}\\
+   a_{1nn\eta }& a_{2nn\eta}&\cdots&a_{nnn\eta}\\
    \end{bmatrix}\\
 \vdots\\
     \end{bmatrix}\\
@@ -254,31 +287,31 @@ a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
   \begin{bmatrix}
 \vdots\\
  \begin{bmatrix}
-   a_{111j}& a_{211j}&\cdots&a_{n11j}\\
-   a_{121j}& a_{221j}&\cdots&a_{n21j}\\
+   a_{111\eta}& a_{211\eta}&\cdots&a_{n11\eta}\\
+   a_{121\eta}& a_{221\eta}&\cdots&a_{n21\eta}\\
   \cdots&\cdots&\cdots &\cdots& \\
-   a_{1n1j}& a_{2n1j}&\cdots&a_{nn1j}\\
+   a_{1n1\eta}& a_{2n1\eta}&\cdots&a_{nn1\eta}\\
    \end{bmatrix}
 \cdots
 \begin{bmatrix}
-  a_{11nj}& a_{21nj}&\cdots&a_{n1nj}\\
-  a_{12nj}& a_{22nj}&\cdots&a_{n2nj}\\
+  a_{11n\eta}& a_{21n\eta}&\cdots&a_{n1n\eta}\\
+  a_{12n\eta}& a_{22n\eta}&\cdots&a_{n2n\eta}\\
   \cdots&\cdots&\cdots &\cdots& \\
-  a_{1nnj }& a_{2nnj}&\cdots&a_{nnnj}\\
+  a_{1nn\eta }& a_{2nn\eta}&\cdots&a_{nnn\eta}\\
   \end{bmatrix}\\
 \vdots\\
  \begin{bmatrix}
-   a_{111i}& a_{211i}&\cdots&a_{n11i}\\
-   a_{121i}& a_{221i}&\cdots&a_{n21i}\\
+   a_{111\xi}& a_{211\xi}&\cdots&a_{n11\xi}\\
+   a_{121\xi}& a_{221\xi}&\cdots&a_{n21\xi}\\
   \cdots&\cdots&\cdots &\cdots& \\
-a_{1n1i}& a_{2n1i}&\cdots&a_{nn1i}\\
+a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
 \end{bmatrix}
 \cdots
 \begin{bmatrix}
-  a_{11ni}& a_{21ni}&\cdots&a_{n1ni}\\
-  a_{12ni}& a_{22ni}&\cdots&a_{n2ni}\\
+  a_{11n\xi}& a_{21n\xi}&\cdots&a_{n1n\xi}\\
+  a_{12n\xi}& a_{22n\xi}&\cdots&a_{n2n\xi}\\
   \cdots&\cdots&\cdots &\cdots& \\
-  a_{1nni}& a_{2nni}&\cdots&a_{nnni}\\
+  a_{1nn\xi}& a_{2nn\xi}&\cdots&a_{nnn\xi}\\
   \end{bmatrix}\\
 \vdots\\
     \end{bmatrix}
@@ -409,13 +442,45 @@ $$det \begin{bmatrix}
    \end{bmatrix}
     \end{bmatrix}
     =1$$
+      \item
+零项元，单位元中的任何内矩阵交换1所在行列到另一个行列，满足存在$i_{1}=i_{2}$而$j_{1}\neq j_{2}$则此行列式为0，例如：
+$$det \begin{bmatrix}
+ \begin{bmatrix}
+   0& 0&\cdots&0\\
+   1& 0&\cdots&0\\
+  \cdots& \cdots&\cdots&\cdots \\
+0& 0&\cdots&0\\
+\end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+  \cdots& \cdots&\cdots&\cdots \\
+ 0& 0&\cdots&0\\
+ \end{bmatrix}\\
+\vdots\\
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+  \cdots& \cdots&\cdots&\cdots \\
+   0& 0&\cdots&0\\
+   \end{bmatrix}
+\cdots
+\begin{bmatrix}
+  0& 0&\cdots&0\\
+  0& 0&\cdots&0\\
+  \cdots& \cdots&\cdots&\cdots \\
+   0& 0&\cdots&1\\
+   \end{bmatrix}
+    \end{bmatrix}
+    =0$$
  \end{list}
-\end{define}
+
 \begin{theorem} 由上面的性质可以推导出双重维数矩阵的det表达式如下：
 $$det(A_{ijkl})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
 \end{theorem}
 \begin{proof}
-由加法性质$\textrm{III}$ 得到左边等于
+由加法性质$\uppercase\expandafter{\romannumeral3}$ 得到左边等于
 % \scriptsize
  \begin{equation}
  \begin{aligned}
@@ -486,62 +551,116 @@ det\begin{bmatrix}
 %\end{cases}
 \end{aligned}
 \end{equation}
-对$(7)$式再进行分拆，最后得到和式单项满足:固定指标$k$,对任意的$i,j,l$,只有取到一个值才为非零值。根据$I$,提取系数到矩阵外，则所得矩阵的非零项都是1，再由$II$,得到如果对任意指标存在两个列上的非零项它的其它指标完全相同，则这个和式单项为0.最后剩余的和式单项满足矩阵它的非零项每个指标下的每个列都恰好是$1$到$n$的排列.再由$II$,这些和式单项的矩阵交换次序得到单位元的符号恰好为下标排列的逆序数的乘积，即证。
+对$l=1$分拆成$n^{2}$个和式单项，每个单项关于指标$i,j,k,1$，除一个固定项$a_{i_{1}j_{1}k_{1}1}$，其余都为0。根据$\uppercase\expandafter{\romannumeral3}$,再次对单项进行关于$l=2$的分拆，以此类推，进行n次的分拆后，得到最后的和式单项满足除$a_{i_{1}j_{1}k_{1}1} \cdots a_{i_{n}j_{n}k_{n}n}$外，关于指标$i,j,k,l$皆为0。若此$n$个数值中存在至少一个为0，则由$\uppercase\expandafter{\romannumeral1}$得到此单项为0，否则此$n$项都不为0，若$i_{\xi}=i_{\eta}$，则由$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$得此单项为0。由此除去0项，余项满足关于任何一个指标为一个$1 \cdots n$的排列,由$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$得到结果。
 \end{proof}
 
-这样定义的det(A)可以用在外积运算上，如下：
-\begin{theorem}
-令
-\begin{equation}
-\begin{aligned}
-\omega=
-& \sum_{\substack{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}\\ i_{1} < i_{2} < i_{3} < i_{4}}}a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
-& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}} \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}} \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}} \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
-\end{aligned}\end{equation}
-则
-\begin{equation}
-\omega^{\frac{n}{4}}
-\begin{aligned}
-& = \frac{n}{4}! det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n \wedge e_{4}^1\wedge e_{4}^2 \cdots \wedge e_{4}^n
-\end{aligned}\end{equation}
-\end{theorem}
+%这样定义的det(A)可以用在外积运算上，如下：
+%\begin{theorem}
+%令
+%\begin{equation}
+%\begin{aligned}
+%\omega=
+%& \sum_{\substack{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}\\ i_{1} < i_{2} < i_{3} < i_{4}}}a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
+%& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}} \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}} \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}} \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
+%\end{aligned}\end{equation}
+%则
+%\begin{equation}
+%\omega^{\frac{n}{4}}
+%\begin{aligned}
+%& = \frac{n}{4}! det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+%\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n \wedge e_{4}^1\wedge e_{4}^2 \cdots \wedge e_{4}^n
+%\end{aligned}\end{equation}
+%\end{theorem}
+%
+%
+%\begin{theorem}
+%令
+%\begin{equation}
+%\begin{aligned}
+%\omega_{i}=
+%& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
+%\end{aligned}\end{equation}
+%则
+%\begin{equation}
+%\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
+%\begin{aligned}
+%& = det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
+%\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n
+%\end{aligned}
+%\end{equation}
+%\end{theorem}
+%这两个定理，从几何角度反映了$det(A)$定义的意义。
+%
+%同样,上面定义的$pfaffian$得到如下的定理：
+%\begin{theorem}
+%令
+%\begin{equation}\delta=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
+%则
+%\begin{equation}\delta^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
+%\end{theorem}
 
-
 \begin{theorem}
-令
-\begin{equation}
-\begin{aligned}
-\omega_{i}=
-& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
-\end{aligned}\end{equation}
-则
-\begin{equation}
-\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
-\begin{aligned}
-& = det(A) e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n
-\end{aligned}
-\end{equation}
-\end{theorem}
-这两个定理，从几何角度反映了$det(A)$定义的意义。
-
-同样,上面定义的$pfaffian$得到如下的定理：
-\begin{theorem}
-令
-\begin{equation}\delta=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
-则
-\begin{equation}\delta^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
-\end{theorem}
-\begin{theorem}
-矩阵$A$的外维数为$MN(N=4K)$，如果除$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+4K)(i+8K)(i+12K)}=-a_{(i+4K)(i+8K)(i+12K)i}=a_{(i+8K)(i+12K)i(i+4K)}=-a_{(i+12K)i(i+4K)(i+8K)}$$ 外, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
+矩阵$A$的外维数为$n=\xi\eta(\eta \equiv 0 (mod 4))$，如果除$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ 外, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
 
 \begin{proof}
-行列式和式单项下标为列向量构成矩阵:
-\begin{equation}\begin{bmatrix}\sigma(1)&\sigma(2)&...&\sigma(n)\\\tau(1)&\tau(2)&...&\tau(n)\\\gamma(1)&\gamma(2)&...&\gamma(n)\\
-1&2&...&n\end{bmatrix}=LM\end{equation}\\
-右边和式单项下标为列向量构成矩阵\begin{equation}\begin{bmatrix}p_{1}&p_{5}&...&p_{n-3}\\p_{2}&p_{6}&...&p_{n-2}\\p_{3}&p_{7}&...&p_{n-1}\\p_{4}&p_{8}&...&p_{n}\\\end{bmatrix}=RM\end{equation}
+$det(A)$和式单项下标作为元素构成的集合:
+
+$$C_{l} = \left\{
+\left(                 %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    \sigma(1) \\  %第一行元素
+    \tau(1) \\  %第二行元素
+    \gamma(1)\\
+    1\\
+  \end{array}
+             %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    \sigma(2) \\  %第一行元素
+    \tau(2) \\  %第二行元素
+    \gamma(2)\\
+    2\\
+  \end{array}
+\cdots            %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    \sigma(n) \\  %第一行元素
+    \tau(n) \\  %第二行元素
+    \gamma(n)\\
+    n\\
+  \end{array}
+\right)
+\mid \sigma,\tau,\gamma \right\},$$
+
+$pfaffian(A)$和式单项下标作为元素构成的集合:
+$$C_{r} =
+\left\{              %左括号
+\left(
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    p_{1} \\  %第一行元素
+    p_{2} \\  %第二行元素
+    p_{3}\\
+    p_{4}\\
+  \end{array}              %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    p_{5} \\  %第一行元素
+    p_{6} \\  %第二行元素
+    p_{7}\\
+    p_{8}\\
+  \end{array}
+\cdots            %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    p_{n-3} \\  %第一行元素
+    p_{n-2} \\  %第二行元素
+    p_{n-1}\\
+    p_{n}\\
+  \end{array}
+\right)
+\mid \phi=(p_{1}p_{2}...p_{N})\text{ fulfils }(1)(2)
+\right\}$$
+则$C_{l}$与$C_{r} \times C_{r}\times C_{r} \times C_{r} $一一对应。
+\begin{equation}\begin{bmatrix}\sigma(1)&\sigma(2)&...&\sigma(n)\\ \tau(1)&\tau(2)&...&\tau(n)\\ \gamma(1)&\gamma(2)&...&\gamma(n)\\
+1&2&...&n\end{bmatrix}=T_{l}\end{equation}\\
+$pfaffian(A)$和式单项下标作为列向量构成矩阵\begin{equation}\begin{bmatrix}p_{1}&p_{5}&...&p_{n-3}\\p_{2}&p_{6}&...&p_{n-2}\\p_{3}&p_{7}&...&p_{n-1}\\p_{4}&p_{8}&...&p_{n}\\\end{bmatrix}=T_{r}\end{equation}
 若将矩阵看成一个和式单项，$RM$的乘积为做唯一性的变换在行向拼接,那么需要证明$\Sigma LM$=$(\Sigma RM)^{4}$。这里的等号对列向量的交换视为相等的变换\\
 首先证明$RM$的乘积恰好得到一个$LM$，再证明$LM$恰好对应一个唯一的$RM$的乘积，最后证明符号相等。\\
 第一步的证明：
