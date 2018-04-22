@@ -76,7 +76,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 
 %\ziju{0.025} \vspace*{.26in}
 
-\title{$1\times 4$长方块覆盖方形栅格的计数表示及超矩阵的行列式的定义的讨论}
+\title{栅格覆盖的计数表示及超矩阵的行列式}
 
 %-------------------------------------------------------------------------
 
@@ -94,7 +94,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 
 \vskip.25in
 {\narrower\fangsong\zihao{-5}\small {\zihao{-5}\heiti 摘要:}\ \
-在文章$Kasteleyn^{[1]}$ 中，$Kasteleyn$($Fisher$和$Temperley$ 同时独立)开创性研究了$1 \times 2$长方块在栅格上的覆盖数计算问题。那么如果是$1 \times 3$长方块或者$1 \times 4$长方块甚至更多，结果又是怎样的呢？文章不打算讨论$1 \times 3$ 长方块，而直接讨论$1 \times 4$ 长方块的情况，因为在4的情况下，计数表达方法存在一个显而易见的推广，从而让问题的研究更集中在延拓后的性质探讨和计算上， 在3 的情形却没有，3的情形相对更为困难。更进一步的看，$1 \times (2n)$的长方块的覆盖问题都可以得到延拓，出于聚焦计算问题的需要，这里只讨论$1\times 4$的情形。文章对内维数为2 的情形$det(A)=pfaffian^{2}(A)$ 的结果做了推广，得出本文的一个关键结果即在内维数为4 的情况下，延拓矩阵、行列式以及$pfaffian$ 定义，得到 $det(A)=pfaffian^{4}(A)$。从形式上看，这个结果相当有趣！但是计算问题却变的非常的不显然，与一般矩阵作类比，得到一些此类矩阵的结果作为文章的结尾。
+在文章$Kasteleyn^{[1]}$ 中，$Kasteleyn$($Fisher$和$Temperley$ 同时独立)开创性研究了$1 \times 2$长方块在栅格上的覆盖数计算问题。那么如果是$1 \times 3$长方块或者$1 \times 4$长方块甚至更多，结果又是怎样的呢？文章不打算讨论$1 \times 3$ 长方块，而直接讨论$1 \times 4$ 长方块的情况，因为在4的情况下，计数表达方法存在一个显而易见的推广，从而让问题的研究更集中在延拓后的性质探讨和计算上， 而在3 的情形却没有，3的情形相对更为困难。更进一步的看，$1 \times (2n)$的长方块的覆盖问题都可以得到延拓，出于聚焦计算问题的需要，这里只讨论$1\times 4$的情形。文章对内维数为2 的情形$det(A)=pfaffian^{2}(A)$ 的结果做了推广，得出本文的一个关键结果即在内维数为4 的情况下，延拓矩阵、行列式以及$pfaffian$ 定义，得到 $det(A)=pfaffian^{4}(A)$。从形式上看，这个结果相当完美！但是计算问题却变的非常的不显然。本文的后半部分则重点讨论超矩阵的一些性质。
 
 {\zihao{-5}\heiti\tenbf 关键词:}\ \ 双重维数矩阵; 内维数; 多米诺覆盖; 外积; $pfaffian$;
 
@@ -767,9 +767,8 @@ i=0,1,...,\lfloor \frac{M}{4} \rfloor -1;
 j=0,1,...,K-1\}
 \end{split}
 \end{equation}
-
 由于列向量元素满足以单位1，或者$n$的等比数列，$RM$中的每一列元素，从上至下分别从属于分组
-\begin{equation*}(16)(17)(18)(19)\cdots \cdots formal1\end{equation*}或
+\begin{equation*}(\ref{5})(17)(18)(19)\cdots \cdots formal1\end{equation*}或
 \begin{equation*}(17)(18)(19)(16)\cdots \cdots formal2\end{equation*}或
 \begin{equation*}(18)(19)(16)(17)\cdots \cdots formal3\end{equation*}或
 \begin{equation*}(19)(16)(17)(18)\cdots \cdots formal4\end{equation*}

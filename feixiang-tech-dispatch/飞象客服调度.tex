@@ -1,0 +1,218 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{CJK}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage[top=25.4mm, bottom=25.4mm, left=31.7mm, right=32.2mm]{geometry}
+%页面设置
+
+\begin{CJK*}{GBK}{hei}
+%\theoremstyle{definition}
+%\newtheoremstyle{mythm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus .2ex}
+%   {\kai}{\parindent}{\song\bfseries}{}{1em}{}
+\newtheoremstyle{mythm}{1ex}{1ex}%定理环境的上下间距.
+{\CJKfamily{song}}{\parindent}{\CJKfamily{hei} \bf}{}{1em}{}%定理内容为宋体, 缩进, 定理名称为黑粗体
+\theoremstyle{mythm}%设置定理环境
+\newtheorem{thm}{定理~}[section]
+\newtheorem{lem}[thm]{引理~}
+\newtheorem{pro}[thm]{性质~}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{prop}[thm]{命题~}
+\newtheorem{ques}[thm]{问题~}
+\newtheorem{cor}[thm]{推论~}
+\newtheorem{de}[thm]{定义~}
+\newtheorem{rem}[thm]{注记~}
+\numberwithin{equation}{section}
+\end{CJK*}
+\renewcommand\refname{\CJKfamily{hei}参考文献}
+\renewcommand{\abstractname}{摘要}
+
+%%%%%%%%%%%%%%%%下面几行用于改变证明环境的定义
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+\pushQED{\qed}%
+\normalfont \topsep6\p@\@plus6\p@ \labelsep1em\relax
+\trivlist
+\item[\hskip\labelsep\indent
+\bfseries #1]\ignorespaces
+}{%
+\popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+%%%%%%%%%%%%%%(http://latex.yo2.cn)
+\renewcommand{\proofname}{\CJKfamily{hei}证明}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%\titleformat{\section}{\CJKfamily{hei} }{\arabic{section}{1em}{}
+\titleformat{\section}{\large \bf \CJKfamily{hei} }{{\bf \thesection\space}}{0pt}{}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+\title{飞象客服调度系统模型分析}
+\author{惠慧}
+\maketitle
+\abstractname{}
+\section{问题背景}
+飞象客服系统是为了给手机用户提供及时的客服指导的一款及时通讯工具,基本业务包括聊天对话、客户发送语音、客服客户互传图片、客服传送文件给客户。通过以上方式来及时解答客户的多种服务需求。作为一款及时通讯工具，除了提高客服的服务水平，建立完备的知识库系统以外，客户需要及时获取咨询，减少排队等待时间，只有极大的缩短客户排队等待时间，才能够提高服务的效率，满足客户及时获取重要信息的心理期望，赢得用户的口碑和回头率。从另一方面公司需要尽量减少雇佣客服人员的人数以减少公司在雇佣员工上的费用支出，这一对矛盾需要得到很好的平衡。如何配置客服人员才能在满足客户需求的前提下，同时又能极大的减少公司在客服上的花费呢？这需要建立合理的数学模型
+
+\section{需求分析}
+客户群是个动态的过程，各种因素导致客户群的复杂性，这里我们假设其满足一些常规的分布，以此为依据，我们可以确定哪些统计量来作为客服人数的计算。当然随着市场的推广和服务的丰富性带来客户由不常使用到经常使用，客户群在时间的推演中会呈现越来越多的，使用频率走高的趋势，客服方面，那些有经验的客服随着服务的熟练程度的提升，服务率也会呈现一定的提升。如何根据历史数据来研判下一个阶段客服的安排。
+
+$\hspace{0em}$为了简化模型，不考虑网络不稳定带来的客户掉线重连带来的服务的延误导致服务时间延长的次要因素，把它当作和正常客户的使用一样来统计服务时长。
+
+$\hspace{0em}$其次，有些优先级高的用户将插队首先享受服务，这会比较严重的影响到客户的等待时间，需要考虑进模型。
+
+$\hspace{0em}$另外，在业务的逐渐推开后，普通客服解决不了的问题会切换给高级客服来解决，这将使服务台具有网络话的现象，这个是否具备统计规律还是偶尔发生可以忽略，这里暂不考虑此因素。
+
+$\hspace{0em}$我们的目标是要给出合理的模型，据此确定下来参数的统计原则，给定计算公式，据此计算出客服的人数要求。
+\section{数学模型的建立与应用}
+\subsection{引言}
+这其实是一个很好的排队论模型的例子。而对于排队论，早在1909年丹麦数学家$A.K.Erlang$ 所发表的论文就对此问题做了初步的研究，其人服务于丹麦哥本哈根电话公司，该论文研究的主题是电话交换机的使用状况。其后又有几位数学家研究了排队论的问题。二次世界大战后，应用概率论，运筹学得到了广泛面深入的发展，排队论的论述已十分普及。五十年代，英国人$D.G.Kendall$有系统地阐述了排队问题，并且利用嵌入马尔可夫链的方法推动了排队论的进一步发展。$Kendall$的两篇重要论文发表于1951年和1953年。
+\subsection{模型假设}
+\subsubsection{相关的理论知识}
+\paragraph{泊松过程}
+\begin{de}
+泊松过程${N(t), t\geqslant 0}$,是一个计数过程，亦即$N(t)$代表在$(0,t)$之间事件发生的次数必定符合下列四个条件：
+
+\newcounter{Lcount}
+%    set the "default" label to print counter as a Roman numeral
+\begin{list}{\Roman{Lcount}}
+%    inform the list command to use this counter
+{\usecounter{Lcount}
+%    set rightmargin equal to leftmargin
+\setlength{\rightmargin}{\leftmargin}}
+\item $ N(0) = 0$
+\item 守序性
+
+\subitem $P[N(t) = 0] = 1 - \lambda t + 0(t)$
+\subitem $P[N(t) = 1] = \lambda t + 0(t)$
+\subitem $P[N(t) = 2] = 0(t)$
+
+\item 增量平稳性
+$P[N(t+h) - N(t) = n] = P[N(h) = n], t > 0$
+\item 增量独立性
+$N(t)$与$N(t+h)-N(t)$互为独立。
+\end{list}
+\end{de}
+
+$\hspace{0em}$在上面的条件{\romannumeral 2}.里，$0(t)$表示以
+$$\lim_{t\rightarrow 0} \frac{0(t)}{t} = 0$$
+为条件的一个$t$的函数，因此守序性要求在极短时间$\delta$内一个事件发生的概率为$\lambda\delta$,没有事件发生的概率为$1-\lambda\delta$，而两个或两个事件发生的概率趋近于零。
+
+\begin{thm}
+泊松过程的三个条件与下列的条件互为充要关系。
+$$P[N(t)=n] = e^{-\lambda t}\frac{(\lambda t)^{n}}{n!},n = 0,1,2,\cdots,\lambda > 0, t \geq 0$$。
+\end{thm}
+
+$\hspace{0em}$泊松过程的另一类一般化的过程是假设发生率本身为时间的函数，在不同的时间发生率可以不同。
+\begin{de}
+${N(t),t \geq 0}$是一个“非均匀泊松过程”，其发生率为$\lambda(t)$,那么该过程的充要条件为
+\begin{list}{\Roman{Lcount}}
+%    inform the list command to use this counter
+{\usecounter{Lcount}
+%    set rightmargin equal to leftmargin
+\setlength{\rightmargin}{\leftmargin}}
+\item $ N(0) = 0$
+\item ${N(t), t\geq 0}$具有增量独立性
+\item $P[$两个或两个以上事件发生于$(t, t+h)] = 0(h)$
+\item $P[$一个事件发生于$(t, t+h)] = \lambda(t)h + 0(h)。$
+\end{list}
+\end{de}
+
+$\hspace{0em}$与“均匀”泊松过程一样，我们可以证明
+$$P[N(t) = n] = e^{-m(t)}\frac{[m(t)]^{n}}{n!}, n = 0,1,2,\cdots$$
+在上式中$m(t)=\int_0^{t}\lambda(S)dS(\cite{wikinonhomopossion})$。称作该过程的“均值函数”。这是因为$E[N(t)] = m(t)$。
+$N(t)$与$N(t+h)-N(t)$互为独立。
+
+\paragraph{马尔可夫链}
+\begin{de}
+假定一个离散时间随机过程${X_{n},n=1,2,\cdots},$界定于一空间
+$S={0,1,2,\cdots}$，$(X_{n}$的值是$S$汇总的某一元素$)$而且
+$P[X_{n+1}=y_{n+1}|X_{1}=y_{1},\cdots,X_{n}=y_{n}]=P[X_{n+1}=y_{n+1}|X_{n}=y_{n}]$那么$X_{n}$就称作马尔可夫链。$S$ 里的元素称为${X_{n}}$的“状态”。
+\end{de}
+
+\paragraph{$M/M/c$模型}
+
+\subparagraph{一些记号}
+
+采用$Kendall$的符号，$A/B/n$,$A$ 代表时间间隔，$B$代表服务时间，$n$代表服务台个数。沿用\cite{hx} 中的记号，$M$ 代表指数分布，$D$ 代表常数，$G$ 代表一般独立而同分布的间隔。
+
+\subparagraph{占用率}
+到达率$\lambda$和平均服务时间$E(B)$，那么队列不会无限延长下去，要求$\lambda E(B) < 1$,记$\rho = \lambda E(B)$ 为占用率。当为$c$个服务台时，$\rho = \lambda E(B)/c$。
+
+\subparagraph{$Little$公式}
+记$L(t)$代表$t$时刻系统的队长，第$n$个客户在系统中逗留的时间为$S_{n}$,
+$$\lim_{t\rightarrow \infty} \frac{1}{t}\int_{x=0}^{t}L(x)dx = E(L),\lim_{n\rightarrow \infty} \frac{1}{n}\sum_{k=1}^{n}S_{k}=E(S)$$。那么$E(L) = \lambda E(S)$。
+
+\subparagraph{$M/M/1$模型}
+
+$p_{n}(t)$表示$t$时刻有$n$个客户在系统中的概率，则当$\Delta t \rightarrow 0$，
+\begin{list}
+{\usecounter{Lcount}
+\setlength{\rightmargin}{\leftmargin}}
+\item  $p_{0}(t+\Delta t) = (1 - \lambda \Delta t)p_{0}(t) + \mu \Delta t p_{1}(t) + 0(\Delta t)$
+\item  $p_{n}(t+\Delta t) = \lambda \Delta t p_{n-1}(t) + (1 - (\lambda + \mu) \Delta t) p_{n}(t) + \mu \Delta t p_{n+1}(t) + 0(\Delta t)$
+\end{list}
+
+当$\Delta t \rightarrow 0$，我们可以得到
+\begin{list}
+{\usecounter{Lcount}
+\setlength{\rightmargin}{\leftmargin}}
+\item  $p_{0}^{'}(t) = -\lambda p_{0}(t) + \mu p_{1}(t)$,
+\item  $p_{n}^{'}(t) = \lambda p_{n-1}(t) - (\lambda + \mu) p_{n}(t) + \mu p_{n+1}(t)$,
+\end{list}
+
+当时间$t \rightarrow \infty$，$p_{n}^{'}(t) \rightarrow 0$并且$p_{n}(t) \rightarrow p_{n}$,
+
+\begin{list}
+{\usecounter{Lcount}
+\setlength{\rightmargin}{\leftmargin}}
+\item  $0 = -\lambda p_{0} + \mu p_{1}$,
+\item  $0 = \lambda p_{n-1} - (\lambda + \mu) p_{n} + \mu p_{n+1}$,
+\item  $\Sigma_{n=0}^{\infty}p_{n} = 1$.
+\end{list}
+
+令$\rho = \lambda/\mu$，解得$p_{n}=(1 - \rho)\rho^{n}, n = 0,1,2,\cdots$
+由此求得系统平均排队长度，$E(L) = \Sigma_{n=0}^{\infty}np_{n}=\frac{\rho}{1-\rho}$,运用$Little$引理，$E(S) = \frac{1/\mu}{1-\rho}$。
+平均系统中的客户剩余服务时间的均值为$1/\mu$,加上客户本身的服务时间即得系统逗留时间，因此有$E(S)=E(L)\frac{1}{\mu} + \frac{1}{\mu}$。
+由此得到排队等待的队长为$E(L^{q})=E(L)-\rho=\frac{\rho^{2}}{1-\rho}$,平均等待时间$E(W)=E(S)-\frac{1}{\mu}=\frac{\rho/\mu}{1 -\rho}$
+
+\subparagraph{$M/M/c$模型}
+有$c$个服务台时，到达率和服务率满足
+$\lambda_{i} = \lambda, 
+$
+$\mu_{i}= \begin{cases} i\mu, i \leq c \\
+c\mu, i \geq c \end{cases} $
+将$\lambda,\mu$代入$M/M/1$中，即得
+
+$p_{n}=\frac{(c\rho)^{n}}{n!}p_{0}, n=0,\cdots,c$,
+
+$p_{c+n}=\rho^{n}p_{c}=\rho^{n}\frac{(c\rho)^{c}}{c!}p_{0},n=0,1,2,\cdots$。
+
+因此求得
+
+$p_{0}=(\Sigma_{n=0}^{c-1}\frac{(c\rho)^{n}}{n!}+\frac{(c\rho)^{c}}{c!}\frac{1}{1-\rho})^{-1}$,
+
+等待概率：$\prod_{W}=p_{c}+p_{c+1}+p_{c+2}+\cdots=\frac{(c\rho)^{c}}{c!}((1-\rho)\Sigma_{n=0}^{c-1}\frac{(c\rho)^{n}}{n!}+\frac{(c\rho)^{c}}{c!})^{-1}$，
+
+平均等待队列长度：$E(L^{q})=\Sigma_{n=0}^{\infty}np_{c+n}=\prod_{W}\frac{\rho}{1-\rho}$，
+
+平均等待时间：$E(W)=\prod_{W}\frac{1}{1-\rho}\frac{1}{c\mu}$。
+
+\subsubsection{模型分析和建立}
+$\hspace{0em}$飞象客服平台区分客户的级别，如果为普通客户，将接受普通客服服务，在普通客服解决不了问题的情况下，转到专家客服来进行服务。VIP客户可以直接接受专家客服的服务。把不同级别的客服看作子系统，单一客户在不同子系统中接受服务的有一定的概率转移到另一个子系统中。所以按照\cite{hx}中的术语，这是一个网络队列系统。但是为了简化模型，我们不考虑转移的情况，而是将其当作不同类别的客服台。
+\bibliographystyle{amsplain}
+\bibliography{xbib}
+\end{CJK*}
+\end{document}
