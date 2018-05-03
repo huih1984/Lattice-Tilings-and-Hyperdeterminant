@@ -1,0 +1,31 @@
+HANDLE hFile = CreateFile(TEXT("E:\\12.txt"),
+GENERIC_WRITE | GENERIC_READ,
+FILE_SHARE_READ, 
+NULL,
+CREATE_ALWAYS, 
+FILE_FLAG_SEQUENTIAL_SCAN, 
+NULL);
+
+// 创建文件映射内核对象，句柄保存于hFileMapping
+HANDLE hFileMapping = CreateFileMapping(hFile,NULL,PAGE_READWRITE, 
+0, 0x4000000, NULL);
+// 释放文件内核对象
+CloseHandle(hFile);
+
+// 设定大小、偏移量等参数
+__int64 qwFileSize = 0x4000000;
+__int64 qwFileOffset = 0;
+SYSTEM_INFO   sinf; 
+GetSystemInfo(&sinf); 
+__int64 T = 600 * sinf.dwAllocationGranularity;
+DWORD dwBytesInBlock = 1000 * sinf.dwAllocationGranularity;
+
+// 将文件数据映射到进程的地址空间
+PBYTE pbFile = (PBYTE)MapViewOfFile(hFileMapping,
+FILE_MAP_ALL_ACCESS,
+(DWORD)(qwFileOffset>>32), (DWORD)(qwFileOffset&0xFFFFFFFF), dwBytesInBlock);
+//PVOID   m_pDaqData   =   NULL;
+//MoveMemory(pbFile+qwFileOffset,m_pDaqData,2700*4);
+//qwFileOffset+=2700*4;
+UnmapViewOfFile(pbFile);
+CloseHandle(hFileMapping);
