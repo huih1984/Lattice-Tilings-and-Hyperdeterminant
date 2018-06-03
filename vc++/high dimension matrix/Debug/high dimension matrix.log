@@ -1,0 +1,37 @@
+﻿生成启动时间为 2018-06-02 上午 10:02:55。
+     1>项目“E:\repo\Lattice-Tilings-and-Hyperdeterminant\vc++\high dimension matrix\high dimension matrix.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\high dimension matrix.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         所有输出均为最新。
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\repo\Lattice-Tilings-and-Hyperdeterminant\vc++\Debug\high dimension matrix.exe" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Debug\high dimension matrix.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\repo\Lattice-Tilings-and-Hyperdeterminant\vc++\Debug\high dimension matrix.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\repo\Lattice-Tilings-and-Hyperdeterminant\vc++\Debug\high dimension matrix.lib" /MACHINE:X86 "Debug\high dimension matrix.res"
+         Debug\Chdoperator.obj
+         Debug\DBConnect.obj
+         Debug\filemanage.obj
+         Debug\formaltupleall.obj
+         "Debug\high dimension matrix.obj"
+         Debug\IndexMatrix.obj
+         Debug\IndexMatrix2.obj
+         Debug\IndexMatrix3.obj
+         Debug\IndexMatrix4.obj
+         Debug\IndexMatrix5.obj
+         Debug\IndexMatrix6.obj
+         Debug\Inferior_datum.obj
+         Debug\Inferior_datum_mutiplicity.obj
+         Debug\InferiorFileRW.obj
+         Debug\InferiorOper.obj
+         Debug\Perm_datum.obj
+         Debug\Preimage.obj
+         Debug\qsort.obj
+         Debug\stdafx.obj
+     1>Chdoperator.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/INCREMENTAL:NO”规范)
+     1>LINK : fatal error LNK1123: 转换到 COFF 期间失败: 文件无效或损坏
+     1>已完成生成项目“E:\repo\Lattice-Tilings-and-Hyperdeterminant\vc++\high dimension matrix\high dimension matrix.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.55

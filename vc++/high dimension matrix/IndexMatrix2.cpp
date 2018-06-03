@@ -1,4 +1,5 @@
 /*这个文件处理下表纵向遍历的方法进行求解，并用set进行集合的处理*/
+#include "StdAfx.h"
 #include<set>
 #include<list>
 #include<iostream>

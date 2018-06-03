@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "high dimension matrix", "high dimension matrix\high dimension matrix.vcproj", "{84DB048B-2CD8-4702-A6C8-FEA965D79066}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "high dimension matrix", "high dimension matrix\high dimension matrix.vcxproj", "{84DB048B-2CD8-4702-A6C8-FEA965D79066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

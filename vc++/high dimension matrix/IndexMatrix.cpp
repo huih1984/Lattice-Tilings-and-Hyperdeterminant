@@ -154,6 +154,7 @@ int main(){
 			}
 		}
 	}
+
 	for(int i=1;i<=dimension;++i){
 		set<Index>::iterator iter;
 		iter=indexSet[0].begin();

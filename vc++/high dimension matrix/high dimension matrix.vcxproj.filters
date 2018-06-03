@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Chdoperator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConnect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filemanage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="formaltupleall.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="high dimension matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexMatrix6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Inferior_datum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Inferior_datum_mutiplicity.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InferiorFileRW.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InferiorOper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Perm_datum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Preimage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qsort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data1.txt">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="data2.txt">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="out1.txt">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="tupleall.txt">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ReadMe.txt" />
+    <None Include="内存映射文件读写.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Chdoperator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBConnect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="filemanage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Inferior_datum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Inferior_datum_mutiplicity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InferiorFileRW.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InferiorOper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Perm_datum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Preimage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="qsort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="high dimension matrix.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
