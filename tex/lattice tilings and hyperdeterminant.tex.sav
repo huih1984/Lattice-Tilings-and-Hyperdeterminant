@@ -1,120 +1,64 @@
-\documentclass[twoside,a4paper,CCT]{cctart}   % ÕâÊÇLi Dongfeng¸ÄµÄÎÄ¼şÍ·
-\usepackage{amsmath,amsthm,vatola,makeidx,amssymb,amscd,headrule}     % ÕâÊÇLi Dongfeng¸ÄµÄÎÄ¼şÍ·
-\usepackage{amsfonts}                     % ÕâÊÇLi Dongfeng¸ÄµÄÎÄ¼şÍ·
-%\documentstyle[twoside,headrule,vatola]{carticle} %ÕâÊÇÔ­À´µÄÎÄ¼şÍ·
-%\input amssym.def
-\usepackage{graphicx}                              %ÕâÊÇÔ­À´µÄÎÄ¼şÍ·
-\usepackage{epsf}
-\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
-\usepackage{amsmath}
-%\usepackage{tikz}
-\usepackage{amsmath,amssymb}
+\documentclass{amsc}          %´ËÄ£°åĞèµ÷ÓÃºê°üamsc.cls, ÇëÈ·±£´Ëºê°üÓëtexÎÄ¼şÔÚÍ¬Ò»ÎÄ¼ş¼ĞÏÂ
+\numberwithin{equation}{section} % ¹«Ê½±àºÅ»áËæ×ÅSection¶ø±ä¶¯,Èç(1.1),(1.2),(2.1)...,Èç¹û²»±ãÊ¹ÓÃ,Äú¿ÉÒÔ½«Õâ¸öÃüÁîÉ¾È¥
+\usepackage[colorlinks,
+            linkcolor=red,
+            anchorcolor=blue,
+            citecolor=green
+            ]{hyperref}
 \usepackage{tikz}
-\input scrload.tex    %µ÷ÓÃ»¨Ìå×Ö: {\scr A,B,C,...}
-%--------------------------Page Format--------------------------
-\headsep 0.2 true cm \topmargin 0pt \oddsidemargin 0pt \footskip
-2mm \evensidemargin 0pt \textheight 21 true cm \textwidth 14.7
-true cm \setcounter{page}{1}
-%\parskip 0.2cm
-\parindent 2\ccwd
-\nofiles
-%---------------------------------------------------------------
-\def\sec#1{
-\vskip.12in \noindent{\Large\bf\zihao{-4}\heiti #1} \vskip.1in}
-\def\subsec#1{
-\vskip.1in \flushpar{\zihao{5}\heiti #1} \vskip.1in}
-\def\de#1{{\heiti\bf #1}\quad}
+\usepackage{amsmath}
+
 \begin{document}
-\TagsOnRight \abovedisplayskip=10.0pt plus 2.0pt minus 2.0pt
-\belowdisplayskip=10.0pt plus 2.0pt minus 2.0pt
-%====================================================================
-%\catcode`@=11 \long\def\@makefntext#1{\parindent 1em\noindent
-%\hbox to 0pt{\hss$^{}$}#1} \catcode`\@=12
-%====================================================================
 
-\renewcommand{\baselinestretch}{1.0}
+\Volume{201x}{1}{0}{0}               % Äê¡¢ÔÂ¡¢¾í¡¢ÆÚ
+\PageNum{1}                                  % ÆğÊ¼Ò³Âë
+\PaperID{0583-1431(20xx)0x-0xxx-0x}   % ÎÄÕÂ±àºÅ
+\DocumentCode{A}                              % ÎÄÏ×±êÊ¶Âë
+\EditorNote{ÊÕ¸åÈÕÆÚ:\ 200x-xx-xx;\ ½ÓÊÜÈÕÆÚ:\ 200x-xx-xx}  % ½Å×¢
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  ×÷Õß´ÓÏÂÃæ¿ªÊ¼ÌîĞ´¸÷ÏîÄÚÈİ,±¾¿¯µÄ±êµã·ûºÅ¾ùÊ¹ÓÃÓ¢ÎÄ±êµã,Äú¿ÉÒÔÔÚ±àÒëÇ°ÉèÖÃ±êµãĞÎÊ½
 
-\newfont{\htxt}{eufm10 scaled \magstep0}
-%\newfam\euffam
-\font\tenthxt=eufm10 scaled \magstep0 \font\tenBbb=msbm10 scaled
-\magstep0 \font\tencyr=wncyr10 scaled \magstep0 \font\tenrm=cmr10
-scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
+\EditorNote{»ù½ğÏîÄ¿: }            %Èç »ù½ğÏîÄ¿:¹ú¼Ò×ÔÈ»¿ÆÑ§»ù½ğ×ÊÖúÏîÄ¿(10171074),ÈçÃ»ÓĞ»ù½ğÏîÄ¿ÇëÉ¾È¥´ËĞĞ
 
+\TitleMark{»İ»Û:Õ¤¸ñ¸²¸ÇµÄ¼ÆÊı±íÊ¾¼°³¬¾ØÕóµÄĞĞÁĞÊ½}  % Ò³Ã¼, ÈçÓĞ¶àÎ»×÷Õß,ÇëĞ´Îª µÚÒ»×÷ÕßĞÕÃûµÈ: ÂÛÎÄ±êÌâËõĞ´
 
-\def\cyr{\tencyr}
+\BeginTitle
 
+\Title{Õ¤¸ñ¸²¸ÇµÄ¼ÆÊı±íÊ¾¼°³¬¾ØÕóµÄĞĞÁĞÊ½}
 
+\Author{»İ»Û}
+ {ÄÏ¾©´óÑ§\  ÄÏ¾©\ 210093\\ % ÀıÈç ÖĞ¹ú¿ÆÑ§ÔºÊıÑ§ÓëÏµÍ³¿ÆÑ§ÑĞ¾¿Ôº\ ±±¾©\ 100190 \\
+E-mail: huih1984@163.com}
 
+\Abstract{ÔÚÎÄÕÂ\cite{Kly} ÖĞ£¬$Kasteleyn$($Fisher$ºÍ$Temperley$ Í¬Ê±¶ÀÁ¢)¿ª´´ĞÔÑĞ¾¿ÁË$1 \times 2$³¤·½¿éÔÚÕ¤¸ñÉÏµÄ¸²¸ÇÊı¼ÆËãÎÊÌâ¡£ÄÇÃ´Èç¹ûÊÇ$1 \times 3$³¤·½¿é»òÕß$1 \times 4$³¤·½¿éÉõÖÁ¸ü¶à£¬½á¹ûÓÖÊÇÔõÑùµÄÄØ£¿ÎÄÕÂ²»´òËãÌÖÂÛ$1 \times 3$ ³¤·½¿é£¬¶øÖ±½ÓÌÖÂÛ$1 \times 4$ ³¤·½¿éµÄÇé¿ö£¬ÒòÎªÔÚ4µÄÇé¿öÏÂ£¬¼ÆÊı±í´ï·½·¨´æÔÚÒ»¸öÏÔ¶øÒ×¼ûµÄÍÆ¹ã£¬´Ó¶øÈÃÎÊÌâµÄÑĞ¾¿¸ü¼¯ÖĞÔÚÑÓÍØºóµÄĞÔÖÊÌ½ÌÖºÍ¼ÆËãÉÏ£¬ ¶øÔÚ3 µÄÇéĞÎÈ´Ã»ÓĞ£¬3µÄÇéĞÎÏà¶Ô¸üÎªÀ§ÄÑ¡£¸ü½øÒ»²½µÄ¿´£¬$1 \times (2n)$µÄ³¤·½¿éµÄ¸²¸ÇÎÊÌâ¶¼¿ÉÒÔµÃµ½ÑÓÍØ£¬³öÓÚ¾Û½¹¼ÆËãÎÊÌâµÄĞèÒª£¬ÕâÀïÖ»ÌÖÂÛ$1\times 4$µÄÇéĞÎ¡£ÎÄÕÂ¶ÔÄÚÎ¬ÊıÎª2 µÄÇéĞÎ$det(A)=pfaffian^{2}(A)$ µÄ½á¹û×öÁËÍÆ¹ã£¬µÃ³ö±¾ÎÄµÄÒ»¸ö¹Ø¼ü½á¹û¼´ÔÚÄÚÎ¬ÊıÎª4 µÄÇé¿öÏÂ£¬ÑÓÍØ¾ØÕó¡¢ĞĞÁĞÊ½ÒÔ¼°$pfaffian$ ¶¨Òå£¬µÃµ½ $det(A)=pfaffian^{4}(A)$¡£´ÓĞÎÊ½ÉÏ¿´£¬Õâ¸ö½á¹ûÏàµ±ÍêÃÀ£¡µ«ÊÇ¼ÆËãÎÊÌâÈ´±äµÄ·Ç³£µÄ²»ÏÔÈ»¡£±¾ÎÄµÄºó°ë²¿·ÖÔòÖØµãÌÖÂÛ³¬¾ØÕóµÄÒ»Ğ©ĞÔÖÊ¡£}
 
-\renewcommand{\proofname}{\bf Ö¤Ã÷}
-\newtheorem{lemma}{ÒıÀí}[section]
-\newtheorem{guess}{²Â²â}[section]
-\newtheorem{define}{¶¨Òå}[section]
-\newtheorem{theorem}{¶¨Àí}[section]
-%-----------------------×÷Õß¶¨Òå
+\Keywords{Ë«ÖØÎ¬Êı¾ØÕó; ÄÚÎ¬Êı; ¶àÃ×Åµ¸²¸Ç; Íâ»ı; $pfaffian$;}
 
 
-%-----------------------×÷Õß¶¨Òå½áÊø
-\def\binom#1#2{{#1\choose#2}}
-\def\qed{\hfill\raisebox{0.1truecm}{\framebox[0.2truecm]{\ } } }
-\def\su{\mathop{\sum}\limits}
-\def\Cal#1{ {\cal #1 \rm}  }
-%---------------------------------------------------------------
-\def\evenhead{{\protect\small{\zihao{-5}\songti \hfill \qquad\qquad
-\qquad} \hfill {\zihao{-5}\songti }}}
-\def\oddhead{{\protect\small {\zihao{-5}\songti }
-\hfill {\small\zihao{-5}\songti }\hfill}}
-%---------------------------------------------------------------
+\ETitle{lattice tilings and hyperdeterminant} %Ó¢ÎÄ±êÌâ
 
-%\vspace*{-13mm}
-%
-%\thispagestyle{empty}
+\EAuthor{Hui \uppercase{Hui}} % ×÷ÕßĞÕÃûµÄÆ´Òô,ÃûÔÚÇ°,ĞÕÔÚºó
+{Nanjing University, Nanjing $100190$, P. R. China \\            % Èç Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing $100190$, P. R. China \\
+E-mail\,$:$ huih1984$1$@163.com}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\EAbstract{
+The article \cite{Kly} transfer dimer tiling to determinant of matrix ingenious, finally, get formula of it.
+so, what about of three,four?this is intreseting.}
+
+\EKeywords{double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian; trimer; dimer; tertramer}
+
+\EndTitle
 
 
-%\ziju{0.025} \vspace*{.26in}
-
-\title{Õ¤¸ñ¸²¸ÇµÄ¼ÆÊı±íÊ¾¼°³¬¾ØÕóµÄĞĞÁĞÊ½}
-
-%-------------------------------------------------------------------------
-
- %\footnotetext{»ù½ğÏîÄ¿: ¹ú¼Ò×ÔÈ»¿ÆÑ§»ù½ğ×ÊÖú¿ÎÌâ(No. 10271026),
-%¸£½¨Ê¡×ÔÈ»¿ÆÑ§»ù½ğ×ÊÖúÏîÄ¿(No. F0310010).}
-
-\footnotetext{E-mail: $*$ huih1984@163.com}
-
-%-------------------------------------------------------------------------
-\author{»İ»Û}
-%\centerline{\fangsong\large\zihao{4} »İ»Û$^{1}$ } \vskip.12in
-
-\maketitle
-%\centerline{\small\zihao{-5}(1.ÄÏ¾©´óÑ§ÊıÑ§Ïµ,ÄÏ¾©,½­ËÕ, 210093)}
-
-\vskip.25in
-{\narrower\fangsong\zihao{-5}\small {\zihao{-5}\heiti ÕªÒª:}\ \
-ÔÚÎÄÕÂ$Kasteleyn^{[1]}$ ÖĞ£¬$Kasteleyn$($Fisher$ºÍ$Temperley$ Í¬Ê±¶ÀÁ¢)¿ª´´ĞÔÑĞ¾¿ÁË$1 \times 2$³¤·½¿éÔÚÕ¤¸ñÉÏµÄ¸²¸ÇÊı¼ÆËãÎÊÌâ¡£ÄÇÃ´Èç¹ûÊÇ$1 \times 3$³¤·½¿é»òÕß$1 \times 4$³¤·½¿éÉõÖÁ¸ü¶à£¬½á¹ûÓÖÊÇÔõÑùµÄÄØ£¿ÎÄÕÂ²»´òËãÌÖÂÛ$1 \times 3$ ³¤·½¿é£¬¶øÖ±½ÓÌÖÂÛ$1 \times 4$ ³¤·½¿éµÄÇé¿ö£¬ÒòÎªÔÚ4µÄÇé¿öÏÂ£¬¼ÆÊı±í´ï·½·¨´æÔÚÒ»¸öÏÔ¶øÒ×¼ûµÄÍÆ¹ã£¬´Ó¶øÈÃÎÊÌâµÄÑĞ¾¿¸ü¼¯ÖĞÔÚÑÓÍØºóµÄĞÔÖÊÌ½ÌÖºÍ¼ÆËãÉÏ£¬ ¶øÔÚ3 µÄÇéĞÎÈ´Ã»ÓĞ£¬3µÄÇéĞÎÏà¶Ô¸üÎªÀ§ÄÑ¡£¸ü½øÒ»²½µÄ¿´£¬$1 \times (2n)$µÄ³¤·½¿éµÄ¸²¸ÇÎÊÌâ¶¼¿ÉÒÔµÃµ½ÑÓÍØ£¬³öÓÚ¾Û½¹¼ÆËãÎÊÌâµÄĞèÒª£¬ÕâÀïÖ»ÌÖÂÛ$1\times 4$µÄÇéĞÎ¡£ÎÄÕÂ¶ÔÄÚÎ¬ÊıÎª2 µÄÇéĞÎ$det(A)=pfaffian^{2}(A)$ µÄ½á¹û×öÁËÍÆ¹ã£¬µÃ³ö±¾ÎÄµÄÒ»¸ö¹Ø¼ü½á¹û¼´ÔÚÄÚÎ¬ÊıÎª4 µÄÇé¿öÏÂ£¬ÑÓÍØ¾ØÕó¡¢ĞĞÁĞÊ½ÒÔ¼°$pfaffian$ ¶¨Òå£¬µÃµ½ $det(A)=pfaffian^{4}(A)$¡£´ÓĞÎÊ½ÉÏ¿´£¬Õâ¸ö½á¹ûÏàµ±ÍêÃÀ£¡µ«ÊÇ¼ÆËãÎÊÌâÈ´±äµÄ·Ç³£µÄ²»ÏÔÈ»¡£±¾ÎÄµÄºó°ë²¿·ÖÔòÖØµãÌÖÂÛ³¬¾ØÕóµÄÒ»Ğ©ĞÔÖÊ¡£
-
-{\zihao{-5}\heiti\tenbf ¹Ø¼ü´Ê:}\ \ Ë«ÖØÎ¬Êı¾ØÕó; ÄÚÎ¬Êı; ¶àÃ×Åµ¸²¸Ç; Íâ»ı; $pfaffian$;
-
-%{\tenbf\zihao{-5}\heiti MR(2000) Ö÷Ìâ·ÖÀà:}\ \ 54C10; 54D55 /
-%{\tenbf\zihao{-5}\heiti ÖĞÍ¼·ÖÀàºÅ:} O189.1
- }
-
-\normalsize
-
-\baselineskip 15pt \vskip.15in
-
-\sec{0 ÒıÑÔ}
-¹ØÓÚ$dimer$¸²¸ÇÊıµÄ¼ÆËãÎÊÌâ£¬ÆğÔ´ÓÚ$Kasteleyn^{[1]}$µÄÎÄÕÂ£¬ÎÄÕÂ¸ø³öÁË$dimer$ÔÚ$m \times n$µÄ¿é×´ÉÏºÍ»·ÃæÉÏµÄ¸²¸ÇÊıµÄ¼ÆËã¹«Ê½¡£µ«ÊÇÓÃ$tetramer$¸²¸ÇµÄ¹«Ê½È´Ã»ÓĞÑĞ¾¿½á¹û,ÓÃ$1\times n$¸²¸ÇµÄÎÄÕÂÓĞ$Mathar^{[4]}$£¬µ«ÊÇÎÄÕÂÖ»ÌÖÂÛÁË±»¸²¸ÇÎª$9 \times n$µÄ¼ÆËã¹«Ê½£¬±¾ÎÄÌÖÔò¹Ø×¢Ò»°ãĞÔµÄ¼ÆËãÎÊÌâ¡£
+\Section{ÒıÑÔ}
+¹ØÓÚ$dimer$¸²¸ÇÊıµÄ¼ÆËãÎÊÌâ£¬ÆğÔ´ÓÚ\cite{Kly}µÄÎÄÕÂ£¬ÎÄÕÂ¸ø³öÁË$dimer$ÔÚ$m \times n$µÄ¿é×´ÉÏºÍ»·ÃæÉÏµÄ¸²¸ÇÊıµÄ¼ÆËã¹«Ê½¡£µ«ÊÇÓÃ$tetramer$¸²¸ÇµÄ¹«Ê½È´Ã»ÓĞÑĞ¾¿½á¹û,ÓÃ$1\times n$¸²¸ÇµÄÎÄÕÂÓĞ\cite{MA}£¬µ«ÊÇÎÄÕÂÖ»ÌÖÂÛÁË±»¸²¸ÇÎª$9 \times n$µÄ¼ÆËã¹«Ê½£¬±¾ÎÄ¹Ø×¢Ò»°ãĞÔµÄ¼ÆËãÎÊÌâ¡£
 %ÊıÑ§¹«Ê½ÔÚÍÆ¹ãµ½¸ü¸ß½×µÄÇéĞÎ£¬Çé¿öÍùÍù±äµÃ¸´ÔÓ£¬±ÈÈç·½³Ì½âµÄÎÊÌâ£¬ÔÚĞ¡ÓÚÎå´ÎÊ±£¬ÓĞ±È½Ï¼òµ¥¸ùÊ½ĞÎÊ½£¬¶ø¸ßÓÚÎå´ÎµÄ·½³ÌÒ»°ã¶øÑÔÃ»ÓĞ¸ùÊ½½â£¬¸ø³öÉî¿ÌµÄÔ¼ÊøÌõ¼ş£¬¸ß½×·½³ÌµÄ¸ùÊ½½âÒÀÈ»´æÔÚ£¬Õâ¸ö
 % ÊıÑ§ÀúÊ·ÉÏµÄÖøÃûÎÊÌâ¸øÈËÉîÉîµÄÕÜË¼Æô·¢¡£ÀíÂÛµÄÍÆ¹ã¼¸ºõ×ÜÊÇÈ¥³ı¾ÖÏŞµÄ²¿·Ö£¬ÓàÏÂµÄÇéĞÎ¾Í¿ÉÒÔÍØÕ¹¿ªÀ´£¬·¢ÏÖ¸ü¶àµÄÏÖÏóºÍ±¾ÖÊ£¬±¾ÎÄ½ÓÏÂÀ´¾ÍÌÖÂÛ$1 \times 4$¹ÇÅÆ¸²¸ÇÊıµÄ¼ÆËã¹«Ê½¡£
 
 %ºÜÈİÒ×µÃµ½ÀàËÆÓÚ$pfaffian$µÄ±í´ïĞÎÊ½,½ø¶ø×÷ÕßÒ»Ö±ÔÚÑ°ÕÒ×ª»»³É¾ØÕó±í´ïĞÎÊ½£¬Ö®ËùÒÔÕâÃ´×öÊÇÒòÎª´ÓĞÎÊ½ÉÏÀ´¿´£¬ÕâÖÖ¾ØÕóµÄ´æÔÚÍêÈ«·ûºÏÊıÑ§·ûºÅµÄĞÎÊ½ÃÀ£¬¾­¹ıÒ»·¬Å¬Á¦£¬ÖÕÓÚÕÒµ½ÁËÏàÓ¦µÄ¾ØÕóĞÎÊ½¡£¶øÕâÖÖÍØÕ¹µÄ¾ØÕóĞÎÊ½±¾ÉíÈ´¸üÓĞÄÍÈËÑ°Î¶µÄ½á¹¹ÃÀ£¬×÷ÕßÃ»ÓĞ¼û¹ıÓĞÊ²Ã´ÎÄÏ×¶ÔÕâÖÖĞÎÊ½µÄ¾ØÕóÓĞÉîÈëµÄÑĞ¾¿£¬ÕâÀï×÷ÕßÖ»µÃ³öÁËÒ»Ğ©ÉÙÁ¿µÄ½á¹û£¬×÷ÕßÄÜÁ¦ÓĞÏŞ£¬Ï£ÍûÓĞ¸ü¶àµÄÑĞ¾¿Õß²ÎÓëÆäÖĞÀ´ÑĞ¾¿ÕâÖÖ¾ØÕó¡£
 
-\sec{1 ±íÊ¾·½·¨}
-
+\Section{±íÊ¾·½·¨}
 
 \begin{center}
 \begin{tikzpicture}[radius=0.1cm]
@@ -152,30 +96,31 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 ²ÉÓÃ$Kasteleyn^{[1]}$ÏàÍ¬µÄ±íÊ¾·½·¨£¬$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
     ÆäÖĞ$(p_{j},p_{j+1},p_{j+2},p_{j+3})$ÎªÒ»¸ö³¤·½¿éµÄËÄ¸öÁ¬Ğø×ø±ê¡£
 
-    \begin{equation}\label{1}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
+    \begin{equation}\label{a}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
    ,...,p_{N-3}<p_{N-2}<p_{N-1}<p_{N}\end{equation}
 
-   \begin{equation}p_{1}<p_{5}<...<p_{N-3}\end{equation}
+   \begin{equation}\label{b}p_{1}<p_{5}<...<p_{N-3}\end{equation}
 
    \begin{equation}a_{(i,j;i+1,j;i+2,j;i+3,j)}=1,1\leq i \leq m-3,1\leq j\leq n\end{equation}
    \begin{equation}a_{(i,j;i,j+1;i,j+2;i,j+3)}=1,1\leq i \leq m,1\leq j\leq n-3\end{equation}
    \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
 
-   \begin{equation}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
+   \begin{equation}\label{c}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
    ¶ÔÓ¦µÄ¾ØÕó¼ÇÎª$A_{4}=(a_{ijkl})$,Âú×ã$a_{jikl}=-a_{ijkl}$£¬$i,j,k,l$µÄÈÎÒâÒ»¸öĞò¹ØÏµ¶¼Âú×ãÄæĞòÊıÕı¸ººÅ¡£
-   ÕâÑùµÃµ½µÄ±í´ïÊ½$(6)$£¬ÈÔÈ»³ÆÎª$pfaffian$¡£
+   ÕâÑùµÃµ½µÄ±í´ïÊ½$\ref{c}$£¬ÈÔÈ»³ÆÎª$pfaffian$¡£
 
 
-\sec{2 $pfaffian \rightarrow det$µÄ×ª»»}
+\Section{$pfaffian \rightarrow det$µÄ×ª»»}
 
-\begin{define}\quad ¾ØÕóµÄÄÚÎ¬ÊıºÍÍâÎ¬Êı:
-\end{define}
+\begin{definition} ¾ØÕóµÄÄÚÎ¬ÊıºÍÍâÎ¬Êı:
+
 $\begin{bmatrix}
 a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$Îª$n$¸öÏÂÖ¸±ê¹¹³ÉµÄ¶àÎ¬¾ØÕó£¬Ã¿¸öÖ¸±êÈ¡ÖµÎª$1,2,\cdots,m$£¬Ôò$n$³ÆÎªÄÚÎ¬Êı£¬$m$³ÆÎªÍâÎ¬Êı¡£´ËÎÄÖ»¿¼ÂÇ$n$Îª4µÄÇéĞÎ¡£
+\end{definition}
 
-\begin{define}\quad ¾ØÕóĞĞÁĞÊ½:
-\end{define}
+\begin{definition} ¾ØÕóĞĞÁĞÊ½:
+\end{definition}
 
 ½«$[a_{ijkl}]$±íÊ¾³É¾ØÕóµÄ¾ØÕóĞÎÊ½£¬ÄÚ²¿×Ó¾ØÕóµÄÖ¸±êÎª$i,j$£¬Íâ²¿¾ØÕóÖ¸±êÎª$k,l$£¬ĞĞÁĞÊ½$det$Âú×ãÈçÏÂĞÔÖÊ£º
 \newcounter{Lcount}
@@ -186,33 +131,33 @@ a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$Îª$n$¸öÏÂÖ¸±ê¹¹³ÉµÄ¶àÎ¬¾ØÕó£¬Ã¿¸öÖ¸±êÈ¡Ö
 \item
 ÏµÊıĞÔÖÊ£¬ĞĞÁĞÊ½³ËÒÔÏµÊık£¬ÓëÔÚÄ³¸öÖ¸±êÖĞµÄ¹Ì¶¨È¡ÖµÉÏ³ËÒÔkËùµÃ¾ØÕóµÄĞĞÁĞÊ½ÏàµÈ¡£ÈçÈ¡$l=1$ÈçÏÂ£º
 \begin{align*}
-s det
+s*det
   \begin{bmatrix}
   \begin{bmatrix}
   \  a_{1111}&\  a_{2111}&\cdots&\  a_{n111}\\
  \  a_{1211}&\  a_{2211}&\cdots&\  a_{n211}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1n11}&\  a_{2n11}&\cdots&\  a_{nn11}\\
- \end{bmatrix}
-\cdots
+ \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
 \  a_{11n1}&\  a_{21n1}&\cdots&\  a_{n1n1}\\
 \  a_{12n1}&\  a_{22n1}&\cdots&\  a_{n2n1}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1nn1}&\  a_{2nn1}&\cdots&\  a_{nnn1}\\
 \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
 \  a_{111n}& \  a_{211n}&\cdots&\  a_{n11n}\\
 \  a_{121n}& \  a_{221n}&\cdots&\  a_{n21n}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1n1n}& \  a_{2n1n}&\cdots& \  a_{nn1n}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
 \  a_{11nn}& \  a_{21nn}&\cdots&\  a_{n1nn}\\
 \  a_{12nn}& \  a_{22nn}&\cdots&\  a_{n2nn}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1nnn}& \  a_{2nnn}&\cdots&\  a_{nnnn}\\
 \end{bmatrix}
 \end{bmatrix}\\
@@ -222,28 +167,28 @@ s det
   \begin{bmatrix}
  sa_{1111}& sa_{2111}&\cdots&sa_{n111}\\
  sa_{1211}& sa_{2211}&\cdots&sa_{n211}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 sa_{1n11}& sa_{2n11}&\cdots&sa_{nn11}\\
- \end{bmatrix}
-\cdots
+ \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
 sa_{11n1}& sa_{21n1}&\cdots&sa_{n1n1}\\
 sa_{12n1}& sa_{22n1}&\cdots&sa_{n2n1}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 sa_{1nn1}& sa_{2nn1}&\cdots&sa_{nnn1}\\
 \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
 \  a_{111n}& \  a_{211n}&\cdots&\  a_{n11n}\\
 \  a_{121n}& \  a_{221n}&\cdots&\  a_{n21n}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1n1n}& \  a_{2n1n}&\cdots&\  a_{nn1n}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
 \  a_{11nn}& \  a_{21nn}&\cdots& \  a_{n1nn}\\
 \  a_{12nn}& \  a_{22nn}&\cdots&\  a_{n2nn}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 \  a_{1nnn}& \  a_{2nnn}&\cdots& \  a_{nnnn}\\
 \end{bmatrix}
 \end{bmatrix}
@@ -253,67 +198,67 @@ sa_{1nn1}& sa_{2nn1}&\cdots&sa_{nnn1}\\
 \begin{align*}
 det
   \begin{bmatrix}
-\vdots\\
+\vdots&\vdots&\vdots\\
  \begin{bmatrix}
  a_{111\xi}& a_{211\xi}&\cdots&a_{n11\xi}\\
  a_{121\xi}& a_{221\xi}&\cdots&a_{n21\xi}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots&\\
 a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n\xi}& a_{21n\xi}&\cdots&a_{n1n\xi}\\
   a_{12n\xi}& a_{22n\xi}&\cdots&a_{n2n\xi}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
  a_{1nn\xi}& a_{2nn\xi}&\cdots&a_{nnn\xi}\\
  \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   a_{111\eta}& a_{211\eta}&\cdots&a_{n11\eta}\\
   a_{121\eta}& a_{221\eta}&\cdots&a_{n21\eta}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1n1\eta}& a_{2n1\eta}&\cdots&a_{nn1\eta}\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n\eta}& a_{21n\eta}&\cdots&a_{n1n\eta}\\
   a_{12n\eta}& a_{22n\eta}&\cdots&a_{n2n\eta}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1nn\eta }& a_{2nn\eta}&\cdots&a_{nnn\eta}\\
    \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
     \end{bmatrix}\\
 =-det
   \begin{bmatrix}
-\vdots\\
+\vdots&\vdots&\vdots\\
  \begin{bmatrix}
    a_{111\eta}& a_{211\eta}&\cdots&a_{n11\eta}\\
    a_{121\eta}& a_{221\eta}&\cdots&a_{n21\eta}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1n1\eta}& a_{2n1\eta}&\cdots&a_{nn1\eta}\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n\eta}& a_{21n\eta}&\cdots&a_{n1n\eta}\\
   a_{12n\eta}& a_{22n\eta}&\cdots&a_{n2n\eta}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
   a_{1nn\eta }& a_{2nn\eta}&\cdots&a_{nnn\eta}\\
   \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
  \begin{bmatrix}
    a_{111\xi}& a_{211\xi}&\cdots&a_{n11\xi}\\
    a_{121\xi}& a_{221\xi}&\cdots&a_{n21\xi}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots&\\
 a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n\xi}& a_{21n\xi}&\cdots&a_{n1n\xi}\\
   a_{12n\xi}& a_{22n\xi}&\cdots&a_{n2n\xi}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots&\\
   a_{1nn\xi}& a_{2nn\xi}&\cdots&a_{nnn\xi}\\
   \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
     \end{bmatrix}
 \end{align*}
  \item
@@ -323,28 +268,28 @@ a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
  \begin{bmatrix}\begin{smallmatrix}
  a_{1111} + a_{1111}^{'}& a_{2111} + a_{2111}^{'}&\cdots&a_{n111} + a_{n111}^{'}\\
  a_{1211} + a_{1211}^{'}& a_{2211} + a_{2211}^{'}&\cdots&a_{n211} + a_{n211}^{'}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 a_{1n11} + a_{1n11}^{'}& a_{2n11} + a_{2n11}^{'}&\cdots&a_{nn11} + a_{nn11}^{'}\\
-\end{smallmatrix}\end{bmatrix}
-\cdots
+\end{smallmatrix}\end{bmatrix}&
+\cdots&
 \begin{bmatrix}\begin{smallmatrix}
   a_{11n1} + a_{11n1}^{'}& a_{21n1} + a_{21n1}^{'}&\cdots&a_{n1n1} + a_{n1n1}^{'}\\
 a_{12n1} + a_{12n1}^{'}& a_{22n1} + a_{22n1}^{'}&\cdots&a_{n2n1} + a_{n2n1}^{'}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
  a_{1nn1} + a_{1nn1}^{'}& a_{2nn1} + a_{2nn1}^{'}&\cdots&a_{nnn1} + a_{nnn1}^{'}\\
  \end{smallmatrix}\end{bmatrix}\\
-\vdots\\
+\vdots & \vdots & \vdots\\
 \begin{bmatrix}
   \ \ a_{111n}\ \ \ \ & a_{211n}\ \ \ \ &\cdots&a_{n11n}\\
   \ \ a_{121n}\ \ \ \ & a_{221n}\ \ \ \ &\cdots&a_{n21n}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
   \ \ a_{1n1n}\ \ \ \ & a_{2n1n}\ \ \ \ &\cdots&a_{nn1n}\\
-  \end{bmatrix}
-\cdots
+  \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   \ \ a_{11nn}\ \ \ \ & a_{21nn}\ \ \ \ &\cdots&a_{n1nn}\\
   \ \ a_{12nn}\ \ \ \ & a_{22nn}\ \ \ \ &\cdots&a_{n2nn}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+ \vdots&\vdots&\ddots &\vdots& \\
    \ \ a_{1nnn}\ \ \ \ & a_{2nnn}\ \ \ \ &\cdots&a_{nnnn}\\
 \end{bmatrix}
 \end{bmatrix}\\
@@ -353,28 +298,28 @@ $$=det\begin{bmatrix}
  \begin{bmatrix}
    a_{1111}& a_{2111}&\cdots&a_{n111}\\
    a_{1211}& a_{2211}&\cdots&a_{n211}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 a_{1n11}& a_{2n11}&\cdots&a_{nn11}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n1}& a_{21n1}&\cdots&a_{n1n1}\\
   a_{12n1}& a_{22n1}&\cdots&a_{n2n1}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
  a_{1nn1}& a_{2nn1}&\cdots&a_{nnn1}\\
  \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   a_{111n}& a_{211n}&\cdots&a_{n11n}\\
   a_{121n}& a_{221n}&\cdots&a_{n21n}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
   a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
    \end{bmatrix}
     \end{bmatrix}
@@ -384,28 +329,28 @@ a_{1n11}& a_{2n11}&\cdots&a_{nn11}\\
  \begin{bmatrix}
    a_{1111}^{'}& a_{2111}^{'}&\cdots&a_{n111}^{'}\\
    a_{1211}^{'}& a_{2211}^{'}&\cdots&a_{n211}^{'}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
 a_{1n11}^{'}& a_{2n11}^{'}&\cdots&a_{nn11}^{'}\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11n1}^{'}& a_{21n1}^{'}&\cdots&a_{n1n1}^{'}\\
   a_{12n1}^{'}& a_{22n1}^{'}&\cdots&a_{n2n1}^{'}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
  a_{1nn1}^{'}& a_{2nn1}^{'}&\cdots&a_{nnn1}^{'}\\
  \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   a_{111n}& a_{211n}&\cdots&a_{n11n}\\
   a_{121n}& a_{221n}&\cdots&a_{n21n}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
   a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
-  \cdots&\cdots&\cdots &\cdots& \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
    \end{bmatrix}
     \end{bmatrix}\\$$
@@ -416,28 +361,28 @@ $$det \begin{bmatrix}
  \begin{bmatrix}
    1& 0&\cdots&0\\
    0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
  0& 0&\cdots&0\\
  \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    0& 0&\cdots&0\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    0& 0&\cdots&1\\
    \end{bmatrix}
     \end{bmatrix}
@@ -448,110 +393,129 @@ $$det \begin{bmatrix}
  \begin{bmatrix}
    0& 0&\cdots&0\\
    1& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
  0& 0&\cdots&0\\
  \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    0& 0&\cdots&0\\
-   \end{bmatrix}
-\cdots
+   \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   0& 0&\cdots&0\\
   0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    0& 0&\cdots&1\\
    \end{bmatrix}
     \end{bmatrix}
     =0$$
  \end{list}
 
+
 \begin{theorem} ÓÉÉÏÃæµÄĞÔÖÊ¿ÉÒÔÍÆµ¼³öË«ÖØÎ¬Êı¾ØÕóµÄdet±í´ïÊ½ÈçÏÂ£º
 $$det(A_{ijkl})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
 \end{theorem}
 \begin{proof}
 ÓÉ¼Ó·¨ĞÔÖÊ$\uppercase\expandafter{\romannumeral3}$ µÃµ½×ó±ßµÈÓÚ
-% \scriptsize
- \begin{equation}
- \begin{aligned}
-%\begin{split}
-%\begin{cases}
-det\begin{bmatrix}
+$$det\begin{bmatrix}
   \begin{bmatrix}
    a_{1111}& 0&\cdots&0\\
    0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
  \begin{bmatrix}
    0& 0&\cdots&0\\
    0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
 \end{bmatrix}\\
-\vdots\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   a_{111n}& a_{211n}&\cdots&a_{n11n}\\
   a_{121n}& a_{221n}&\cdots&a_{n21n}\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
   a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
-  \end{bmatrix}
-\cdots
+  \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
   a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
 \end{bmatrix}
+\end{bmatrix}$$
+$$+det\begin{bmatrix}
+  \begin{bmatrix}
+   0&a_{2111}&\cdots&0\\
+   0& 0&\cdots&0\\
+  \vdots&\vdots&\ddots &\vdots& \\
+0& 0&\cdots&0\\
+\end{bmatrix}&
+\cdots&
+ \begin{bmatrix}
+   0& 0&\cdots&0\\
+   0& 0&\cdots&0\\
+  \vdots&\vdots&\ddots &\vdots& \\
+0& 0&\cdots&0\\
 \end{bmatrix}\\
-+ \cdots\\
-+det\begin{bmatrix}
+\vdots&\vdots&\vdots\\
+\begin{bmatrix}
+  a_{111n}& a_{211n}&\cdots&a_{n11n}\\
+  a_{121n}& a_{221n}&\cdots&a_{n21n}\\
+  \vdots&\vdots&\ddots &\vdots& \\
+  a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
+  \end{bmatrix}&
+\cdots&
+\begin{bmatrix}
+  a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
+  a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
+  \vdots&\vdots&\ddots &\vdots& \\
+   a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
+\end{bmatrix}
+\end{bmatrix}$$
+ $$\vdots$$
+$$+det\begin{bmatrix}
   \begin{bmatrix}
    0& 0&\cdots&0\\
    0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
-\end{bmatrix}
-\cdots
+\end{bmatrix}&
+\cdots&
  \begin{bmatrix}
    0& 0&\cdots&0\\
    0& 0&\cdots&0\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&a_{nnn1}\\
 \end{bmatrix}\\
-\\
-\vdots\\
-\\
+\vdots&\vdots&\vdots\\
 \begin{bmatrix}
   a_{111n}& a_{211n}&\cdots&a_{n11n}\\
   a_{121n}& a_{221n}&\cdots&a_{n21n}\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
   a_{1n1n}& a_{2n1n}&\cdots&a_{nn1n}\\
-  \end{bmatrix}
-\cdots
+  \end{bmatrix}&
+\cdots&
 \begin{bmatrix}
   a_{11nn}& a_{21nn}&\cdots&a_{n1nn}\\
   a_{12nn}& a_{22nn}&\cdots&a_{n2nn}\\
-  \cdots& \cdots&\cdots&\cdots \\
+  \vdots&\vdots&\ddots &\vdots& \\
    a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
 \end{bmatrix}
-\end{bmatrix}
-%\end{split}
-%\end{cases}
-\end{aligned}
-\end{equation}
-¶Ô$l=1$·Ö²ğ³É$n^{2}$¸öºÍÊ½µ¥Ïî£¬Ã¿¸öµ¥Ïî¹ØÓÚÖ¸±ê$i,j,k,1$£¬³ıÒ»¸ö¹Ì¶¨Ïî$a_{i_{1}j_{1}k_{1}1}$£¬ÆäÓà¶¼Îª0¡£¸ù¾İ$\uppercase\expandafter{\romannumeral3}$,ÔÙ´Î¶Ôµ¥Ïî½øĞĞ¹ØÓÚ$l=2$µÄ·Ö²ğ£¬ÒÔ´ËÀàÍÆ£¬½øĞĞn´ÎµÄ·Ö²ğºó£¬µÃµ½×îºóµÄºÍÊ½µ¥ÏîÂú×ã³ı$a_{i_{1}j_{1}k_{1}1} \cdots a_{i_{n}j_{n}k_{n}n}$Íâ£¬¹ØÓÚÖ¸±ê$i,j,k,l$½ÔÎª0¡£Èô´Ë$n$¸öÊıÖµÖĞ´æÔÚÖÁÉÙÒ»¸öÎª0£¬ÔòÓÉ$\uppercase\expandafter{\romannumeral1}$µÃµ½´Ëµ¥ÏîÎª0£¬·ñÔò´Ë$n$Ïî¶¼²»Îª0£¬Èô$i_{\xi}=i_{\eta}$£¬ÔòÓÉ$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$µÃ´Ëµ¥ÏîÎª0¡£ÓÉ´Ë³ıÈ¥0Ïî£¬ÓàÏîÂú×ã¹ØÓÚÈÎºÎÒ»¸öÖ¸±êÎªÒ»¸ö$1 \cdots n$µÄÅÅÁĞ,ÓÉ$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$µÃµ½½á¹û¡£
+\end{bmatrix}$$
+¶Ô$l=1$·Ö²ğ³É$n^{3}$¸öºÍÊ½µ¥Ïî£¬Ã¿¸öµ¥Ïî¹ØÓÚÖ¸±ê$i,j,k,1$£¬³ıÒ»¸ö¹Ì¶¨Ïî$a_{i_{1}j_{1}k_{1}1}$£¬ÆäÓà¶¼Îª0¡£¸ù¾İ$\uppercase\expandafter{\romannumeral3}$,ÔÙ´Î¶Ôµ¥Ïî½øĞĞ¹ØÓÚ$l=2$µÄ·Ö²ğ£¬ÒÔ´ËÀàÍÆ£¬½øĞĞn´ÎµÄ·Ö²ğºó£¬µÃµ½×îºóµÄºÍÊ½µ¥ÏîÂú×ã³ı$a_{i_{1}j_{1}k_{1}1} \cdots a_{i_{n}j_{n}k_{n}n}$Íâ£¬¹ØÓÚÖ¸±ê$i,j,k,l$½ÔÎª0¡£Èô´Ë$n$¸öÊıÖµÖĞ´æÔÚÖÁÉÙÒ»¸öÎª0£¬ÔòÓÉ$\uppercase\expandafter{\romannumeral1}$µÃµ½´Ëµ¥ÏîÎª0£¬·ñÔò´Ë$n$Ïî¶¼²»Îª0£¬Èô$i_{\xi}=i_{\eta}$£¬ÔòÓÉ$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$µÃ´Ëµ¥ÏîÎª0¡£ÓÉ´Ë³ıÈ¥0Ïî£¬ÓàÏîÂú×ã¹ØÓÚÈÎºÎÒ»¸öÖ¸±êÎªÒ»¸ö$1 \cdots n$µÄÅÅÁĞ,ÓÉ$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$µÃµ½½á¹û¡£
 \end{proof}
 
 %ÕâÑù¶¨ÒåµÄdet(A)¿ÉÒÔÓÃÔÚÍâ»ıÔËËãÉÏ£¬ÈçÏÂ£º
@@ -600,14 +564,17 @@ det\begin{bmatrix}
 %\end{theorem}
 
 \begin{theorem}
-¾ØÕó$A$µÄÍâÎ¬ÊıÎª$n=\xi\eta(\eta \equiv 0 (mod 4))$£¬Èç¹û³ı$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ Íâ, ÆäËü¶¼Îª0¡£ÄÇÃ´$$det(A)=pfaffian(A)^{4}$$
+Õ¤¸ñÎª$N$ÁĞ£¬$M$ĞĞ£¬$N = 4K,n=MN,M \equiv M_{1} \pmod{4},N \equiv 0 (mod 4)$£¬¾ØÕó$A$µÄÍâÎ¬ÊıÎª$n=MN$£¬Èç¹û³ı$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ Íâ, ÆäËü¶¼Îª0¡£ÄÇÃ´$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
 
-\begin{proof}
-$det(A)$ºÍÊ½µ¥ÏîÏÂ±ê×÷ÎªÔªËØ¹¹³ÉµÄ¼¯ºÏ:
+\begin{prof}
 
-$$C_{l} = \left\{
-\left(
+
+$det(A)$¶¨ÒåÓÒ²àºÍÊ½µ¥ÏîÏÂ±ê×÷ÎªÔªËØ¹¹³É¼¯ºÏ:
+
+\begin{equation}\label{7}
+C_{l} = \left\{
+\left\{
 \left(                 %×óÀ¨ºÅ
   \begin{array}{ccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
     \sigma(1) \\  %µÚÒ»ĞĞÔªËØ
@@ -634,13 +601,16 @@ $$C_{l} = \left\{
     n\\
   \end{array}
 \right)
-\right)
-\mid \sigma,\tau,\gamma \right\},$$
+\right\}
+\mid \sigma,\tau,\gamma \text{ÎªÈÎÒâ}(1 \cdots n)\text{ÅÅÁĞ}\right\}
+\end{equation}
 
-$pfaffian(A)$ºÍÊ½µ¥ÏîÏÂ±ê×÷ÎªÔªËØ¹¹³ÉµÄ¼¯ºÏ:
-$$C_{r} =
+$pfaffian(A)$¶¨ÒåÓÒ²àºÍÊ½µ¥ÏîÏÂ±ê×÷ÎªÔªËØ¹¹³É¼¯ºÏ:
+
+\begin{equation}\label{8}
+C_{r} =
 \left\{              %×óÀ¨ºÅ
-  \left(
+  \left\{
 \left(
   \begin{array}{ccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
     p_{1} \\  %µÚÒ»ĞĞÔªËØ
@@ -666,116 +636,115 @@ $$C_{r} =
     p_{n}\\
   \end{array}
 \right)
-\right)
-\mid \phi=(p_{1}p_{2}...p_{n})\text{ fulfils }(1)(2)
-\right\}$$
+\right\}
+\mid \phi=(p_{1}p_{2}...p_{n})\text{ Âú×ã } \ref{a}£¬ \ref{b}
+\right\}
+\end{equation}
+
+
 ÔòÒªÖ¤$C_{l}$Óë$C_{r} \times C_{r}\times C_{r} \times C_{r} $Ò»Ò»¶ÔÓ¦¡£
 
-µÚÒ»²½µÄÖ¤Ã÷£º
-½«$1,...,n$½øĞĞ·Ö×é,¼ÙÉè$$n=MN=M(4K),M \equiv M_{1} \pmod{4} $$
+Áî
 
-Áîº¯Êı
+º¯Êı:
+$$f(x,k)=
+\begin{cases}
+0& \text{x $<$ k }\\
+1& \text{x $\geq$ k}
+\end{cases},$$
 
-$$f1(M1)=
-\begin{cases}
-0& \text{M1=0}\\
-1& \text{M1 $\geq$ 1}
-\end{cases}$$
-$$f2(M1)=
-\begin{cases}
-0& \text{M1=0,1}\\
-1& \text{M1 $\geq$ 2}
-\end{cases}$$
-$$f3(M1)=
-\begin{cases}
-0& \text{M1=0,1,2}\\
-1& \text{M1 $\geq$ 3}
-\end{cases}$$
+¼¯ºÏ:
+
+\begin{align*}
+&A1 = \{0,1,...,\lfloor \frac{M}{4} \rfloor + f(M1,1) -1\}\\
+&A2 = \{0,1,...,\lfloor \frac{M}{4} \rfloor + f(M1,2) -1\}\\
+&A3 = \{0,1,...,\lfloor \frac{M}{4} \rfloor + f(M1,3) -1\}\\
+&A4 = \{0,1,...,\lfloor \frac{M}{4} \rfloor + f(M1,4) -1\}\\
+&B=\{0,1,...,K-1\}
+\end{align*}
+
 ½«ÏÂ±êÔª½øĞĞ·ÖÀà
-\begin{equation}\label{2}
+
+
+\begin{displaymath}
 \begin{split}
-&
-\{1+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f1(M1) -1;
-j=0,1,...,K-1\} \\
-& \{4+4K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f2(M1) -1;
-j=0,1,...,K-1\} \\
-&
-\{3+8K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f3(M1) -1;
-j=0,1,...,K-1\} \\
-&\{2+12K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor -1;
-j=0,1,...,K-1\}
+C_{1} &=\{1+4iN+4j \mid i \in A1,j \in B\}\cup\{4+N+4iN+4j \mid i\in A2,j \in B\}\\
+&\cup\{3+2N+4iN+4j \mid i\in A3,j \in B\}\cup\{2+3N+4iN+4j \mid i\in A4,j \in B\}
 \end{split}
+\end{displaymath}
+
+\begin{displaymath}
+\begin{split}
+C_{2} &=\{2+4iN+4j \mid i \in A1,j \in B\} \cup\{1+N+4iN+4j \mid i \in A2,j \in B\} \\
+&\cup\{4+2N+4iN+4j \mid i \in A3,j \in B\}  \cup\{3+3N+4iN+4j \mid i \in A4,j \in B\}
+\end{split}
+\end{displaymath}
+
+\begin{displaymath}
+\begin{split}
+C_{3} &=\{3+4iN+4j \mid i \in A1;j \in B\}  \cup\{2+N+4iN+4j \mid i \in A2; j \in B\} \\
+&\cup\{1+2N+4iN+4j \mid i \in A3;j \in B\}  \cup\{4+3N+4iN+4j \mid i \in A4;j \in B\}
+\end{split}
+\end{displaymath}
+
+\begin{displaymath}
+\begin{split}
+C_{4} &=\{4+4iN+4j \mid i \in A1;j \in B\}  \cup\{3+N+4iN+4j \mid i \in A2;j \in B\} \\
+&\cup\{2+2N+4iN+4j \mid i \in A3;j \in B\}  \cup\{1+3N+4iN+4j \mid i \in A4;j \in B\}
+\end{split}
+\end{displaymath}
+
+
+ÓÉÓÚÁĞÏòÁ¿ÔªËØÎªÒÔ$1$»òÕß$N$µÄµÈ±ÈÊıÁĞ£¬\ref{8}¼¯ºÏÔªËØÖĞµÄÃ¿Ò»ÁĞÔªËØ
+$\left(
+  \begin{array}{ccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
+    p_{i_{1}} \\  %µÚÒ»ĞĞÔªËØ
+    p_{i_{2}} \\  %µÚ¶şĞĞÔªËØ
+    p_{i_{3}} \\
+    p_{i_{4}} \\
+  \end{array}              %×óÀ¨ºÅ
+    \right)$
+    ´ÓÊôµÄ¼¯ºÏÖ»ÓĞËÄÖÖÇéĞÎ£¬ÈçÏÂ±í£º
+
+\begin{equation}
+\label{table1}\begin{tabular}{|c|c|c|c|c|}% Í¨¹ıÌí¼Ó | À´±íÊ¾ÊÇ·ñĞèÒª»æÖÆÊúÏß
+\hline  % ÔÚ±í¸ñ×îÉÏ·½»æÖÆºáÏß
+$p_{i_{1}}$&$C_1$&$C_2$&$C_3$&$C_4$\\
+\hline  %ÔÚµÚÒ»ĞĞºÍµÚ¶şĞĞÖ®¼ä»æÖÆºáÏß
+$p_{i_{2}}$&$C_2$&$C_3$&$C_4$&$C_1$\\
+\hline % ÔÚ±í¸ñ×îÏÂ·½»æÖÆºáÏß
+$p_{i_{3}}$&$C_3$&$C_4$&$C_1$&$C_2$\\
+\hline % ÔÚ±í¸ñ×îÏÂ·½»æÖÆºáÏß
+$p_{i_{4}}$&$C_4$&$C_1$&$C_2$&$C_3$\\
+\hline % ÔÚ±í¸ñ×îÏÂ·½»æÖÆºáÏß
+\end{tabular}
 \end{equation}
 
-\begin{equation}\label{3}
-\begin{split}
-&
-\{2+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f1(M1) -1;
-j=0,1,...,K-1\} \\
-& \{1+4K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f2(M1) -1;
-j=0,1,...,K-1\} \\
-&
-\{4+8K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f3(M1) -1;
-j=0,1,...,K-1\} \\
-&\{3+12K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor -1;
-j=0,1,...,K-1\}
-\end{split}
-\end{equation}
 
-\begin{equation}\label{4}
-\begin{split}
-&
-\{3+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f1(M1) -1;
-j=0,1,...,K-1\} \\
-& \{2+4K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f2(M1) -1;
-j=0,1,...,K-1\} \\
-&
-\{1+8K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f3(M1) -1;
-j=0,1,...,K-1\} \\
-&\{4+12K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor -1;
-j=0,1,...,K-1\}
-\end{split}
-\end{equation}
+¶ÔÓÚÒ»×éÖµ£¬¸ù¾İ\ref{a}£¬ \ref{b}£¬$\left(
+  \begin{array}{ccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
+    p_{i_{1}} \\  %µÚÒ»ĞĞÔªËØ
+    p_{i_{2}} \\  %µÚ¶şĞĞÔªËØ
+    p_{i_{3}} \\
+    p_{i_{4}} \\
+  \end{array}              %×óÀ¨ºÅ
+    \right)$Ö»ÄÜ´ÓÊôÆäÖĞÒ»¸ö,ÆäËüÈıÖÖ¶ÔÓ¦ÓÚ
 
-\begin{equation}\label{5}
-\begin{split}
-&
-\{4+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f1(M1) -1;
-j=0,1,...,K-1\} \\
-& \{3+4K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f2(M1) -1;
-j=0,1,...,K-1\} \\
-&
-\{2+8K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor + f3(M1) -1;
-j=0,1,...,K-1\} \\
-&\{1+12K+16iK+4j \mid
-i=0,1,...,\lfloor \frac{M}{4} \rfloor -1;
-j=0,1,...,K-1\}
-\end{split}
-\end{equation}
-ÓÉÓÚÁĞÏòÁ¿ÔªËØÂú×ãÒÔµ¥Î»1£¬»òÕß$n$µÄµÈ±ÈÊıÁĞ£¬$RM$ÖĞµÄÃ¿Ò»ÁĞÔªËØ£¬´ÓÉÏÖÁÏÂ·Ö±ğ´ÓÊôÓÚ·Ö×é
-\begin{equation*}(\ref{2})(\ref{3})(\ref{4})(\ref{5})\cdots \cdots formal1\end{equation*}»ò
-\begin{equation*}(17)(18)(19)(16)\cdots \cdots formal2\end{equation*}»ò
-\begin{equation*}(18)(19)(16)(17)\cdots \cdots formal3\end{equation*}»ò
-\begin{equation*}(19)(16)(17)(18)\cdots \cdots formal4\end{equation*}
-ÇÒÁĞÖĞÔªËØ¹ö¶¯´ÎĞò£¬Ç¡ºÃ¿ÉÒÔÎ¨Ò»¶ÔÓ¦4ÖÖformal£¬
- 4¸ö$RM$µÄ³Ë»ı£¬¶ÔËùÓĞĞĞÍ¬Ê±¹ö¶¯ÁĞÔªËØÒªÇóµÚÒ»ÏîÂú×ãformal1£¬ÆäËüÏîÒÀ´ÎÂú×ã¶ÔÓ¦µÄformal£¬ÔòËùµÃÇ¡ºÃÎªÒ»¸ö$LM$¡£\\
-µÚ¶ş²½µÄÖ¤Ã÷£º$RM$ÁĞÔªËØ´ÓÉÏÖÁÏÂ·Ö±ğ´ÓÊôÓÚ²»Í¬µÄformal£¬¶Ô´Ë½øĞĞ·ÖÀà£¬Ç¡ºÃÓĞ$\frac(n)(4)$¸öÁĞÎªformal1£¬formal2£¬formal3£¬formal4.´Ó¶øµÃµ½Î¨Ò»µÄ$RM$µÄ³Ë»ı¡£\\
-µÚÈı²½µÄÖ¤Ã÷£ºÊ×ÏÈÓÉÃüÌâÖĞµÄ¶¨Òå£¬ÁĞÏòÁ¿µÄĞĞ¹ö¶¯±ä»»²»»á´øÀ´·ûºÅÉÏµÄ²î±ğ£¬Æä´ÎÁĞ½»»»Ò²²»»á´øÀ´·ûºÅÉÏµÄ²î±ğ£¬ËùÒÔ·ûºÅÏàµÈ¡£¼´Ö¤
+    $$\left(
+  \begin{array}{cccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
+    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %µÚÒ»ĞĞÔªËØ
+    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %µÚ¶şĞĞÔªËØ
+  \end{array}\right)^{i},i=1,2,3$$
+
+  ÈıÖÖ±ä»»¡£½«$C_{r} \times C_{r}\times C_{r} \times C_{r}$·Ö±ğ¶ÔÓ¦$C_{r}*\left(
+  \begin{array}{cccc}   %¸Ã¾ØÕóÒ»¹²3ÁĞ£¬Ã¿Ò»ÁĞ¶¼¾ÓÖĞ·ÅÖÃ
+    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %µÚÒ»ĞĞÔªËØ
+    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %µÚ¶şĞĞÔªËØ
+  \end{array}              %×óÀ¨ºÅ
+    \right)^{i},$ $i=0,1,2,3$¡£
+Òò´Ë£¬ÓÒ²àÔªËØ¶ÔÓ¦Ò»¸ö×ó²àÔªËØ£¬²¢ÇÒÕâÖÖ¶ÔÓ¦ÊÇÒ»¶ÔÒ»µÄ¡£
+ÓÉ\ref{table1}ÁĞÔªËØºÍĞĞÔªËØÇ¡ºÃÏàÍ¬£¬²¢ÇÒÁĞÓÉËÄ¸öÔªËØ¹¹³É£¬½»»»²»»á´øÀ´·ûºÅÉÏµÄ±ä»¯£¬Òò´Ë·ûºÅÒ²ÊÇÏàÍ¬µÄ¡£
+
 %½«ÓÒ±ßÔªËØ¿´³É¶¼ÊÇ´Ó³õÊ¼Ôª£¨¼´$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$ĞÎÊ½£©±ä»»¹ıÀ´µÄ£¬±ä»»µÄ¹æÔòÎªÃ¿´ÎÖ»ÔÊĞí½øĞĞËÄ¸öÔªÊúÆğÀ´£¬»òÕßËÄ¸ö²¢ĞĞ½øĞĞ×óÓÒÒÆ¶¯Ò»¸ñ¡£¼´
 %$$\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)\\
 %(i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
@@ -793,9 +762,7 @@ j=0,1,...,K-1\}
 %(i+4k)&(i+2+4k)&(i+2+8k)&(i+2+12k)\\
 %i+8k&(i+3+4k)&(i+3+8k)&(i+3+12k)\\
 %i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ ÄÇÃ´Í¨¹ıÕâÑùµÄ±ä»»×îÖÕ¾Í¿ÉÒÔµÃµ½×îÖÕÔª£¬¶øÃ¿Ò»²½µÄ±ä»»¶¼²»»á´øÀ´·ûºÅÉÏµÄ¸Ä±ä£¬ËùÒÔ×îÖÕ·ûºÅÒ²ÊÇÏàÍ¬µÄ£¬ÇÒÕâÀï»¹¶¼ÊÇÕıºÅ,¼´Ö¤¡£
-\end{proof}
-´ÓÖ¤Ã÷¹ı³Ì¿ÉÒÔ¿´³öÂú×ã$$\begin{pmatrix}i\\i+1\\i+2\\i+3 \end{pmatrix}=\begin{pmatrix}i+1\\i+2\\i+3\\i \end{pmatrix}=\begin{pmatrix}i+2\\i+3\\i\\i+1 \end{pmatrix}=\begin{pmatrix}i+3\\i\\i+1\\i+2 \end{pmatrix}$$ºÍ$$\begin{pmatrix}i\\i+4k\\i+8k\\i+12k \end{pmatrix}=\begin{pmatrix}i+4k\\i+8k\\i+12k\\i \end{pmatrix}=\begin{pmatrix}i+8k\\i+12k\\i\\i+4k \end{pmatrix}=\begin{pmatrix}i+12k\\i\\i+4k\\i+8k \end{pmatrix}$$
-ÒÀÈ»ÓĞ$$det(A)=pfaffian(A)^{4}$$
+\end{prof}
 
 Ö¤Ã÷ÖĞ¹ØÓÚµÈÊ½ÓÒ±ßµÄÊ½×Ó¾ÙÀıÈçÏÂ£º
 
@@ -840,71 +807,99 @@ j=0,1,...,K-1\}
 
 \filldraw[fill=gray!20!white, draw=gray!50!black] (5,3.5) rectangle (7,4);
 \filldraw[fill=gray!20!white, draw=gray!50!black] (7,3.5) rectangle (9,4);
+\filldraw
+(0,0) circle (1pt) node[align=left,   below] {1}
+(2,0) circle (1pt) node[align=center, below] {4}
+(4,0) circle (1pt) node[align=right,  below] {8} ;
+\filldraw
+(0,4) circle (1pt) node[align=left,  above] {56}
+(2,4) circle (1pt) node[align=left,  above] {60}
+(4,4) circle (1pt) node[align=left,  above] {64} ;
+\filldraw
+(5,0) circle (1pt) node[align=left,   below] {1}
+(7,0) circle (1pt) node[align=center, below] {4}
+(9,0) circle (1pt) node[align=right,  below] {8} ;
+\filldraw
+(5,4) circle (1pt) node[align=left,  above] {56}
+(7,4) circle (1pt) node[align=left,  above] {60}
+(9,4) circle (1pt) node[align=left,  above] {64} ;
 \end{tikzpicture}
 \end{center}
-\begin{center}
-pic(1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pic(2)
-\end{center}
-Í¼1µÄ¾ØÕó
-$$\begin{bmatrix}
-1&5&12&16&19&23&26&30&33&37&44&48&51&55&58&62\\
-2&6&9&13&20&24&27&31&34&38&41&45&52&56&59&63\\
-3&7&10&14&17&21&28&32&35&39&42&46&49&53&60&64\\
-4&8&11&15&18&22&25&29&36&40&43&47&50&54&57&61\\\end{bmatrix}$$
-Í¼2µÄ¾ØÕó
-$$\begin{bmatrix}
+
+$$\left[\begin{array}{cccccccccccccccccc}
+1 & 5 & 12 & 16 & 19 & 23 & 26 & 30 & 33 & 37 & 44 & 48 & 51 & 55 & 58 & 62\\
+2 & 6 & 9 & 13 & 20 & 24 & 27 & 31 & 34 & 38 & 41 & 45 & 52 & 56 & 59 & 63\\
+3 & 7 & 10 & 14 & 17 & 21 & 28 & 32 & 35 & 39 & 42 & 46 & 49 & 53 & 60 & 64\\
+4 & 8 & 11 & 15 & 18 & 22 & 25 & 29 & 36 & 40 & 43 & 47 & 50 & 54 & 57 & 61
+\end{array}\right]$$
+
+$$\left[\begin{array}{cccccccccccccccccc}
 1&5&33&12&19&26&37&30&23&16&44&48&51&55&58&62\\
 2&6&9&13&20&27&34&38&31&24&41&45&52&56&59&63\\
 3&7&17&10&21&28&35&14&39&32&42&46&49&53&60&64\\
-4&8&25&11&18&29&36&22&15&40&43&47&50&54&57&61\\\end{bmatrix}$$
+4&8&25&11&18&29&36&22&15&40&43&47&50&54&57&61
+\end{array}\right]$$
 
 ÕâÀï¾ÙÀıµÄÁ½¸ö½Ç±ê¾ØÕóÊÇÂú×ãÖ¤Ã÷ÖĞµÄµÚÒ»²½µÄ·Ö×éĞÔÖÊµÄ¡£
 
 Í¨¹ı¼ÆËã»ú±à³Ì£¬¿ÉÒÔÑéÖ¤¶¨ÀíÖĞµÄ²¿·Ö½á¹ûÈçÏÂ£º
-$$1 \times4£¬det(A) = pfaffian(A)^{4} = 1^{4}=1$$
-$$4 \times4£¬det(A) = pfaffian(A)^{4} = 2^{4}=16$$
-$$5 \times4£¬det(A) = pfaffian(A)^{4} = 3^{4}=81$$
-$$6 \times4£¬det(A) = pfaffian(A)^{4} = 4^{4}=256$$
-$$7 \times4£¬det(A) = pfaffian(A)^{4} = 5^{4}=625$$
-$$8 \times4£¬det(A) = pfaffian(A)^{4} = 7^{4}=2401$$
-´úÂë²Î¿¼ ${IndexMatrix[5]}$
+
+\begin{align*}
+&1 \times4£¬det(A) = pfaffian(A)^{4} = 1^{4}=1\\
+&4 \times4£¬det(A) = pfaffian(A)^{4} = 2^{4}=16\\
+&5 \times4£¬det(A) = pfaffian(A)^{4} = 3^{4}=81\\
+&6 \times4£¬det(A) = pfaffian(A)^{4} = 4^{4}=256\\
+&7 \times4£¬det(A) = pfaffian(A)^{4} = 5^{4}=625\\
+&8 \times4£¬det(A) = pfaffian(A)^{4} = 7^{4}=2401\\
+&8 \times3£¬det(A) = pfaffian(A)^{4} = 1^{4}=1
+\end{align*}
+´úÂë²Î¿¼ \cite{IM}.
+Í¬Ê±¼ÆËãÁËÒ»Ğ©²»ÊÇ4µÄ±¶ÊıµÄÇé¿ö£º
+\begin{align*}
+&5 \times5£¬det(A) = pfaffian(A)^{4} =0\\
+&6 \times5£¬det(A) = pfaffian(A)^{4} =0\\
+&7 \times5£¬det(A) = pfaffian(A)^{4} =0\\
+\end{align*}
+ÓÉÉÏÊöÖ¤Ã÷¶¨Àí×ÔÈ»ÍÆ¹ãÎªÏÂÊö¶¨Àí£º
 
 \begin{theorem}
-½«(\ref{1})ÖĞµÄ$p_{i}<p_{j}<p_{k}<p_{l}$ĞŞ¸ÄÎª$p_{i}\in$ (\ref{2}),$p_{j}\in$ (\ref{3}),$p_{k}\in$ (\ref{4}),$p_{l}\in$ (\ref{5}).
-¾ØÕó$A$µÄÏÂ½Ç±êĞ´³ÉÁĞÏòÁ¿ĞÎÊ½£¬³ıÂú×ãformal1,formal2,formal3,formal4µÄÔªËØÒÔÍâ£¬ÆäÓà¶¼Îª0£¬²¢ÇÒ¹ö¶¯ĞĞÔªËØµÃµ½µÄĞÂµÄÁĞÏòÁ¿¶ÔÓ¦ÔªËØÖ»ÓĞ·ûºÅÉÏµÄ²î±ğ£¬ÄÇÃ´ÈÔÈ»ÓĞ$$det(A)=pfaffian(A)^{4}$$
+Áî$p_{i}\equiv p^{'}_{i} (mod 4)$£¬½«\ref{a},\ref{b}ĞŞ¸ÄÎª
+\begin{equation}\label{aa}p^{'}_{1}<p^{'}_{2}<p^{'}_{3}<p^{'}_{4},p^{'}_{5}<p^{'}_{6}<p^{'}_{7}<p^{'}_{8}
+   ,...,p^{'}_{N-3}<p^{'}_{N-2}<p^{'}_{N-1}<p^{'}_{N}\end{equation}
+\begin{equation}\label{bb}p^{'}_{1}<p^{'}_{5}<...<p^{'}_{N-3}\end{equation}£¬³ıÂú×ã\ref{table1}µÄÔªËØÒÔÍâ£¬ÆäÓà¶¼Îª0£¬ÄÇÃ´ÈÔÈ»ÓĞ$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
-\begin{proof}
-¹éÄÉ·¨¡£
-Ê×ÏÈ¶ÔÓÚ¾ØÕóÍâÎ¬ÊıÎª4µÄÇéĞÎÏÔÈ»³ÉÁ¢¡£
-¼ÙÉèÔÚ$4(n-1)$Ê±³ÉÁ¢£¬ÏÂÖ¤$4n$³ÉÁ¢£¬
-Ê×ÏÈÖ¤Ã÷×ó±ß¾ØÕóÖĞµÄÏÂ±êÔª¾ØÕó¶¼¿ÉÒÔ·Ö½â³ÉËÄ¸öpfaffianĞÎÊ½¡£¼ÙÉè´æÔÚÄ³¸öÁĞÖĞ°üº¬$(4n-3,4n)$¼äµÄÔªËØÒ²°üº¬$(1,4(n-1))$¼äµÄÔªËØ£¬
-ÄÇÃ´½«ÕâÆäÖĞ°üº¬$(4n-3,4n)$¼äµÄÔªËØÌŞ³ıµôÊ£ÏÂµÄÔªËØ°´Ä³¸öÖÜÆÚ¹éÎ»£¬ÄÇÃ´Õâ¸öÁĞÉÏ±»$(4n-3,4n)$¼äÔªËØËùÕ¼¾İÎ»ÖÃµÄÔªËØ£¬Ç¡ºÃ¶¼ÔÚÄ³¸ö$\xi$
-ÁĞÉÏ£¬½«ÕâĞ©ÔªËØ»¹Ô­£¬¼´¿ÉµÃµ½ÍêÈ«ÊôÓÚ$(1,4(n-1))$Ö®¼äµÄÔªËØ¹¹³ÉµÄÁĞ£¬¶ø$\xi$±ä»»µÃµ½µÄ$\xi^{'}$Èç¹û»¹ÓĞÔªËØ$a$ÊôÓÚ$(1,4(n-1))$¼äµÄÔªËØ£¬ÄÇÃ´
-¿Ï¶¨´æÔÚÄ³¸ö$\eta$ÖĞÓĞÔªËØÊôÓÚÕâ¸öÔªËØ$a$ËùÔÚµÄÖÜÆÚ£¬²¢ÇÒ$\eta$ÖĞ$a$ÔªËØËùÔÚµÄĞĞÎ»ÖÃÇ¡ºÃÈ±ÉÙµÄÊÇ$a$,ÎÒÃÇÏÈ½«$\eta$±ä»»³ÉÖ»°üº¬$a$ËùÔÚÖÜÆÚµÄÔªËØºÍ$(4n-3,4n)$ÖÜÆÚµÄÔªËØ$\eta^{'}$£¬»ùÓÚ¼ÙÉè£¬Õâ×ÜÊÇ¿ÉÒÔ×öµ½µÄ£¬ÄÇÃ´½»»¥$a$ºÍ$\eta^{'}$¶ÔÓ¦µÄĞĞÎ»ÖÃ£¬ÄÇÃ´µÃµ½µÄ$\xi^{''}$×î¶à»¹ÓĞÒ»¸öÔªËØ²»ÊôÓÚ$(4n-3,4n)$ÖÜÆÚ£¬
-Èç¹ûÈ·Êµ»¹ÓĞÒ»¸öÕâÑùµÄÔªËØ£¬ÀàËÆµÄ½øĞĞ²Ù×÷µÃµ½$\xi^{'''}$¾ÍÊÇËùÓĞ¶¼ÔÚ$(4n-3,4n)$ÖÜÆÚµÄÁĞÁË¡£ÀàËÆµÄÎÒÃÇ¿ÉÒÔ¶ÔÆäËüÁĞ£¬ÆäÖĞ°üº¬$(4n-3,4n)$¼äµÄÔªËØÒ²°üº¬$(1,4(n-1))$ ¼äµÄÔªËØ½øĞĞ²Ù×÷£¬×îÖÕµÃµ½ÍêÈ«ÊôÓÚ$(4n-3,4n)$ÖÜÆÚµÄÁĞ£¬ÒòÎª¶ÔÓÚÃ¿¸öÁĞÀ´Ëµ£¬ÁĞÔªËØÖ»ÄÜÊÇÒÔ4ÎªÖÜÆÚµÄË³ĞòÏòÁ¿ÁĞÖ®¼äĞĞÔªËØÓëĞĞÔªËØµÄ½»²æ±ä»»£¬ËùÒÔÕâ²»»áÓëÖ®Ç°µÄ²Ù×÷´æÔÚ³åÍ»£¬×îÖÕÎÒÃÇµÃµ½ÁËËÄ¸öÔªËØ¶¼ÊôÓÚ$(4n-3,4n)$¼äµÄÁĞ£¬ºÍÓàÏÂµÄÁĞ£¬ÄÇÃ´ÓĞ¼ÙÉè½áÂÛÏÔÈ»¶Ô±ä»»ºóµÄÕâÑùµÄÅÅÁĞ¿ÉÒÔ·Ö½â³ÉËÄ¸öpfaffianĞÎÊ½µÄÁĞ¡£
-¶ø±ä»»¶¼ÊÇ¿ÉÄæµÄ£¬ËùÒÔ¶ÔÓÚÔ­Ê¼ĞÎÊ½Ò»Ñù¿ÉÒÔ·Ö½â³ÉËÄ¸öpfaffianĞÎÊ½µÄÁĞ¡£ËÄ¸öÓÒ±ß¿ÉÒÔºÏ²¢³ÉÒ»¸ö×ó±ßÊÇÏÔÈ»µÄ¡£
-·ûºÅÏàÍ¬µÄÖ¤Ã÷£¬¶ÔÓÚ×ó±ß¾ØÕóÖĞµÄÏÂ±êÔª¾ØÕóÓÉÔ­Ê¼µÄÕıÔòĞÍ±ä»»Í¨¹ıĞĞ±ä»»¶øÀ´£¬¶øÃ¿´Î±ä»»¶¼ÒıÆğÒ»´ÎÄæĞòÊı¡£Õâ¶ÔÓÚ×îÖÕ·Ö³âµÄpfaffianĞÎÊ½À´ËµÒ²Í¬ÑùÒıÆğÒ»´Î·ûºÅµÄ±ä»»£¬ËùÒÔ·ûºÅÏàÍ¬¡£
-\end{proof}
-´Ó½á¹¹ÉÏ¿´£¬¶¨Àí¶ÔÄÚÎ¬ÊıÎª2µÄÇéĞÎ£¬Ô¼»¯µôµÄÄÇĞ©°üº¬ÆæÂÖ»»µÄÔªËØ£¬Ã»ÄÜ°üº¬½øÀ´£¬ÕâÔÚÍÆ¹ãÉÏ¸Ğ¾õÓĞµã²»¹»ÍêÃÀ£¬»òĞíÓĞ¸üÎª¹ãÒåµÄÍÆ¹ã£¬µ«ÊÇÒÅº¶×÷Õß×öÁËÒ»Ğ©³¢ÊÔÃ»ÄÜÕÒµ½,ÕâÊÇÒ»¸ö¸ü¾ßÌôÕ½µÄÎÊÌâ£¬Èç¹ûÄú¸ĞĞËÈ¤£¬¿ÉÒÔ³¢ÊÔÒ»ÏÂ¡£
-\sec{3 ´ËÀàĞÎÊ½¾ØÕóĞÔÖÊ}
 
-\begin{define}  Ë«ÖØÎ¬Êı¾ØÕóµÄ³Ë·¨
+»Ø¹Ë$\det(A)=pfaffian (A)^{2}$µÄÌõ¼ş£¬
+$$\alpha =\{(i_{1},j_{1}),(i_{2},j_{2}),\cdots ,(i_{n},j_{n})\}$$
+$i_{k}<j_{k}$ºÍ$i_{1}<i_{2}<\cdots <i_{n}$
+$${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &2n-1&2n\\i_{1}&j_{1}&i_{2}&j_{2}&\cdots &i_{n}&j_{n}\end{bmatrix}}}$$
+
+ÍÆ¹ã»¹²»ÊÇ×ÔÈ»µÄ·º»¯£¬ÏÂÃæ¸ø³öÒ»¸ö×ÔÈ»·º»¯µÄ²Â²â£¬
+$$\alpha =\{(i_{1},j_{1},k_{1},l_{1}),(i_{2},j_{2},k_{2},l_{2}),\cdots ,(i_{n},j_{n},k_{n},l_{n})\}$$
+$i_{s}<j_{s}<k_{s}<l_{s}$ºÍ$i_{1}<i_{2}<\cdots <i_{n}$
+$${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &4n-3&4n-2&4n-1&4n\\i_{1}&j_{1}&k_{1}&l_{1}&\cdots &i_{n}&j_{n}&k_{n}&l_{n}\end{bmatrix}}}$$
+µ«ÊÇÏÔÈ»
+\Section{³¬ĞĞÁĞÊ½ĞÔÖÊ}
+
+\begin{definition}  Ë«ÖØÎ¬Êı¾ØÕóµÄ³Ë·¨:
    $$[a_{ij}][b_{ijkl}]=[c_{ijkl}]$$
-   $$c_{ijkl} = \Sigma_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
-\end{define}
+   $$c_{ijkl} = \sum_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
+\end{definition}
 
-\begin{theorem}\   ³Ë·¨¶¨Àí
+\begin{theorem}\   ³Ë·¨¶¨Àí:
 
     $$det(A_{ij}B_{ijkl})=det(A_{ij})det(B_{ijkl})$$
 \end{theorem}
 
-\begin{proof}
+\begin{prof}
 
 ·¨Ò»£º
+
 \begin{align*}
 det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
-&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n}\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma (\sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\ &\cdots\sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\
+&\cdots \sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
 &=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det(A_{ij})\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
 &=det(A_{ij})det(B_{ijkl})
 \end{align*}
@@ -924,7 +919,9 @@ det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\si
 $$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
 $$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
 $$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
+
 Ôò
+
 \begin{equation}
 f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 \begin{aligned}
@@ -934,6 +931,7 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 \end{equation}
 
 ´Ó¶ø£¬
+
 \begin{equation}
 \begin{aligned}
 \omega_{i}
@@ -943,9 +941,13 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 &= \sum_{\xi_{1}=1}^{n}\sum_{\xi_{2}=1}^{n}\sum_{\xi_{3}=1}^{n}\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
 x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
 \end{aligned}\end{equation}
-´Ó¶øµÃµ½
+
+½ø¶øµÃµ½
+
 $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$$
+
 ÓÉÇ°Êö¶¨ÀíµÃµ½
+
 \begin{equation}
 \begin{aligned}
 \omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
@@ -956,16 +958,16 @@ $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}
 \wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
 \end{aligned}
 \end{equation}
+
 ¼´Ö¤ $det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
-\\
-\end{proof}
+\end{prof}
 
 \begin{theorem}  $A_{ijkl}$µÄÀ­ÆÕÀ­Ë¹¶¨Àí
 $$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A^{*}_{i,j,k,l} $$
 \end{theorem}
-\begin{proof}
+\begin{prof}
 ×ó±ßµ¥Ïî¶¼ÊôÓÚÓÒ±ßÇÒ·ûºÅÏàÍ¬£¬ÏîÊıÒ²ÊÇÏàÍ¬µÄ£¬½á¹ûÊÇÏÔ¶øÒ×¼ûµÄ¡£
-\end{proof}
+\end{prof}
 
 ÍÆ¹ãµÄÃüÌâÊÇ£¬
 $$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
@@ -984,7 +986,7 @@ l_{p+1} & l_{p+2} & \cdots & l_{n} \\
 \end{array}\right)}$$
 ÏîÊıÉÏµÄ¹ØÏµÊÇ×ó±ß$(n!)^{3}$,ÓÒ±ßÊÇ$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$½áÂÛÒ²±È½ÏÏÔÈ»¡£
 
-\begin{define}
+\begin{definition}
 ¾ØÕóµÄ¿ËÂŞÄÚ¿Ë»ı
 \\
    $$\begin{bmatrix}\begin{smallmatrix}
@@ -1024,9 +1026,9 @@ l_{p+1} & l_{p+2} & \cdots & l_{n} \\
   & & \cdots&
   A_{n1} \times B_{mm}& A_{n2} \times B_{mm}& \cdots&A_{nn} \times B_{mm}\\
   \end{smallmatrix}\end{bmatrix}$$
-\end{define}
+\end{definition}
 
-\sec{4 ¼ÆËã}
+\Section{¼ÆËã}
 ÀàËÆ Kasteleyn$^{[1]}$ÖĞ½«¼ÆËãµÄ¾ØÕó±í´ï³É
 $D=z(Q_{n}\times E_{m})  +  z^{'} (F_{n} \times Q_{m})$
 ÓÉÉÏÃæµÄ¶¨Òå£¬ÕâÀï¹ØÓÚ$tetramer$µÄ¼ÆËãÒ²¿ÉÒÔ±í´ï³ÉÁ½¸öÀàĞÍµÄºÍÊ½¡£
@@ -1104,33 +1106,20 @@ $$= \begin{bmatrix}\begin{smallmatrix}
 $Q_{n}\times E_{m}$
 ÄÇÃ´ÓĞ½á¹û
 $D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$¡£\\
-\sec{5 Õ¹Íû}
+\Section{Õ¹Íû}
 ÔÚÄÚÎ¬ÊıÎª2µÄÇéĞÎ£¬ÌØÕ÷ÖµºÍÌØÕ÷ÏòÁ¿ÊÇÑĞ¾¿¾ØÕó·Ç³£ÓĞÓÃµÄ¹¤¾ß£¬ÔÚÄÚÎ¬ÊıÎª4µÄÇéĞÎÈçºÎÕ¹¿ªÑĞ¾¿£¿
 ÏÔÈ»£¬ÈÔ¿ÉÒÔÍ¨¹ı$det(\lambda E - A) = 0$Çó³öÌØÕ÷Öµ£¬²¢Âú×ãÕâĞ©ÌØÕ÷ÖµµÄ³Ë»ıÇ¡ºÃµÈÓÚ$det(A)$¡£µ«ÊÇ¶ÔÈÎÒâµÄ¿ÉÄæ¾ØÕóÈ´Ã»ÓĞÏàËÆ±ä»»±£Ö¤¶Ô$E$×öÍê±ä»»ºó±£³Ö²»±ä¡£Ê²Ã´ÑùµÄ±ä»»ÄÜ±£Ö¤$E$²»±ä£¿Ê²Ã´ÑùµÄ¾ØÕó¿ÉÒÔÍ¨¹ıÀàËÆÄÚÎ¬ÊıÎª2µÄÇé¿ö½øĞĞÏàËÆ±ä»»ºó¶Ô½Ç»¯£¿ÕâĞ©ÎÊÌâºÜÖµµÃÑĞ¾¿¡£
+\Thanks{±¾ÎÄ×÷Õß¸ĞĞ»¹ùÑ§¾ü½ÌÊÚµÄ¹ÄÀøÓë°ïÖú.}
 
- \sec{²Î¿¼ÎÄÏ×}
-\baselineskip 13pt {\footnotesize
+\BeginRef
+\bibitem{Kly} P. W. Kasteleyn, The statistics of dimers on a lattice, {\it Physica.}, 1961, 27.
 
-\REF{[1]} P. W. Kasteleyn, The statistics of dimers on a lattice, {\it Physica.}, 1961, 27.
+\bibitem{KO} Richard Kenyon, Andrei Okounkov,  What is ... a dimer?, {\it Notices of the American Mathematical Society} MARCH 2005 VOLUME 52, NUMBER 3.
 
-\REF{[2]} Richard Kenyon, Andrei Okounkov,  What is ... a dimer?, {\it Notices of the American Mathematical Society} MARCH 2005 VOLUME 52, NUMBER 3.
+\bibitem{MA} RICHARD J. MATHAR PAVING RECTANGULAR REGIONS WITH RECTANGULAR TILES: TATAMI AND NON-TATAMI TILINGS.{\it arXiv:1311.6135v1 [math.CO]},  24 Nov 2013
 
-\REF{[3]} IndexMatrix%<link  href="https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc%2B%2B/high%20dimension%20matrix/IndexMatrix.cpp">
-\REF{[4]} RICHARD J. MATHAR PAVING RECTANGULAR REGIONS WITH RECTANGULAR TILES: TATAMI AND NON-TATAMI TILINGS.{\it arXiv:1311.6135v1 [math.CO]},  24 Nov 2013
-\vskip .25in
+\bibitem{IM} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc\%2B\%2B/high\%20dimension\%20matrix/IndexMatrix.cpp}{IndexMatrix}
 
-\centerline{\Large  The statistics of tetramers on a lattice }\vskip
-.1in
+\EndRef
 
-\centerline{\normalsize\zihao{5} Hui Hui$^{1}$}\vskip .13in
-
-{\small({\it  1. Department of Mathematics, NanJing University, Nanjing,
-Jiangsu, 210093, P. R. China})}\vskip .23in
-
-\baselineskip 14pt \zihao{5}\normalsize {\indent{\bf Abstract:}\ \
-The article Kasteleyn$^{[1]}$ transfer dimer tiling to determinant of matrix ingenious, finally, get formula of it.
-so, what about of three,four?this is intreseting.\\
-{\bf Key words:double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian;trimer; dimer; tertramer}\ \
-
-}
 \end{document}

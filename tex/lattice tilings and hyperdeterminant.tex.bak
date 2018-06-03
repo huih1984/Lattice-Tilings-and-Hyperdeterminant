@@ -105,10 +105,10 @@ so, what about of three,four?this is intreseting.}
    \begin{equation}a_{(i,j;i,j+1;i,j+2;i,j+3)}=1,1\leq i \leq m,1\leq j\leq n-3\end{equation}
    \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
 
-   \begin{equation}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
+   \begin{equation}\label{c}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
    对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
-   这样得到的表达式$(6)$，仍然称为$pfaffian$。
+   这样得到的表达式$\ref{c}$，仍然称为$pfaffian$。
 
 
 \Section{$pfaffian \rightarrow det$的转换}
@@ -429,7 +429,7 @@ $$det(A_{ijkl})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\s
 由加法性质$\uppercase\expandafter{\romannumeral3}$ 得到左边等于
 $$det\begin{bmatrix}
   \begin{bmatrix}
-   a_{1111}& 0_{    }&\cdots&0\\
+   a_{1111}& 0&\cdots&0\\
    0& 0&\cdots&0\\
   \vdots&\vdots&\ddots &\vdots& \\
 0& 0&\cdots&0\\
@@ -668,34 +668,34 @@ $$f(x,k)=
 
 \begin{displaymath}
 \begin{split}
-C_{1} &=\{1+16iK+4j \mid i \in A1,j \in B\}\cup\{4+4K+16iK+4j \mid i\in A2,j \in B\}\\
-&\cup\{3+8K+16iK+4j \mid i\in A3,j \in B\}\cup\{2+12K+16iK+4j \mid i\in A4,j \in B\}
+C_{1} &=\{1+4iN+4j \mid i \in A1,j \in B\}\cup\{4+N+4iN+4j \mid i\in A2,j \in B\}\\
+&\cup\{3+2N+4iN+4j \mid i\in A3,j \in B\}\cup\{2+3N+4iN+4j \mid i\in A4,j \in B\}
 \end{split}
 \end{displaymath}
 
 \begin{displaymath}
 \begin{split}
-C_{2} &=\{2+16iK+4j \mid i \in A1,j \in B\} \cup\{1+4K+16iK+4j \mid i \in A2,j \in B\} \\
-&\cup\{4+8K+16iK+4j \mid i \in A3,j \in B\}  \cup\{3+12K+16iK+4j \mid i \in A4,j \in B\}
+C_{2} &=\{2+4iN+4j \mid i \in A1,j \in B\} \cup\{1+N+4iN+4j \mid i \in A2,j \in B\} \\
+&\cup\{4+2N+4iN+4j \mid i \in A3,j \in B\}  \cup\{3+3N+4iN+4j \mid i \in A4,j \in B\}
 \end{split}
 \end{displaymath}
 
 \begin{displaymath}
 \begin{split}
-C_{3} &=\{3+16iK+4j \mid i \in A1;j \in B\}  \cup\{2+4K+16iK+4j \mid i \in A2; j \in B\} \\
-&\cup\{1+8K+16iK+4j \mid i \in A3;j \in B\}  \cup\{4+12K+16iK+4j \mid i \in A4;j \in B\}
+C_{3} &=\{3+4iN+4j \mid i \in A1;j \in B\}  \cup\{2+N+4iN+4j \mid i \in A2; j \in B\} \\
+&\cup\{1+2N+4iN+4j \mid i \in A3;j \in B\}  \cup\{4+3N+4iN+4j \mid i \in A4;j \in B\}
 \end{split}
 \end{displaymath}
 
 \begin{displaymath}
 \begin{split}
-C_{4} &=\{4+16iK+4j \mid i \in A1;j \in B\}  \cup\{3+4K+16iK+4j \mid i \in A2;j \in B\} \\
-&\cup\{2+8K+16iK+4j \mid i \in A3;j \in B\}  \cup\{1+12K+16iK+4j \mid i \in A4;j \in B\}
+C_{4} &=\{4+4iN+4j \mid i \in A1;j \in B\}  \cup\{3+N+4iN+4j \mid i \in A2;j \in B\} \\
+&\cup\{2+2N+4iN+4j \mid i \in A3;j \in B\}  \cup\{1+3N+4iN+4j \mid i \in A4;j \in B\}
 \end{split}
 \end{displaymath}
 
 
-由于列向量元素为以$1$或者$N$的等比数列，\ref{8}集合元素中的每一列元素，
+由于列向量元素为以$1$或者$N$的等比数列，\ref{8}集合元素中的每一列元素
 $\left(
   \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
     p_{i_{1}} \\  %第一行元素
@@ -705,21 +705,46 @@ $\left(
   \end{array}              %左括号
     \right)$
     从属的集合只有四种情形，如下表：
-$$\begin{tabular}{|c|c|c|c|}% 通过添加 | 来表示是否需要绘制竖线
+
+\begin{equation}
+\label{table1}\begin{tabular}{|c|c|c|c|c|}% 通过添加 | 来表示是否需要绘制竖线
 \hline  % 在表格最上方绘制横线
-$C_1$&$C_2$&$C_3$&$C_4$\\
+$p_{i_{1}}$&$C_1$&$C_2$&$C_3$&$C_4$\\
 \hline  %在第一行和第二行之间绘制横线
-$C_2$&$C_3$&$C_4$&$C_1$\\
+$p_{i_{2}}$&$C_2$&$C_3$&$C_4$&$C_1$\\
 \hline % 在表格最下方绘制横线
-$C_3$&$C_4$&$C_1$&$C_2$\\
+$p_{i_{3}}$&$C_3$&$C_4$&$C_1$&$C_2$\\
 \hline % 在表格最下方绘制横线
-$C_4$&$C_1$&$C_2$&$C_3$\\
+$p_{i_{4}}$&$C_4$&$C_1$&$C_2$&$C_3$\\
 \hline % 在表格最下方绘制横线
-\end{tabular}$$
-且列中元素滚动次序，恰好可以唯一对应4种formal，
- 4个$RM$的乘积，对所有行同时滚动列元素要求第一项满足formal1，其它项依次满足对应的formal，则所得恰好为一个$LM$。\\
-第二步的证明：$RM$列元素从上至下分别从属于不同的formal，对此进行分类，恰好有$\frac(n)(4)$个列为formal1，formal2，formal3，formal4.从而得到唯一的$RM$的乘积。\\
-第三步的证明：首先由命题中的定义，列向量的行滚动变换不会带来符号上的差别，其次列交换也不会带来符号上的差别，所以符号相等。即证
+\end{tabular}
+\end{equation}
+
+
+对于一组值，根据\ref{a}， \ref{b}，$\left(
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+    p_{i_{1}} \\  %第一行元素
+    p_{i_{2}} \\  %第二行元素
+    p_{i_{3}} \\
+    p_{i_{4}} \\
+  \end{array}              %左括号
+    \right)$只能从属其中一个,其它三种对应于
+
+    $$\left(
+  \begin{array}{cccc}   %该矩阵一共3列，每一列都居中放置
+    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %第一行元素
+    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %第二行元素
+  \end{array}\right)^{i},i=1,2,3$$
+
+  三种变换。将$C_{r} \times C_{r}\times C_{r} \times C_{r}$分别对应$C_{r}*\left(
+  \begin{array}{cccc}   %该矩阵一共3列，每一列都居中放置
+    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %第一行元素
+    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %第二行元素
+  \end{array}              %左括号
+    \right)^{i},$ $i=0,1,2,3$。
+因此，右侧元素对应一个左侧元素，并且这种对应是一对一的。
+由\ref{table1}列元素和行元素恰好相同，并且列由四个元素构成，交换不会带来符号上的变化，因此符号也是相同的。
+
 %将右边元素看成都是从初始元（即$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$形式）变换过来的，变换的规则为每次只允许进行四个元竖起来，或者四个并行进行左右移动一格。即
 %$$\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)\\
 %(i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
@@ -738,8 +763,6 @@ $C_4$&$C_1$&$C_2$&$C_3$\\
 %i+8k&(i+3+4k)&(i+3+8k)&(i+3+12k)\\
 %i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ 那么通过这样的变换最终就可以得到最终元，而每一步的变换都不会带来符号上的改变，所以最终符号也是相同的，且这里还都是正号,即证。
 \end{prof}
-从证明过程可以看出满足$$\begin{pmatrix}i\\i+1\\i+2\\i+3 \end{pmatrix}=\begin{pmatrix}i+1\\i+2\\i+3\\i \end{pmatrix}=\begin{pmatrix}i+2\\i+3\\i\\i+1 \end{pmatrix}=\begin{pmatrix}i+3\\i\\i+1\\i+2 \end{pmatrix}$$和$$\begin{pmatrix}i\\i+4k\\i+8k\\i+12k \end{pmatrix}=\begin{pmatrix}i+4k\\i+8k\\i+12k\\i \end{pmatrix}=\begin{pmatrix}i+8k\\i+12k\\i\\i+4k \end{pmatrix}=\begin{pmatrix}i+12k\\i\\i+4k\\i+8k \end{pmatrix}$$
-依然有$$det(A)=pfaffian(A)^{4}$$
 
 证明中关于等式右边的式子举例如下：
 
@@ -784,6 +807,22 @@ $C_4$&$C_1$&$C_2$&$C_3$\\
 
 \filldraw[fill=gray!20!white, draw=gray!50!black] (5,3.5) rectangle (7,4);
 \filldraw[fill=gray!20!white, draw=gray!50!black] (7,3.5) rectangle (9,4);
+\filldraw
+(0,0) circle (1pt) node[align=left,   below] {1}
+(2,0) circle (1pt) node[align=center, below] {4}
+(4,0) circle (1pt) node[align=right,  below] {8} ;
+\filldraw
+(0,4) circle (1pt) node[align=left,  above] {56}
+(2,4) circle (1pt) node[align=left,  above] {60}
+(4,4) circle (1pt) node[align=left,  above] {64} ;
+\filldraw
+(5,0) circle (1pt) node[align=left,   below] {1}
+(7,0) circle (1pt) node[align=center, below] {4}
+(9,0) circle (1pt) node[align=right,  below] {8} ;
+\filldraw
+(5,4) circle (1pt) node[align=left,  above] {56}
+(7,4) circle (1pt) node[align=left,  above] {60}
+(9,4) circle (1pt) node[align=left,  above] {64} ;
 \end{tikzpicture}
 \end{center}
 
@@ -804,39 +843,47 @@ $$\left[\begin{array}{cccccccccccccccccc}
 这里举例的两个角标矩阵是满足证明中的第一步的分组性质的。
 
 通过计算机编程，可以验证定理中的部分结果如下：
-$$1 \times4，det(A) = pfaffian(A)^{4} = 1^{4}=1$$
-$$4 \times4，det(A) = pfaffian(A)^{4} = 2^{4}=16$$
-$$5 \times4，det(A) = pfaffian(A)^{4} = 3^{4}=81$$
-$$6 \times4，det(A) = pfaffian(A)^{4} = 4^{4}=256$$
-$$7 \times4，det(A) = pfaffian(A)^{4} = 5^{4}=625$$
-$$8 \times4，det(A) = pfaffian(A)^{4} = 7^{4}=2401$$
 
+\begin{align*}
+&1 \times4，det(A) = pfaffian(A)^{4} = 1^{4}=1\\
+&4 \times4，det(A) = pfaffian(A)^{4} = 2^{4}=16\\
+&5 \times4，det(A) = pfaffian(A)^{4} = 3^{4}=81\\
+&6 \times4，det(A) = pfaffian(A)^{4} = 4^{4}=256\\
+&7 \times4，det(A) = pfaffian(A)^{4} = 5^{4}=625\\
+&8 \times4，det(A) = pfaffian(A)^{4} = 7^{4}=2401\\
+&8 \times3，det(A) = pfaffian(A)^{4} = 1^{4}=1
+\end{align*}
 代码参考 \cite{IM}.
-
+同时计算了一些不是4的倍数的情况：
+\begin{align*}
+&5 \times5，det(A) = pfaffian(A)^{4} =0\\
+&6 \times5，det(A) = pfaffian(A)^{4} =0\\
+&7 \times5，det(A) = pfaffian(A)^{4} =0\\
+\end{align*}
+由上述证明定理自然推广为下述定理：
 
 \begin{theorem}
-将(\ref{1})中的$p_{i}<p_{j}<p_{k}<p_{l}$修改为$p_{i}\in$ (\ref{2}),$p_{j}\in$ (\ref{3}),$p_{k}\in$ (\ref{4}),$p_{l}\in$ (\ref{5}).
-矩阵$A$的下角标写成列向量形式，除满足formal1,formal2,formal3,formal4的元素以外，其余都为0，并且滚动行元素得到的新的列向量对应元素只有符号上的差别，那么仍然有$$det(A)=pfaffian(A)^{4}$$
+令$p_{i}\equiv p^{'}_{i} (mod 4)$，将\ref{a},\ref{b}修改为
+\begin{equation}\label{aa}p^{'}_{1}<p^{'}_{2}<p^{'}_{3}<p^{'}_{4},p^{'}_{5}<p^{'}_{6}<p^{'}_{7}<p^{'}_{8}
+   ,...,p^{'}_{N-3}<p^{'}_{N-2}<p^{'}_{N-1}<p^{'}_{N}\end{equation}
+\begin{equation}\label{bb}p^{'}_{1}<p^{'}_{5}<...<p^{'}_{N-3}\end{equation}，除满足\ref{table1}的元素以外，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
-\begin{proof}
-归纳法。
-首先对于矩阵外维数为4的情形显然成立。
-假设在$4(n-1)$时成立，下证$4n$成立，
-首先证明左边矩阵中的下标元矩阵都可以分解成四个pfaffian形式。假设存在某个列中包含$(4n-3,4n)$间的元素也包含$(1,4(n-1))$间的元素，
-那么将这其中包含$(4n-3,4n)$间的元素剔除掉剩下的元素按某个周期归位，那么这个列上被$(4n-3,4n)$间元素所占据位置的元素，恰好都在某个$\xi$
-列上，将这些元素还原，即可得到完全属于$(1,4(n-1))$之间的元素构成的列，而$\xi$变换得到的$\xi^{'}$如果还有元素$a$属于$(1,4(n-1))$间的元素，那么
-肯定存在某个$\eta$中有元素属于这个元素$a$所在的周期，并且$\eta$中$a$元素所在的行位置恰好缺少的是$a$,我们先将$\eta$变换成只包含$a$所在周期的元素和$(4n-3,4n)$周期的元素$\eta^{'}$，基于假设，这总是可以做到的，那么交互$a$和$\eta^{'}$对应的行位置，那么得到的$\xi^{''}$最多还有一个元素不属于$(4n-3,4n)$周期，
-如果确实还有一个这样的元素，类似的进行操作得到$\xi^{'''}$就是所有都在$(4n-3,4n)$周期的列了。类似的我们可以对其它列，其中包含$(4n-3,4n)$间的元素也包含$(1,4(n-1))$ 间的元素进行操作，最终得到完全属于$(4n-3,4n)$周期的列，因为对于每个列来说，列元素只能是以4为周期的顺序向量列之间行元素与行元素的交叉变换，所以这不会与之前的操作存在冲突，最终我们得到了四个元素都属于$(4n-3,4n)$间的列，和余下的列，那么有假设结论显然对变换后的这样的排列可以分解成四个pfaffian形式的列。
-而变换都是可逆的，所以对于原始形式一样可以分解成四个pfaffian形式的列。四个右边可以合并成一个左边是显然的。
-符号相同的证明，对于左边矩阵中的下标元矩阵由原始的正则型变换通过行变换而来，而每次变换都引起一次逆序数。这对于最终分斥的pfaffian形式来说也同样引起一次符号的变换，所以符号相同。
-\end{proof}
-从结构上看，定理对内维数为2的情形，约化掉的那些包含奇轮换的元素，没能包含进来，这在推广上感觉有点不够完美，或许有更为广义的推广，但是遗憾作者做了一些尝试没能找到,这是一个更具挑战的问题，如果您感兴趣，可以尝试一下。
 
+回顾$\det(A)=pfaffian (A)^{2}$的条件，
+$$\alpha =\{(i_{1},j_{1}),(i_{2},j_{2}),\cdots ,(i_{n},j_{n})\}$$
+$i_{k}<j_{k}$和$i_{1}<i_{2}<\cdots <i_{n}$
+$${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &2n-1&2n\\i_{1}&j_{1}&i_{2}&j_{2}&\cdots &i_{n}&j_{n}\end{bmatrix}}}$$
+
+推广还不是自然的泛化，下面给出一个自然泛化的猜测，
+$$\alpha =\{(i_{1},j_{1},k_{1},l_{1}),(i_{2},j_{2},k_{2},l_{2}),\cdots ,(i_{n},j_{n},k_{n},l_{n})\}$$
+$i_{s}<j_{s}<k_{s}<l_{s}$和$i_{1}<i_{2}<\cdots <i_{n}$
+$${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &4n-3&4n-2&4n-1&4n\\i_{1}&j_{1}&k_{1}&l_{1}&\cdots &i_{n}&j_{n}&k_{n}&l_{n}\end{bmatrix}}}$$
+但是显然
 \Section{超行列式性质}
 
 \begin{definition}  双重维数矩阵的乘法:
    $$[a_{ij}][b_{ijkl}]=[c_{ijkl}]$$
-   $$c_{ijkl} = \Sigma_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
+   $$c_{ijkl} = \sum_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
 \end{definition}
 
 \begin{theorem}\   乘法定理:
@@ -847,10 +894,12 @@ $$8 \times4，det(A) = pfaffian(A)^{4} = 7^{4}=2401$$
 \begin{prof}
 
 法一：
+
 \begin{align*}
 det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
-&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n}\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \Sigma_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \Sigma_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2}\cdots \Sigma_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma (\sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\ &\cdots\sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
+&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\
+&\cdots \sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
 &=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det(A_{ij})\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
 &=det(A_{ij})det(B_{ijkl})
 \end{align*}
@@ -870,7 +919,9 @@ det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\si
 $$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
 $$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
 $$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
+
 则
+
 \begin{equation}
 f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 \begin{aligned}
@@ -880,6 +931,7 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 \end{equation}
 
 从而，
+
 \begin{equation}
 \begin{aligned}
 \omega_{i}
@@ -889,9 +941,13 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 &= \sum_{\xi_{1}=1}^{n}\sum_{\xi_{2}=1}^{n}\sum_{\xi_{3}=1}^{n}\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
 x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
 \end{aligned}\end{equation}
-从而得到
+
+进而得到
+
 $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$$
+
 由前述定理得到
+
 \begin{equation}
 \begin{aligned}
 \omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
@@ -902,16 +958,16 @@ $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}
 \wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
 \end{aligned}
 \end{equation}
+
 即证 $det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
-\\
 \end{prof}
 
 \begin{theorem}  $A_{ijkl}$的拉普拉斯定理
 $$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A^{*}_{i,j,k,l} $$
 \end{theorem}
-\begin{proof}
+\begin{prof}
 左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
-\end{proof}
+\end{prof}
 
 推广的命题是，
 $$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
@@ -1063,6 +1119,10 @@ $D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$。\\
 \bibitem{MA} RICHARD J. MATHAR PAVING RECTANGULAR REGIONS WITH RECTANGULAR TILES: TATAMI AND NON-TATAMI TILINGS.{\it arXiv:1311.6135v1 [math.CO]},  24 Nov 2013
 
 \bibitem{IM} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc\%2B\%2B/high\%20dimension\%20matrix/IndexMatrix.cpp}{IndexMatrix}
+
+\bibitem{VAL42} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc%2B%2B/high%20dimension%20matrix/out_4_2_1.txt}{val_4_2}
+\bibitem{VAL34} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc%2B%2B/high%20dimension%20matrix/out_3_4_1.txt}{val_3_4}
+\bibitem{VAL44} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc%2B%2B/high%20dimension%20matrix/out_4_4_1.txt}{val_4_4}
 
 \EndRef
 

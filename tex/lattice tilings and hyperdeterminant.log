@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.12.15)  4 MAY 2018 07:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.12.15)  3 JUN 2018 23:35
 entering extended mode
-**E:/github-repo/Lattice-Tilings-and-Hyperdeterminant/tex/lattice*tilings*and*h
-yperdeterminant.tex
+**E:/repo/Lattice-Tilings-and-Hyperdeterminant/tex/lattice*tilings*and*hyperdet
+erminant.tex
 
-("E:/github-repo/Lattice-Tilings-and-Hyperdeterminant/tex/lattice tilings and h
-yperdeterminant.tex"
+("E:/repo/Lattice-Tilings-and-Hyperdeterminant/tex/lattice tilings and hyperdet
+erminant.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(E:\github-repo\Lattice-Tilings-and-Hyperdeterminant\tex\amsc.cls
+(E:\repo\Lattice-Tilings-and-Hyperdeterminant\tex\amsc.cls
 Document Class: amsc 2011/06/30 v0.1b Acta Mathematica Sinica Chinese article d
 ocument class
 (D:\CTEX\CTeX\tex\latex\cct\cctart.cls
@@ -613,8 +613,8 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 .code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-("E:\github-repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and h
-yperdeterminant.aux")
+("E:\repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and hyperdet
+erminant.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
@@ -657,10 +657,10 @@ LaTeX Info: Redefining \ref on input line 11.
 LaTeX Info: Redefining \pageref on input line 11.
 LaTeX Info: Redefining \nameref on input line 11.
 
-("E:\github-repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and h
-yperdeterminant.out")
-("E:\github-repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and h
-yperdeterminant.out")
+("E:\repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and hyperdet
+erminant.out")
+("E:\repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and hyperdet
+erminant.out")
 \@outlinefile=\write4
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Try loading font information for U+msa on input line 17.
@@ -737,100 +737,105 @@ Underfull \vbox (badness 2828) has occurred while \output is active []
 
 CCT Warning: line 640, GBK punct £¬ in math mode converted to \char44
 
-[7]
-Overfull \hbox (1.73903pt too wide) in paragraph at lines 718--741
-\gbksong40-10.5 1 \gbksong41-10.5  \gbksong37-10.5 Ú \gbksong40-10.5  \gbkson
-g64-10.5 y \gbksong50-10.5 ² \gbksong26-10.5 µ| $\OML/cmm/m/it/10 RM$\gbksong49
--10.5  \gbksong63-10.5  \gbksong56-10.5 ƒ \gbksong39-10.5 l \gbksong54-10.5 þ
- \gbksong64-10.5 – \gbksong59-10.5 e \gbksong41-10.5 © \gbksong37-10.5 O \gbkso
-ng39-10.5 l \gbksong55-10.5 á \gbksong62-10.5 u \gbksong37-10.5 Ø \gbksong57-10
-.5 Ó \gbksong40-10.5 \tenrm formal\gbksong26-10.5 §| \gbksong40-10.5 é \gbkson
-g39-10.5 d \gbksong46-10.5 ? \gbksong60-10.5 1 \gbksong41-10.5 © \gbksong48-10.
-5 a \gbksong26-10.5 §| \gbksong53-10.5 T \gbksong43-10.5 Ð \gbksong62-10.5 k$[]
-\tenrm )(4)$\gbksong42-10.5 ‡
- []
+[7] [8]
 
-[8]
-
-CCT Warning: line 807, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-CCT Warning: line 808, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-CCT Warning: line 809, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-CCT Warning: line 810, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-CCT Warning: line 811, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-CCT Warning: line 812, GBK punct £¬ in math mode converted to \char44
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-LaTeX Warning: Reference `1' on page 9 undefined on input line 818.
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-LaTeX Warning: Reference `2' on page 9 undefined on input line 818.
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-LaTeX Warning: Reference `3' on page 9 undefined on input line 818.
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-LaTeX Warning: Reference `4' on page 9 undefined on input line 818.
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
 
-LaTeX Warning: Reference `5' on page 9 undefined on input line 818.
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
 
-[9]
-Overfull \hbox (0.2184pt too wide) in paragraph at lines 856--856
-[] 
- []
 
-[10]
-Overfull \hbox (31.86644pt too wide) detected at line 930
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 855, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+
+CCT Warning: line 862, GBK punct £¬ in math mode converted to \char44
+
+[9] [10]
+Overfull \hbox (31.86644pt too wide) detected at line 987
 \OML/cmm/m/it/10 detA \tenrm = [] [] [](\OMS/cmsy/m/n/10  \tenrm 1)[]\OML/cmm/m
 /it/10 M[]A[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 934--936
+Underfull \hbox (badness 10000) in paragraph at lines 991--993
 
  []
 
 [11]
-Overfull \hbox (66.21054pt too wide) detected at line 1041
+Overfull \hbox (66.21054pt too wide) detected at line 1098
 \OML/cmm/m/it/10 Q[] \tenrm = []
  []
 
 [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1069.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1130.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1069.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1130.
 
-("E:\github-repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and h
-yperdeterminant.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1069.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1069.
+("E:\repo\Lattice-Tilings-and-Hyperdeterminant\tex\lattice tilings and hyperdet
+erminant.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1130.
 
 Package rerunfilecheck Info: File `lattice*tilings*and*hyperdeterminant.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 15700 strings out of 495354
- 265218 string characters out of 3183858
- 392266 words of memory out of 3000000
- 18403 multiletter control sequences out of 15000+200000
+ 15714 strings out of 495354
+ 265314 string characters out of 3183858
+ 397118 words of memory out of 3000000
+ 18411 multiletter control sequences out of 15000+200000
  60955 words of font info for 214 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,23n,55p,1001b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,23n,55p,994b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/s
 imhei.ttf><C:/Windows/Fonts/simhei.ttf><D:/CTEX/CTeX/fonts/truetype/chinese/sim
 sun.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><D:/CTEX/CTeX
@@ -888,10 +893,10 @@ e1/public/amsfonts/cm/cmsy10.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
 KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/CTEX/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmti8.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb>
-Output written on "lattice tilings and hyperdeterminant.pdf" (13 pages, 623634 
+Output written on "lattice tilings and hyperdeterminant.pdf" (13 pages, 616309 
 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
+ 575 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
