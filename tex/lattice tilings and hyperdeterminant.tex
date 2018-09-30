@@ -1,5 +1,5 @@
-\documentclass{amsc}          %此模板需调用宏包amsc.cls, 请确保此宏包与tex文件在同一文件夹下
-\numberwithin{equation}{section} % 公式编号会随着Section而变动,如(1.1),(1.2),(2.1)...,如果不便使用,您可以将这个命令删去
+\documentclass{amsc}          %��ģ������ú��amsc.cls, ��ȷ���˺����tex�ļ���ͬһ�ļ�����
+\numberwithin{equation}{section} % ��ʽ��Ż�����Section���䶯,��(1.1),(1.2),(2.1)...,�������ʹ��,�����Խ��������ɾȥ
 \usepackage[colorlinks,
             linkcolor=red,
             anchorcolor=blue,
@@ -10,36 +10,36 @@
 
 \begin{document}
 
-\Volume{201x}{1}{0}{0}               % 年、月、卷、期
-\PageNum{1}                                  % 起始页码
-\PaperID{0583-1431(20xx)0x-0xxx-0x}   % 文章编号
-\DocumentCode{A}                              % 文献标识码
-\EditorNote{收稿日期:\ 200x-xx-xx;\ 接受日期:\ 200x-xx-xx}  % 脚注
+\Volume{201x}{1}{0}{0}               % �ꡢ�¡�������
+\PageNum{1}                                  % ��ʼҳ��
+\PaperID{0583-1431(20xx)0x-0xxx-0x}   % ���±��
+\DocumentCode{A}                              % ���ױ�ʶ��
+\EditorNote{�ո�����:\ 200x-xx-xx;\ ��������:\ 200x-xx-xx}  % ��ע
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%  作者从下面开始填写各项内容,本刊的标点符号均使用英文标点,您可以在编译前设置标点形式
+%%%%%  ���ߴ����濪ʼ��д��������,�����ı����ž�ʹ��Ӣ�ı��,�������ڱ���ǰ���ñ����ʽ
 
-\EditorNote{基金项目: }            %如 基金项目:国家自然科学基金资助项目(10171074),如没有基金项目请删去此行
+\EditorNote{������Ŀ: }            %�� ������Ŀ:������Ȼ��ѧ����������Ŀ(10171074),��û�л�����Ŀ��ɾȥ����
 
-\TitleMark{惠慧:栅格覆盖的计数表示及超矩阵的行列式}  % 页眉, 如有多位作者,请写为 第一作者姓名等: 论文标题缩写
+\TitleMark{�ݻ�:դ�񸲸ǵļ�����ʾ�������������ʽ}  % ҳü, ���ж�λ����,��дΪ ��һ����������: ���ı�����д
 
 \BeginTitle
 
-\Title{栅格覆盖的计数表示及超矩阵的行列式}
+\Title{դ�񸲸ǵļ�����ʾ�������������ʽ}
 
-\Author{惠慧}
- {南京大学\  南京\ 210093\\ % 例如 中国科学院数学与系统科学研究院\ 北京\ 100190 \\
+\Author{�ݻ�}
+ {�Ͼ���ѧ\  �Ͼ�\ 210093\\ % ���� �й���ѧԺ��ѧ��ϵͳ��ѧ�о�Ժ\ ����\ 100190 \\
 E-mail: huih1984@163.com}
 
-\Abstract{在文章\cite{Kly} 中，$Kasteleyn$($Fisher$和$Temperley$ 同时独立)开创性研究了$1 \times 2$长方块在栅格上的覆盖数计算问题。那么如果是$1 \times 3$长方块或者$1 \times 4$长方块甚至更多，结果又是怎样的呢？文章不打算讨论$1 \times 3$ 长方块，而直接讨论$1 \times 4$ 长方块的情况，因为在4的情况下，计数表达方法存在一个显而易见的推广，从而让问题的研究更集中在延拓后的性质探讨和计算上， 而在3 的情形却没有，3的情形相对更为困难。更进一步的看，$1 \times (2n)$的长方块的覆盖问题都可以得到延拓，出于聚焦计算问题的需要，这里只讨论$1\times 4$的情形。文章对内维数为2 的情形$det(A)=pfaffian^{2}(A)$ 的结果做了推广，得出本文的一个关键结果即在内维数为4 的情况下，延拓矩阵、行列式以及$pfaffian$ 定义，得到 $det(A)=pfaffian^{4}(A)$。从形式上看，这个结果相当完美！但是计算问题却变的非常的不显然。本文的后半部分则重点讨论超矩阵的一些性质。}
+\Abstract{������\cite{Kly} �У�$Kasteleyn$($Fisher$��$Temperley$ ͬʱ����)�������о���$1 \times 2$��������դ���ϵĸ������������⣬���������ΪFKT��������ƽ��ͼ��ȫϢ�㷨�й㷺Ӧ�á���������緺����$1 \times n$ �����鸲�ǣ�����ֻ����$1 \times 4$ �������������Ӷ������ƹ㵽$1 \times 2n$�ĸ��Ǽ��㣬������ʽ�ĸ����ѶȽϴ����²������ۡ���4������£��������﷽������һ���Զ��׼����ƹ㣬�Ӷ���������о������������غ������̽�ֺͼ����ϡ����¶���ά��Ϊ2 ������$det(A)=pfaffian^{2}(A)$ �Ľ�������ƹ㣬�ó����ĵ�һ���ؼ����������ά��Ϊ4 ������£����ؾ�������ʽ�Լ�$pfaffian$ ���壬�õ� $det(A)=pfaffian^{4}(A)$�� ����ʽ�Ͽ����������൱���������Ǽ�������ȴ��ķǳ��Ĳ���Ȼ�����ĵĺ�벿���ص����۳������һЩ���ʡ�}
 
-\Keywords{双重维数矩阵; 内维数; 多米诺覆盖; 外积; $pfaffian$;}
+\Keywords{˫��ά������; ��ά��; ����ŵ����; ���; $pfaffian$;}
 
 
-\ETitle{lattice tilings and hyperdeterminant} %英文标题
+\ETitle{lattice tilings and hyperdeterminant} %Ӣ�ı���
 
-\EAuthor{Hui \uppercase{Hui}} % 作者姓名的拼音,名在前,姓在后
-{Nanjing University, Nanjing $100190$, P. R. China \\            % 如 Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing $100190$, P. R. China \\
+\EAuthor{Hui \uppercase{Hui}} % ����������ƴ��,����ǰ,���ں�
+{Nanjing University, Nanjing $100190$, P. R. China \\            % �� Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing $100190$, P. R. China \\
 E-mail\,$:$ huih1984$1$@163.com}
 
 \EAbstract{
@@ -51,14 +51,14 @@ so, what about of three,four?this is intreseting.}
 \EndTitle
 
 
-\Section{引言}
-关于$dimer$覆盖数的计算问题，起源于\cite{Kly}的文章，文章给出了$dimer$在$m \times n$的块状上和环面上的覆盖数的计算公式。但是用$tetramer$覆盖的公式却没有研究结果,用$1\times n$覆盖的文章有\cite{MA}，但是文章只讨论了被覆盖为$9 \times n$的计算公式，本文关注一般性的计算问题。
-%数学公式在推广到更高阶的情形，情况往往变得复杂，比如方程解的问题，在小于五次时，有比较简单根式形式，而高于五次的方程一般而言没有根式解，给出深刻的约束条件，高阶方程的根式解依然存在，这个
-% 数学历史上的著名问题给人深深的哲思启发。理论的推广几乎总是去除局限的部分，余下的情形就可以拓展开来，发现更多的现象和本质，本文接下来就讨论$1 \times 4$骨牌覆盖数的计算公式。
+\Section{����}
+����$dimer$�������ļ������⣬��Դ��\cite{Kly}�����£����¸�����$dimer$��$m \times n$�Ŀ�״�Ϻͻ����ϵĸ������ļ��㹫ʽ��������$tetramer$���ǵĹ�ʽȴû���о����,��$1\times n$���ǵ�������\cite{MA}����������ֻ�����˱�����Ϊ$9 \times n$�ļ��㹫ʽ�����Ĺ�ע$1 \times 2n$����һ���Եļ������⡣
+%��ѧ��ʽ���ƹ㵽���߽׵����Σ����������ø��ӣ����緽�̽�����⣬��С�����ʱ���бȽϼ򵥸�ʽ��ʽ����������εķ���һ�����û�и�ʽ�⣬������̵�Լ���������߽׷��̵ĸ�ʽ����Ȼ���ڣ����
+% ��ѧ��ʷ�ϵ�������������������˼���������۵��ƹ㼸������ȥ�����޵Ĳ��֣����µ����ξͿ�����չ���������ָ��������ͱ��ʣ����Ľ�����������$1 \times 4$���Ƹ������ļ��㹫ʽ��
 
-%很容易得到类似于$pfaffian$的表达形式,进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学符号的形式美，经过一番努力，终于找到了相应的矩阵形式。而这种拓展的矩阵形式本身却更有耐人寻味的结构美，作者没有见过有什么文献对这种形式的矩阵有深入的研究，这里作者只得出了一些少量的结果，作者能力有限，希望有更多的研究者参与其中来研究这种矩阵。
+%�����׵õ�������$pfaffian$�ı�����ʽ,��������һֱ��Ѱ��ת���ɾ��������ʽ��֮������ô������Ϊ����ʽ�����������־���Ĵ�����ȫ������ѧ���ŵ���ʽ��������һ��Ŭ���������ҵ�����Ӧ�ľ�����ʽ����������չ�ľ�����ʽ����ȴ��������Ѱζ�Ľṹ��������û�м�����ʲô���׶�������ʽ�ľ�����������о�����������ֻ�ó���һЩ�����Ľ���������������ޣ�ϣ���и�����о��߲����������о����־���
 
-\Section{表示方法}
+\Section{��ʾ����}
 
 \begin{center}
 \begin{tikzpicture}[radius=0.1cm]
@@ -93,8 +93,8 @@ so, what about of three,four?this is intreseting.}
 \node[opacity=0.5] at (2.25,2.25) {$20$};
 \end{tikzpicture}
 \end{center}
-采用$Kasteleyn^{[1]}$相同的表示方法，$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
-    其中$(p_{j},p_{j+1},p_{j+2},p_{j+3})$为一个长方块的四个连续坐标。
+����$Kasteleyn^{[1]}$��ͬ�ı�ʾ������$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
+    ����$(p_{j},p_{j+1},p_{j+2},p_{j+3})$Ϊһ����������ĸ��������ꡣ
 
     \begin{equation}\label{a}p_{1}<p_{2}<p_{3}<p_{4},p_{5}<p_{6}<p_{7}<p_{8}
    ,...,p_{N-3}<p_{N-2}<p_{N-1}<p_{N}\end{equation}
@@ -107,29 +107,29 @@ so, what about of three,four?this is intreseting.}
 
    \begin{equation}\label{c}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
-   对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
-   这样得到的表达式$\ref{c}$，仍然称为$pfaffian$。
+   ��Ӧ�ľ����Ϊ$A_{4}=(a_{ijkl})$,����$a_{jikl}=-a_{ijkl}$��$i,j,k,l$������һ�����ϵ�����������������š�
+   �����õ��ı���ʽ$\ref{c}$����Ȼ��Ϊ$pfaffian$��
 
 
-\Section{$pfaffian \rightarrow det$的转换}
+\Section{$pfaffian \rightarrow det$��ת��}
 
-\begin{definition} 矩阵的内维数和外维数:
+\begin{definition} �������ά������ά��:
 
 $\begin{bmatrix}
-a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$为$n$个下指标构成的多维矩阵，每个指标取值为$1,2,\cdots,m$，则$n$称为内维数，$m$称为外维数。此文只考虑$n$为4的情形。
+a_{i_{1}i_{2}...i_{n}}\end{bmatrix}_{m}$Ϊ$n$����ָ�깹�ɵĶ�ά����ÿ��ָ��ȡֵΪ$1,2,\cdots,m$����$n$��Ϊ��ά����$m$��Ϊ��ά��������ֻ����$n$Ϊ4�����Ρ�
 \end{definition}
 
-\begin{definition} 矩阵行列式:
+\begin{definition} ��������ʽ:
 \end{definition}
 
-将$[a_{ijkl}]$表示成矩阵的矩阵形式，内部子矩阵的指标为$i,j$，外部矩阵指标为$k,l$，行列式$det$满足如下性质：
+��$[a_{ijkl}]$��ʾ�ɾ���ľ�����ʽ���ڲ��Ӿ����ָ��Ϊ$i,j$���ⲿ����ָ��Ϊ$k,l$������ʽ$det$�����������ʣ�
 \newcounter{Lcount}
 \begin{list}{\Roman{Lcount}}
 {\usecounter{Lcount}
 \setlength{\rightmargin}{\leftmargin}}
 %\scriptsize
 \item
-系数性质，行列式乘以系数k，与在某个指标中的固定取值上乘以k所得矩阵的行列式相等。如取$l=1$如下：
+ϵ�����ʣ�����ʽ����ϵ��k������ĳ��ָ���еĹ̶�ȡֵ�ϳ���k���þ��������ʽ��ȡ���ȡ$l=1$���£�
 \begin{align*}
 s*det
   \begin{bmatrix}
@@ -194,7 +194,7 @@ sa_{1nn1}& sa_{2nn1}&\cdots&sa_{nnn1}\\
 \end{bmatrix}
  \end{align*}
  \item
- 符号性质，某个指标下的任意两列交换位置，行列式正负号互换，例如下：
+ �������ʣ�ĳ��ָ���µ��������н���λ�ã�����ʽ�����Ż����������£�
 \begin{align*}
 det
   \begin{bmatrix}
@@ -262,7 +262,7 @@ a_{1n1\xi}& a_{2n1\xi}&\cdots&a_{nn1\xi}\\
     \end{bmatrix}
 \end{align*}
  \item
- 加法性质，任意一个列中和式可以分解，例如下
+ �ӷ����ʣ�����һ�����к�ʽ���Էֽ⣬������
 %\begin{align*}
  $$det\begin{bmatrix}
  \begin{bmatrix}\begin{smallmatrix}
@@ -356,7 +356,7 @@ a_{1n11}^{'}& a_{2n11}^{'}&\cdots&a_{nn11}^{'}\\
     \end{bmatrix}\\$$
    % \end{align*}
    \item
-   单位元
+   ��λԪ
 $$det \begin{bmatrix}
  \begin{bmatrix}
    1& 0&\cdots&0\\
@@ -388,7 +388,7 @@ $$det \begin{bmatrix}
     \end{bmatrix}
     =1$$
       \item
-零项元，单位元中的任何内矩阵交换1所在行列到另一个行列，满足存在$i_{1}=i_{2}$而$j_{1}\neq j_{2}$则此行列式为0，例如：
+����Ԫ����λԪ�е��κ��ھ��󽻻�1�������е���һ�����У��������$i_{1}=i_{2}$��$j_{1}\neq j_{2}$�������ʽΪ0�����磺
 $$det \begin{bmatrix}
  \begin{bmatrix}
    0& 0&\cdots&0\\
@@ -422,11 +422,11 @@ $$det \begin{bmatrix}
  \end{list}
 
 
-\begin{theorem} 由上面的性质可以推导出双重维数矩阵的det表达式如下：
+\begin{theorem} ����������ʿ����Ƶ���˫��ά�������det����ʽ���£�
 $$det(A_{ijkl})=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma a_{\sigma(1)\tau(1)\gamma(1)1} a_{\sigma(2)\tau(2)\gamma(2)2}\cdots a_{\sigma(n)\tau(n)\gamma(n)n}$$
 \end{theorem}
 \begin{proof}
-由加法性质$\uppercase\expandafter{\romannumeral3}$ 得到左边等于
+�ɼӷ�����$\uppercase\expandafter{\romannumeral3}$ �õ���ߵ���
 $$det\begin{bmatrix}
   \begin{bmatrix}
    a_{1111}& 0&\cdots&0\\
@@ -515,19 +515,19 @@ $$+det\begin{bmatrix}
    a_{1nnn}& a_{2nnn}&\cdots&a_{nnnn}\\
 \end{bmatrix}
 \end{bmatrix}$$
-对$l=1$分拆成$n^{3}$个和式单项，每个单项关于指标$i,j,k,1$，除一个固定项$a_{i_{1}j_{1}k_{1}1}$，其余都为0。根据$\uppercase\expandafter{\romannumeral3}$,再次对单项进行关于$l=2$的分拆，以此类推，进行n次的分拆后，得到最后的和式单项满足除$a_{i_{1}j_{1}k_{1}1} \cdots a_{i_{n}j_{n}k_{n}n}$外，关于指标$i,j,k,l$皆为0。若此$n$个数值中存在至少一个为0，则由$\uppercase\expandafter{\romannumeral1}$得到此单项为0，否则此$n$项都不为0，若$i_{\xi}=i_{\eta}$，则由$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$得此单项为0。由此除去0项，余项满足关于任何一个指标为一个$1 \cdots n$的排列,由$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$得到结果。
+��$l=1$�ֲ��$n^{3}$����ʽ���ÿ���������ָ��$i,j,k,1$����һ���̶���$a_{i_{1}j_{1}k_{1}1}$�����඼Ϊ0������$\uppercase\expandafter{\romannumeral3}$,�ٴζԵ�����й���$l=2$�ķֲ��Դ����ƣ�����n�εķֲ�󣬵õ����ĺ�ʽ���������$a_{i_{1}j_{1}k_{1}1} \cdots a_{i_{n}j_{n}k_{n}n}$�⣬����ָ��$i,j,k,l$��Ϊ0������$n$����ֵ�д�������һ��Ϊ0������$\uppercase\expandafter{\romannumeral1}$�õ��˵���Ϊ0�������$n$���Ϊ0����$i_{\xi}=i_{\eta}$������$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$�ô˵���Ϊ0���ɴ˳�ȥ0�������������κ�һ��ָ��Ϊһ��$1 \cdots n$������,��$\uppercase\expandafter{\romannumeral1},\uppercase\expandafter{\romannumeral5}$�õ������
 \end{proof}
 
-%这样定义的det(A)可以用在外积运算上，如下：
+%���������det(A)����������������ϣ����£�
 %\begin{theorem}
-%令
+%��
 %\begin{equation}
 %\begin{aligned}
 %\omega=
 %& \sum_{\substack{i_{\sigma}\in {(1,...,n)} j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}\\ i_{1} < i_{2} < i_{3} < i_{4}}}a_{i_{1}j_{1}k_{1}l_{1}}a_{i_{2}j_{2}k_{2}l_{2}}a_{i_{3}j_{3}k_{3}l_{3}}a_{i_{4}j_{4}k_{4}l_{4}}\\
 %& e_{1}^{i_{1}} \wedge e_{2}^{j_{1}} \wedge e_{3}^{k_{1}} \wedge e_{4}^{l_{1}} \wedge e_{1}^{i_{2}} \wedge e_{2}^{j_{2}} \wedge e_{3}^{k_{2}} \wedge e_{4}^{l_{2}} \wedge e_{1}^{i_{3}} \wedge e_{2}^{j_{3}} \wedge e_{3}^{k_{3}} \wedge e_{4}^{l_{3}} \wedge e_{1}^{i_{4}} \wedge e_{2}^{j_{4}} \wedge e_{3}^{k_{4}} \wedge e_{4}^{l_{4}}
 %\end{aligned}\end{equation}
-%则
+%��
 %\begin{equation}
 %\omega^{\frac{n}{4}}
 %\begin{aligned}
@@ -538,13 +538,13 @@ $$+det\begin{bmatrix}
 %
 %
 %\begin{theorem}
-%令
+%��
 %\begin{equation}
 %\begin{aligned}
 %\omega_{i}=
 %& \sum_{j_{\sigma}\in {(1,...,n)}k_{\sigma}\in {(1,...,n)}l_{\sigma}\in{(1,...,n)}}a_{ij_{\sigma}k_{\sigma}l_{\sigma}} e_{1}^{j_{\sigma}} \wedge e_{2}^{k_{\sigma}} \wedge e_{3}^{l_{\sigma}}
 %\end{aligned}\end{equation}
-%则
+%��
 %\begin{equation}
 %\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
 %\begin{aligned}
@@ -553,107 +553,95 @@ $$+det\begin{bmatrix}
 %\end{aligned}
 %\end{equation}
 %\end{theorem}
-%这两个定理，从几何角度反映了$det(A)$定义的意义。
+%�������������Ӽ��νǶȷ�ӳ��$det(A)$��������塣
 %
-%同样,上面定义的$pfaffian$得到如下的定理：
+%ͬ��,���涨���$pfaffian$�õ����µĶ�����
 %\begin{theorem}
-%令
+%��
 %\begin{equation}\delta=\sum_{i<j<k<l}a_{ijkl}e^{i} \wedge e^{j} \wedge e^{k} \wedge e^{l}\end{equation}
-%则
+%��
 %\begin{equation}\delta^{\frac{n}{4}} = \frac{n}{4}! \operatorname{pf}(A)\;e^1\wedge e^2\wedge\cdots\wedge e^{n}\end{equation}
 %\end{theorem}
 
 \begin{theorem}
-栅格为$N$列，$M$行，$N = 4K,n=MN,M \equiv M_{1} \pmod{4},N \equiv 0 (mod 4)$，矩阵$A$的外维数为$n=MN$，如果除$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ 外, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
+դ��Ϊ$N$�У�$M$�У�$N = 4K,n=MN,M \equiv M_{1} \pmod{4},N \equiv 0 (mod 4)$������$A$����ά��Ϊ$n=MN$�������$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ ��, ������Ϊ0����ô$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
 
 \begin{prof}
 
 
-$det(A)$定义右侧和式单项下标作为元素构成集合:
+$det(A)$�����Ҳ��ʽ�����±���ΪԪ�ع��ɼ���:
 
 \begin{equation}\label{7}
 C_{l} = \left\{
-\left\{
-\left(                 %左括号
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    \sigma(1) \\  %第一行元素
-    \tau(1) \\  %第二行元素
+\left(                %������
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    \sigma(1) \\  %��һ��Ԫ��
+    \tau(1) \\  %�ڶ���Ԫ��
     \gamma(1)\\
     1\\
-  \end{array}
-  \right),
-  \left(
-             %左括号
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    \sigma(2) \\  %第一行元素
-    \tau(2) \\  %第二行元素
+  \end{array},
+             %������
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    \sigma(2) \\  %��һ��Ԫ��
+    \tau(2) \\  %�ڶ���Ԫ��
     \gamma(2)\\
     2\\
-  \end{array}
-    \right),
-\cdots     ,       %左括号
-  \left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    \sigma(n) \\  %第一行元素
-    \tau(n) \\  %第二行元素
+  \end{array},
+\cdots     ,       %������
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    \sigma(n) \\  %��һ��Ԫ��
+    \tau(n) \\  %�ڶ���Ԫ��
     \gamma(n)\\
     n\\
   \end{array}
 \right)
-\right\}
-\mid \sigma,\tau,\gamma \text{为任意}(1 \cdots n)\text{排列}\right\}
+\mid \sigma,\tau,\gamma \text{Ϊ����}(1 \cdots n)\text{����}\right\}
 \end{equation}
 
-$pfaffian(A)$定义右侧和式单项下标作为元素构成集合:
+$pfaffian(A)$�����Ҳ��ʽ�����±���ΪԪ�ع��ɼ���:
 
 \begin{equation}\label{8}
 C_{r} =
-\left\{              %左括号
-  \left\{
+\left\{              %������
 \left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    p_{1} \\  %第一行元素
-    p_{2} \\  %第二行元素
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{1} \\  %��һ��Ԫ��
+    p_{2} \\  %�ڶ���Ԫ��
     p_{3}\\
     p_{4}\\
-  \end{array}              %左括号
-    \right),
-  \left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    p_{5} \\  %第一行元素
-    p_{6} \\  %第二行元素
+  \end{array},              %������,
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{5} \\  %��һ��Ԫ��
+    p_{6} \\  %�ڶ���Ԫ��
     p_{7}\\
     p_{8}\\
-  \end{array}
-    \right),
-\cdots ,           %左括号
-  \left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    p_{n-3} \\  %第一行元素
-    p_{n-2} \\  %第二行元素
+  \end{array},
+\cdots ,           %������
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{n-3} \\  %��һ��Ԫ��
+    p_{n-2} \\  %�ڶ���Ԫ��
     p_{n-1}\\
     p_{n}\\
   \end{array}
 \right)
-\right\}
-\mid \phi=(p_{1}p_{2}...p_{n})\text{ 满足 } \ref{a}， \ref{b}
+\mid \phi=(p_{1}p_{2}...p_{n})\text{ ���� } \ref{a}�� \ref{b}
 \right\}
 \end{equation}
 
 
-则要证$C_{l}$与$C_{r} \times C_{r}\times C_{r} \times C_{r} $一一对应。
+��Ҫ֤$C_{l}$��$C_{r} \times C_{r}\times C_{r} \times C_{r} $һһ��Ӧ��
 
-令
+��
 
-函数:
+����:
 $$f(x,k)=
 \begin{cases}
 0& \text{x $<$ k }\\
 1& \text{x $\geq$ k}
 \end{cases},$$
 
-集合:
+����:
 
 \begin{align*}
 &A1 = \{0,1,...,\lfloor \frac{M}{4} \rfloor + f(M1,1) -1\}\\
@@ -663,7 +651,7 @@ $$f(x,k)=
 &B=\{0,1,...,K-1\}
 \end{align*}
 
-将下标元进行分类
+���±�Ԫ���з���
 
 
 \begin{displaymath}
@@ -695,57 +683,65 @@ C_{4} &=\{4+4iN+4j \mid i \in A1;j \in B\}  \cup\{3+N+4iN+4j \mid i \in A2;j \in
 \end{displaymath}
 
 
-由于列向量元素为以$1$或者$N$的等比数列，\ref{8}集合元素中的每一列元素
+����������Ԫ��Ϊ��$1$����$N$�ĵȱ����У�$C_{r}$�е�Ԫ��
 $\left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    p_{i_{1}} \\  %第一行元素
-    p_{i_{2}} \\  %第二行元素
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{i_{1}} \\  %��һ��Ԫ��
+    p_{i_{2}} \\  %�ڶ���Ԫ��
     p_{i_{3}} \\
     p_{i_{4}} \\
-  \end{array}              %左括号
+  \end{array}              %������
     \right)$
-    从属的集合只有四种情形，如下表：
+    ����ֻ���������Σ����±���
 
 \begin{equation}
-\label{table1}\begin{tabular}{|c|c|c|c|c|}% 通过添加 | 来表示是否需要绘制竖线
-\hline  % 在表格最上方绘制横线
+\label{table1}\begin{tabular}{|c|c|c|c|c|}% ͨ������ | ����ʾ�Ƿ���Ҫ��������
+\hline  % �ڱ������Ϸ����ƺ���
+$\in$&$type1$&$type2$&$type3$&$type4$\\
+\hline
 $p_{i_{1}}$&$C_1$&$C_2$&$C_3$&$C_4$\\
-\hline  %在第一行和第二行之间绘制横线
+\hline  %�ڵ�һ�к͵ڶ���֮����ƺ���
 $p_{i_{2}}$&$C_2$&$C_3$&$C_4$&$C_1$\\
-\hline % 在表格最下方绘制横线
+\hline % �ڱ������·����ƺ���
 $p_{i_{3}}$&$C_3$&$C_4$&$C_1$&$C_2$\\
-\hline % 在表格最下方绘制横线
+\hline % �ڱ������·����ƺ���
 $p_{i_{4}}$&$C_4$&$C_1$&$C_2$&$C_3$\\
-\hline % 在表格最下方绘制横线
+\hline % �ڱ������·����ƺ���
 \end{tabular}
 \end{equation}
-
-
-对于一组值，根据\ref{a}， \ref{b}，$\left(
-  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
-    p_{i_{1}} \\  %第一行元素
-    p_{i_{2}} \\  %第二行元素
+�����Ľ�ѭ���û�Ⱥ
+$$ G_{4} = {\left(
+\begin{array}{cccc}   %�þ���һ��3�У�ÿһ�ж����з���
+1 & 2& 3 & 4\\  %��һ��Ԫ��
+2& 3 & 4 & 1\\  %�ڶ���Ԫ��
+\end{array}\right)^{i},i=0��1,2,3}$$
+������Ԫ��,
+$\left(
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{i_{1}} \\  %��һ��Ԫ��
+    p_{i_{2}} \\  %�ڶ���Ԫ��
     p_{i_{3}} \\
     p_{i_{4}} \\
-  \end{array}              %左括号
-    \right)$只能从属其中一个,其它三种对应于
+  \end{array}              %������
+    \right)* \left(
+\begin{array}{cccc}   %�þ���һ��3�У�ÿһ�ж����з���
+1 & 2& 3 & 4\\  %��һ��Ԫ��
+\sigma(1)& \sigma(2) & \sigma(3) & \sigma(4)\\  %�ڶ���Ԫ��
+\end{array}\right)
+= \left(
+  \begin{array}{ccc}   %�þ���һ��3�У�ÿһ�ж����з���
+    p_{i_{\sigma(1)}} \\  %��һ��Ԫ��
+    p_{i_{\sigma(2)}} \\  %�ڶ���Ԫ��
+    p_{i_{\sigma(3)}} \\
+    p_{i_{\sigma(4)}} \\
+  \end{array}              %������
+    \right)$
 
-    $$\left(
-  \begin{array}{cccc}   %该矩阵一共3列，每一列都居中放置
-    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %第一行元素
-    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %第二行元素
-  \end{array}\right)^{i},i=1,2,3$$
+$(C_{r},C_{r}*g,C_{r}*g^2,C_{r}*g^3) \mapsto C_{r}\times C_{r}\times C_{r} \times C_{r}$
+����һ��һ��ӳ�䡣
+��\ref{table1}��Ԫ�غ���Ԫ��ǡ����ͬ�����������ĸ�Ԫ�ع��ɣ�����������������ϵı仯����˷���Ҳ����ͬ�ġ�
 
-  三种变换。将$C_{r} \times C_{r}\times C_{r} \times C_{r}$分别对应$C_{r}*\left(
-  \begin{array}{cccc}   %该矩阵一共3列，每一列都居中放置
-    p_{i_{1}} & p_{i_{2}}& p_{i_{3}} & p_{i_{4}}\\  %第一行元素
-    p_{i_{2}} & p_{i_{3}}& p_{i_{4}}& p_{i_{1}}\\  %第二行元素
-  \end{array}              %左括号
-    \right)^{i},$ $i=0,1,2,3$。
-因此，右侧元素对应一个左侧元素，并且这种对应是一对一的。
-由\ref{table1}列元素和行元素恰好相同，并且列由四个元素构成，交换不会带来符号上的变化，因此符号也是相同的。
-
-%将右边元素看成都是从初始元（即$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$形式）变换过来的，变换的规则为每次只允许进行四个元竖起来，或者四个并行进行左右移动一格。即
+%���ұ�Ԫ�ؿ��ɶ��Ǵӳ�ʼԪ����$\begin{bmatrix}a\\a+1\\a+2\\a+3 \end{bmatrix}$��ʽ���任�����ģ��任�Ĺ���Ϊÿ��ֻ���������ĸ�Ԫ�������������ĸ����н��������ƶ�һ�񡣼�
 %$$\begin{bmatrix}i&(i+4k)&(i+8k)&(i+12k)\\
 %(i+1)&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
 %i+2&(i+2+4k)&(i+2+8k)&(i+2+12k)\\
@@ -761,10 +757,10 @@ $p_{i_{4}}$&$C_4$&$C_1$&$C_2$&$C_3$\\
 %$$\rightarrow\begin{bmatrix}i&(i+1+4k)&(i+1+8k)&(i+1+12k)\\
 %(i+4k)&(i+2+4k)&(i+2+8k)&(i+2+12k)\\
 %i+8k&(i+3+4k)&(i+3+8k)&(i+3+12k)\\
-%i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ 那么通过这样的变换最终就可以得到最终元，而每一步的变换都不会带来符号上的改变，所以最终符号也是相同的，且这里还都是正号,即证。
+%i+12k&(i+4+4k)&(i+4+8k)&(i+4+12k)\\\end{bmatrix}$$ ��ôͨ�������ı任���վͿ��Եõ�����Ԫ����ÿһ���ı任��������������ϵĸı䣬�������շ���Ҳ����ͬ�ģ������ﻹ��������,��֤��
 \end{prof}
 
-证明中关于等式右边的式子举例如下：
+֤���й��ڵ�ʽ�ұߵ�ʽ�Ӿ������£�
 
 \begin{center}
 \begin{tikzpicture}[radius=0.1cm]
@@ -840,68 +836,72 @@ $$\left[\begin{array}{cccccccccccccccccc}
 4&8&25&11&18&29&36&22&15&40&43&47&50&54&57&61
 \end{array}\right]$$
 
-这里举例的两个角标矩阵是满足证明中的第一步的分组性质的。
+��������������Ǳ����������֤���еĵ�һ���ķ������ʵġ�
 
-通过计算机编程，可以验证定理中的部分结果如下：
+ͨ���������̣�������֤�����еĲ��ֽ�����£�
 
 \begin{align*}
-&1 \times4，det(A) = pfaffian(A)^{4} = 1^{4}=1\\
-&4 \times4，det(A) = pfaffian(A)^{4} = 2^{4}=16\\
-&5 \times4，det(A) = pfaffian(A)^{4} = 3^{4}=81\\
-&6 \times4，det(A) = pfaffian(A)^{4} = 4^{4}=256\\
-&7 \times4，det(A) = pfaffian(A)^{4} = 5^{4}=625\\
-&8 \times4，det(A) = pfaffian(A)^{4} = 7^{4}=2401\\
-&8 \times3，det(A) = pfaffian(A)^{4} = 1^{4}=1
+&1 \times4��det(A) = pfaffian(A)^{4} = 1^{4}=1\\
+&4 \times4��det(A) = pfaffian(A)^{4} = 2^{4}=16\\
+&5 \times4��det(A) = pfaffian(A)^{4} = 3^{4}=81\\
+&6 \times4��det(A) = pfaffian(A)^{4} = 4^{4}=256\\
+&7 \times4��det(A) = pfaffian(A)^{4} = 5^{4}=625\\
+&8 \times4��det(A) = pfaffian(A)^{4} = 7^{4}=2401\\
+&8 \times3��det(A) = pfaffian(A)^{4} = 1^{4}=1
 \end{align*}
-代码参考 \cite{IM}.
-同时计算了一些不是4的倍数的情况：
+����ο� \cite{IM}.
+ͬʱ������һЩ����4�ı����������
 \begin{align*}
-&5 \times5，det(A) = pfaffian(A)^{4} =0\\
-&6 \times5，det(A) = pfaffian(A)^{4} =0\\
-&7 \times5，det(A) = pfaffian(A)^{4} =0\\
+&5 \times5��det(A) = pfaffian(A)^{4} =0\\
+&6 \times5��det(A) = pfaffian(A)^{4} =0\\
+&7 \times5��det(A) = pfaffian(A)^{4} =0\\
 \end{align*}
-由上述证明定理自然推广为下述定理：
+������֤��������Ȼ�ƹ�Ϊ����������
 
 \begin{theorem}
-令$p^{'}_{i}\equiv p_{i} (mod 4)$，将\ref{a},\ref{b}修改为
+��$p^{'}_{i}\equiv p_{i} (mod 4)$����\ref{a},\ref{b}�޸�Ϊ
 \begin{equation}\label{aa}p^{'}_{1}<p^{'}_{2}<p^{'}_{3}<p^{'}_{4},p^{'}_{5}<p^{'}_{6}<p^{'}_{7}<p^{'}_{8}
    ,...,p^{'}_{N-3}<p^{'}_{N-2}<p^{'}_{N-1}<p^{'}_{N}\end{equation}
-\begin{equation}\label{bb}p^{'}_{1}<p^{'}_{5}<...<p^{'}_{N-3}\end{equation}，除满足\ref{table1}的元素以外，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
+\begin{equation}\label{bb}p^{'}_{1}<p^{'}_{5}<...<p^{'}_{N-3}\end{equation}��������\ref{table1}��Ԫ�����⣬���඼Ϊ0����ô��Ȼ��$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
 
 \begin{theorem}\label{theorem_pf3}
-将$1, \dots, n$分成四个相等的集合$S_{1},S_{2},S_{3},S_{4}$,将\ref{a},\ref{b}修改为
+��$1, \dots, n$�ֳ��ĸ���ȵļ���$S_{1},S_{2},S_{3},S_{4}$,��\ref{a},\ref{b}�޸�Ϊ
 \begin{equation}p_{i_{1}} \in S_{1}, p_{i_{2}} \in S_{2}, p_{i_{3}} \in S_{3}, p_{i_{4}} \in S_{4}\end{equation}
-\begin{equation}\label{bb}p_{1}<p_{5}<...<p_{N-3}\end{equation}，除满足\ref{table1}的元素以外，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
+\begin{equation}\label{bb}p_{1}<p_{5}<...<p_{N-3}\end{equation}��������\ref{table1}��Ԫ�����⣬���඼Ϊ0����ô��Ȼ��$$det(A)=pfaffian(A)^{4}$$
 \end{theorem}
 
 
-尽管得到\ref{theorem_pf3},结论还不够强，回顾$\det(A)=pfaffian (A)^{2}$的条件，
+���ܵõ�\ref{theorem_pf3}����������ǿ������ʽ�Ͻ��������Ƕ�ά��ʽ����ά�µ���Ȼ�ƹ㡣
+�ع�$\det(A)=pfaffian (A)^{2}$��������
 $$\alpha =\{(i_{1},j_{1}),(i_{2},j_{2}),\cdots ,(i_{n},j_{n})\}$$
-$i_{k}<j_{k}$和$i_{1}<i_{2}<\cdots <i_{n}$
+$i_{k}<j_{k}$��$i_{1}<i_{2}<\cdots <i_{n}$
 $${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &2n-1&2n\\i_{1}&j_{1}&i_{2}&j_{2}&\cdots &i_{n}&j_{n}\end{bmatrix}}}$$
 
-推广还不是自然的泛化，下面给出一个自然泛化的猜测，
+�������һ����Ȼ�������Ʋ⣺
 $$\alpha =\{(i_{1},j_{1},k_{1},l_{1}),(i_{2},j_{2},k_{2},l_{2}),\cdots ,(i_{n},j_{n},k_{n},l_{n})\}$$
-$i_{s}<j_{s}<k_{s}<l_{s}$和$i_{1}<i_{2}<\cdots <i_{n}$
+$i_{s}<j_{s}<k_{s}<l_{s}$��$i_{1}<i_{2}<\cdots <i_{n}$
 $${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &4n-3&4n-2&4n-1&4n\\i_{1}&j_{1}&k_{1}&l_{1}&\cdots &i_{n}&j_{n}&k_{n}&l_{n}\end{bmatrix}}}$$
-在$4 \times 2$,\cite{VAL42}这个猜测是正确的，但是维数稍大一些，如$4 \times 3$,\cite{VAL34}，$4 \times 4$,\cite{VAL44}，则不成立。
+��
+$$det(A)=pfaffian(A)^{4}$$
 
-\Section{超行列式性质}
+��$4 \times 2$,\cite{VAL42}����²�����ȷ�ģ�����ά���Դ�һЩ����$4 \times 3$,\cite{VAL34}��$4 \times 4$,\cite{VAL44}���򲻳�����
 
-\begin{definition}  双重维数矩阵的乘法:
+\Section{������ʽ����}
+
+\begin{definition}  ˫��ά������ĳ˷�:
    $$[a_{ij}][b_{ijkl}]=[c_{ijkl}]$$
    $$c_{ijkl} = \sum_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
 \end{definition}
 
-\begin{theorem}\   乘法定理:
+\begin{theorem}\   �˷�����:
 
     $$det(A_{ij}B_{ijkl})=det(A_{ij})det(B_{ijkl})$$
 \end{theorem}
 
 \begin{prof}
 
-法一：
+��һ��
 
 \begin{align*}
 det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
@@ -912,9 +912,9 @@ det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\si
 &=det(A_{ij})det(B_{ijkl})
 \end{align*}
 
-法二：用外积来证明.
+�������������֤��.
 
-令
+��
 
 \begin{equation}
 \begin{aligned}
@@ -923,12 +923,12 @@ det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\si
 \end{aligned}
 \end{equation}
 
-做基底变换如下：
+�����ױ任���£�
 $$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
 $$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
 $$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
 
-则
+��
 
 \begin{equation}
 f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
@@ -938,7 +938,7 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 \end{aligned}
 \end{equation}
 
-从而，
+�Ӷ���
 
 \begin{equation}
 \begin{aligned}
@@ -950,11 +950,11 @@ f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
 x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
 \end{aligned}\end{equation}
 
-进而得到
+�����õ�
 
 $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$$
 
-由前述定理得到
+��ǰ�������õ�
 
 \begin{equation}
 \begin{aligned}
@@ -967,17 +967,17 @@ $$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}
 \end{aligned}
 \end{equation}
 
-即证 $det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
+��֤ $det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
 \end{prof}
 
-\begin{theorem}  $A_{ijkl}$的拉普拉斯定理
+\begin{theorem}  $A_{ijkl}$��������˹����
 $$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A^{*}_{i,j,k,l} $$
 \end{theorem}
 \begin{prof}
-左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
+��ߵ�������ұ��ҷ�����ͬ������Ҳ����ͬ�ģ�������Զ��׼��ġ�
 \end{prof}
 
-推广的命题是，
+�ƹ�������ǣ�
 $$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
 (-1)^{\sum_{t=1}^{p}(i_{t}+j_{t}+k_{t}+l_{t})}
 M_{\left(\begin{array}{cccc}
@@ -992,10 +992,10 @@ j_{p+1} & j_{p+2} & \cdots & j_{n} \\
 k_{p+1} & k_{p+2} & \cdots & k_{n} \\
 l_{p+1} & l_{p+2} & \cdots & l_{n} \\
 \end{array}\right)}$$
-项数上的关系是左边$(n!)^{3}$,右边是$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$结论也比较显然。
+�����ϵĹ�ϵ�����$(n!)^{3}$,�ұ���$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$����Ҳ�Ƚ���Ȼ��
 
 \begin{definition}
-矩阵的克罗内克积
+����Ŀ����ڿ˻�
 \\
    $$\begin{bmatrix}\begin{smallmatrix}
   A_{11}& A_{12}& \cdots&A_{1n}\\
@@ -1036,11 +1036,11 @@ l_{p+1} & l_{p+2} & \cdots & l_{n} \\
   \end{smallmatrix}\end{bmatrix}$$
 \end{definition}
 
-\Section{计算}
-类似 Kasteleyn$^{[1]}$中将计算的矩阵表达成
+\Section{����}
+���� Kasteleyn$^{[1]}$�н�����ľ�������
 $D=z(Q_{n}\times E_{m})  +  z^{'} (F_{n} \times Q_{m})$
-由上面的定义，这里关于$tetramer$的计算也可以表达成两个类型的和式。
-假设矩形方块为$n\times m$,
+������Ķ��壬�������$tetramer$�ļ���Ҳ���Ա�����������͵ĺ�ʽ��
+������η���Ϊ$n\times m$,
 $$
   Q_{n} = \begin{bmatrix}\begin{smallmatrix}
   0& 0&
@@ -1112,12 +1112,12 @@ $$= \begin{bmatrix}\begin{smallmatrix}
  & & \cdots & &\\
 \end{smallmatrix}\end{bmatrix}_{n} $$
 $Q_{n}\times E_{m}$
-那么有结果
-$D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$。\\
-\Section{展望}
-在内维数为2的情形，特征值和特征向量是研究矩阵非常有用的工具，在内维数为4的情形如何展开研究？
-显然，仍可以通过$det(\lambda E - A) = 0$求出特征值，并满足这些特征值的乘积恰好等于$det(A)$。但是对任意的可逆矩阵却没有相似变换保证对$E$做完变换后保持不变。什么样的变换能保证$E$不变？什么样的矩阵可以通过类似内维数为2的情况进行相似变换后对角化？这些问题很值得研究。
-\Thanks{本文作者感谢郭学军教授的鼓励与帮助.}
+��ô�н��
+$D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$��\\
+\Section{չ��}
+����ά��Ϊ2�����Σ�����ֵ�������������о�����ǳ����õĹ��ߣ�����ά��Ϊ4���������չ���о���
+��Ȼ���Կ���ͨ��$det(\lambda E - A) = 0$�������ֵ����������Щ����ֵ�ĳ˻�ǡ�õ���$det(A)$�����Ƕ�����Ŀ������ȴû�����Ʊ任��֤��$E$����任�󱣳ֲ��䡣ʲô���ı任�ܱ�֤$E$���䣿ʲô���ľ������ͨ��������ά��Ϊ2������������Ʊ任��Խǻ�����Щ�����ֵ���о���
+\Thanks{��л��ѧ�����ڸ�������ص�˶ʿ���Ŀ��⣬�Լ�ָ���͹���.}
 
 \BeginRef
 \bibitem{Kly} P. W. Kasteleyn, The statistics of dimers on a lattice, {\it Physica.}, 1961, 27.
