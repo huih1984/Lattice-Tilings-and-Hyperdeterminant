@@ -1,0 +1,29 @@
+﻿生成启动时间为 2018-09-30 下午 11:23:29。
+     1>项目“E:\workspace\hdmatrix\hdmatrix\hdmatrix.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\hdmatrix.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\hdmatrix.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt hdmatrix.cpp
+         hdmatrix.cpp
+     1>e:\workspace\hdmatrix\hdmatrix\hdmatrix.cpp(126): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(249) : 参见“freopen”的声明
+     1>e:\workspace\hdmatrix\hdmatrix\hdmatrix.cpp(127): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(249) : 参见“freopen”的声明
+     1>e:\workspace\hdmatrix\hdmatrix\hdmatrix.cpp(128): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(304) : 参见“scanf”的声明
+     1>e:\workspace\hdmatrix\hdmatrix\hdmatrix.cpp(130): warning C4101: “temp”: 未引用的局部变量
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\workspace\hdmatrix\Debug\hdmatrix.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\hdmatrix.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\workspace\hdmatrix\Debug\hdmatrix.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\workspace\hdmatrix\Debug\hdmatrix.lib" /MACHINE:X86 Debug\hdmatrix.obj
+         Debug\stdafx.obj
+         hdmatrix.vcxproj -> E:\workspace\hdmatrix\Debug\hdmatrix.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\workspace\hdmatrix\Debug\hdmatrix.exe.manifest" /manifest Debug\hdmatrix.exe.intermediate.manifest "D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug\hdmatrix.unsuccessfulbuild”。
+         正在对“Debug\hdmatrix.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\workspace\hdmatrix\hdmatrix\hdmatrix.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.65
