@@ -136,16 +136,25 @@ int main(){
 				index.cols[2]=i*n+j+2;
 				index.cols[3]=i*n+j+3;
 				indexSet[0].insert(index);
-				int tuple[8][3] = {{0,1,2},{0,2,1},{0,1,3},{0,3,1},{0,2,3},{0,3,2},{1,2,3},{1,3,2}};
+				/*int tuple[8][3] = {{0,1,2},{0,2,1},{0,1,3},{0,3,1},{0,2,3},{0,3,2},{1,2,3},{1,3,2}};
 				for (int tuple_index=0; tuple_index < 8; ++tuple_index){
 					indexSet[0].insert(get_tran_(index, tuple[tuple_index], 3));
-				}
+				}*/
+				
 				int tuple2[3][2] = {{0,1},{0,2},{0,3}};
 				int tuple3[3][2] = {{2,3},{1,3},{1,2}};
 				for (int tuple_index=0; tuple_index < 3; ++tuple_index){
 					Index temp_index = get_tran_(index, tuple2[tuple_index], 2);
 					indexSet[0].insert(get_tran_(temp_index, tuple3[tuple_index], 2));
 				}
+				/*int tuple4[6][2] = {{0,1},{0,2},{0,3},{1,2},{1,3},{2,3}};
+				for (int tuple_index=0; tuple_index < 6; ++tuple_index){
+					indexSet[0].insert(get_tran_(index, tuple4[tuple_index], 2));
+				}
+				int tuple5[6][4] = {{0,1,2,3},{0,1,3,2},{0,2,1,3},{0,2,3,1},{0,3,1,2},{0,3,2,1}};
+				for (int tuple_index=0; tuple_index < 6; ++tuple_index){
+					indexSet[0].insert(get_tran_(index, tuple5[tuple_index], 4));
+				}*/
 			}
 		}
 		for(int i=0;i<=m-4;++i){
@@ -155,16 +164,24 @@ int main(){
 				index.cols[2]=i*n+j+2*n;
 				index.cols[3]=i*n+j+3*n;
 				indexSet[0].insert(index);
-				int tuple[8][3] = {{0,1,2},{0,2,1},{0,1,3},{0,3,1},{0,2,3},{0,3,2},{1,2,3},{1,3,2}};
+				/*int tuple[8][3] = {{0,1,2},{0,2,1},{0,1,3},{0,3,1},{0,2,3},{0,3,2},{1,2,3},{1,3,2}};
 				for (int tuple_index=0; tuple_index < 8; ++tuple_index){
 					indexSet[0].insert(get_tran_(index, tuple[tuple_index], 3));
-				}
+				}*/
 				int tuple2[3][2] = {{0,1},{0,2},{0,3}};
 				int tuple3[3][2] = {{2,3},{1,3},{1,2}};
 				for (int tuple_index=0; tuple_index < 3; ++tuple_index){
 					Index temp_index = get_tran_(index, tuple2[tuple_index], 2);
 					indexSet[0].insert(get_tran_(temp_index, tuple3[tuple_index], 2));
 				}
+				/*int tuple4[6][2] = {{0,1},{0,2},{0,3},{1,2},{1,3},{2,3}};
+				for (int tuple_index=0; tuple_index < 6; ++tuple_index){
+					indexSet[0].insert(get_tran_(index, tuple4[tuple_index], 2));
+				}
+				int tuple5[6][4] = {{0,1,2,3},{0,1,3,2},{0,2,1,3},{0,2,3,1},{0,3,1,2},{0,3,2,1}};
+				for (int tuple_index=0; tuple_index < 6; ++tuple_index){
+					indexSet[0].insert(get_tran_(index, tuple5[tuple_index], 4));
+				}*/
 			}
 		}
 	}
