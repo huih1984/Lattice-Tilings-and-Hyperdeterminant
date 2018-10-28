@@ -6,7 +6,7 @@ f = open("out.txt", "w")
 # 0,1值，存放第i行的第j个元素，标记元素是否已被使用过
 l0 = np.zeros((80))#记录1,2行被标记元素
 l1 = np.zeros((80))#记录3,4行被标记元素
-m = 4
+m = 6
 n = 4
 cnt = 0
 dimension = m * n
@@ -51,6 +51,7 @@ def get_sign(permdata, dimension):
 elementSets =[]
 indexSet = list()
 pfaffian = np.zeros([4,80], np.uint)
+set_num = 0
 def compute_all_element():
     # m 行数
     # n 列数
@@ -80,16 +81,22 @@ def compute_all_element():
                 index = get_tran_(index, tuple2[ind], 2)
                 indexSet.append(index)
     for ind in range(len(indexSet)):
+        for ind2 in range(ind + 1, len(indexSet)):
+            if indexSet[ind2].cols[0] < indexSet[ind].cols[0]:
+                temp = indexSet[ind2].cols.copy()
+                indexSet[ind2].set(indexSet[ind].cols)
+                indexSet[ind].set(temp)
+    
+    for ind in range(len(indexSet)):
         print(indexSet[ind].cols)
-
     # 将数据按照第一行元素放入不同list
-    global elementSets
-    for ind in range(dimension + 1):
-        elementSets.append(set())
-
-    set_len = len(indexSet)
-    for ind in range(set_len):
-        elementSets[indexSet[ind].cols[0]].add(indexSet[ind])
+    # global elementSets
+    # for ind in range(dimension + 1):
+    #     elementSets.append(set())
+    #
+    # set_len = len(indexSet)
+    # for ind in range(set_len):
+    #     elementSets[indexSet[ind].cols[0]].add(indexSet[ind])
     return
 
 def dfs(i):
@@ -104,11 +111,12 @@ def dfs(i):
         f.write("\n")
         cnt = cnt + 1#get_sign(pfaffian)
     else:
-        for ind_s in range(i, len(indexSet)):
-            if l0[indexSet[ind_s].cols[0]] != 0 or l0[indexSet[ind_s].cols[1]] != 0 or l1[indexSet[ind_s].cols[2]] != 0 or l1[indexSet[ind_s].cols[3]] != 0:
-                continue
+        for ind_s in range(i, set_num):
             if i >= 1 and indexSet[ind_s].cols[0] < pfaffian[0, i - 1]:
                 continue
+            if l0[indexSet[ind_s].cols[0]] != 0 or l0[indexSet[ind_s].cols[1]] != 0 or l1[indexSet[ind_s].cols[2]] != 0 or l1[indexSet[ind_s].cols[3]] != 0:
+                continue
+            
             pfaffian[0, i] = indexSet[ind_s].cols[0]
             pfaffian[1, i] = indexSet[ind_s].cols[1]
             pfaffian[2, i] = indexSet[ind_s].cols[2]
@@ -126,5 +134,6 @@ def dfs(i):
 
 if __name__ == '__main__':
     compute_all_element()
+    set_num = len(indexSet)
     dfs(0)
     f.write("%d" % cnt)
