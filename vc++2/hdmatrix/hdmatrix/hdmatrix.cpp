@@ -9,7 +9,7 @@
 using namespace std;
 int m,n,dimension;
 
-#define MAXN 80
+#define MAXN 800
 
 struct Index{
 	int cols[4];
@@ -18,7 +18,7 @@ struct Index{
 	bool operator < (const Index &a) const
 	{
 		//按score从大到小排列
-		return a.cols[0]<cols[0]||(a.cols[0]==cols[0]&&a.cols[1]<cols[1])||(a.cols[0]==cols[0]&&a.cols[1]==cols[1]&&a.cols[2]<cols[2])||(a.cols[0]==cols[0]&&a.cols[1]==cols[1]&&a.cols[2]==cols[2]&&a.cols[3]<cols[3]);
+		return cols[0]<a.cols[0]||(cols[0]==a.cols[0]&&cols[1]<a.cols[1])||(cols[0]==a.cols[0]&&cols[1]==a.cols[1]&&cols[2]<a.cols[2])||(cols[0]==a.cols[0]&&cols[1]==a.cols[1]&&cols[2]==a.cols[2]&&cols[3]<a.cols[3]);
 	}
 	void operator = (Index a)
 	{
@@ -43,7 +43,17 @@ int l1[MAXN];
 int l2[MAXN];
 int l3[MAXN];
 int l4[MAXN];
-int cnt=0;
+long long int cnt=0;
+
+Index get_tran_(Index index, int tuple[], int len){
+	Index new_index = index;
+	for (int i=0; i < len - 1; ++i)
+	{
+		new_index.cols[tuple[i]] = index.cols[tuple[i+1]];
+	}
+	new_index.cols[tuple[len - 1]] = index.cols[tuple[0]];
+	return new_index;
+}
 
 int get_sign(int permdata[][5])
 {
@@ -79,13 +89,13 @@ int get_sign(int permdata[][5])
 
 int dfs(int i){	
 	if(i==dimension+1){
-		for(int i=1;i<=4;++i){
+		/*for(int i=1;i<=4;++i){
 			for(int j=1;j<=dimension;++j){
 				printf("%2d ", indexSystem[j][i]);
 			}
 			printf("\n");
 		}
-		printf("\n");
+		printf("\n");*/
 		cnt+=get_sign(indexSystem);
 		return 0;
 	}
@@ -110,54 +120,6 @@ int dfs(int i){
 		l4[indexSystem[i][4]]=0;
 	}
 	return 0;
-}
-
-
-int dfs2(int i){	
-	if(i==dimension/2+1){
-		for(int i=1;i<=4;++i){
-			for(int j=1;j<=dimension/2;++j){
-				printf("%2d ", indexSystem[j][i]);
-			}
-			printf("\n");
-		}
-		printf("\n");
-		cnt+=get_sign(indexSystem);
-		return 0;
-	}
-
-	set<Index>::iterator iter;
-	iter=indexSet[0].begin();
-	advance(iter, i);
-	for(;!indexSet[0].empty()&&iter!=indexSet[0].end();++iter){
-		if (i >= 1 && (*iter).cols[0] > indexSystem[i - 1][1]) continue;
-		if(!(l1[(*iter).cols[0]]==0
-			&&l1[(*iter).cols[1]]==0&&l2[(*iter).cols[2]]==0&&l2[(*iter).cols[3]]==0))continue;
-		indexSystem[i][1]=(*iter).cols[0];
-		indexSystem[i][2]=(*iter).cols[1];
-		indexSystem[i][3]=(*iter).cols[2];
-		indexSystem[i][4]=(*iter).cols[3];
-		l1[indexSystem[i][1]]=1;
-		l1[indexSystem[i][2]]=1;
-		l2[indexSystem[i][3]]=1;
-		l2[indexSystem[i][4]]=1;
-		dfs(i+1);
-		l1[indexSystem[i][1]]=0;
-		l1[indexSystem[i][2]]=0;
-		l2[indexSystem[i][3]]=0;
-		l2[indexSystem[i][4]]=0;
-	}
-	return 0;
-}
-
-Index get_tran_(Index index, int tuple[], int len){
-	Index new_index = index;
-	for (int i=0; i < len - 1; ++i)
-	{
-		new_index.cols[tuple[i]] = index.cols[tuple[i+1]];
-	}
-	new_index.cols[tuple[len - 1]] = index.cols[tuple[0]];
-	return new_index;
 }
 
 void set_index_set()
@@ -230,7 +192,6 @@ void set_index_set()
 	}
 }
 
-
 void set_index_set2()
 {
 	Index index;
@@ -264,12 +225,58 @@ void set_index_set2()
 			}
 		}
 	}
-	set<Index>::iterator iter;
+	for(int i=1;i<=dimension;++i){
+		set<Index>::iterator iter;
+		iter=indexSet[0].begin();
+		for(;!indexSet[0].empty()&&iter!=indexSet[0].end();++iter){
+			if((*iter).cols[0]==i){
+				indexSet[i].insert(*iter);
+			}
+		}
+	}
+	/*set<Index>::iterator iter;
 	iter=indexSet[0].begin();
 	for(;!indexSet[0].empty()&&iter!=indexSet[0].end();++iter){
 		cout<< (*iter).cols[0]<<(*iter).cols[1]<<(*iter).cols[2]<<(*iter).cols[3]<<endl;
-	}
+	}*/
 }
+int dfs2(int i){	
+	if(i==dimension/2){
+		/*for(int i=1;i<=4;++i){
+			for(int j=0;j<dimension/2;++j){
+				printf("%2d ", indexSystem[j][i]);
+			}
+			printf("\n");
+		}
+		printf("\n");*/
+		cnt += 1;//get_sign(indexSystem);
+		return 0;
+	}
+
+	set<Index>::iterator iter;
+	int iter_which = 0;
+	while(l1[++iter_which]!=0){}  
+	iter=indexSet[iter_which].begin();
+	for(;!indexSet[iter_which].empty()&&iter!=indexSet[iter_which].end();++iter){
+		//if (i >= 1 && (*iter).cols[0] < indexSystem[i - 1][1]) continue;
+		if(l1[(*iter).cols[0]]!=0||l1[(*iter).cols[1]]!=0||l2[(*iter).cols[2]]!=0||l2[(*iter).cols[3]]!=0)continue;
+		indexSystem[i][1]=(*iter).cols[0];
+		indexSystem[i][2]=(*iter).cols[1];
+		indexSystem[i][3]=(*iter).cols[2];
+		indexSystem[i][4]=(*iter).cols[3];
+		l1[indexSystem[i][1]]=1;
+		l1[indexSystem[i][2]]=1;
+		l2[indexSystem[i][3]]=1;
+		l2[indexSystem[i][4]]=1;
+		dfs2(i+1);
+		l1[indexSystem[i][1]]=0;
+		l1[indexSystem[i][2]]=0;
+		l2[indexSystem[i][3]]=0;
+		l2[indexSystem[i][4]]=0;
+	}
+	return 0;
+}
+
 
 int main(){
 	freopen("data1.txt","r",stdin);
@@ -284,7 +291,7 @@ int main(){
 	memset(l4,0,sizeof(l4));
 	cnt=0;
 	set_index_set2();
-	dfs2(1);
+	dfs2(0);
 	printf("%d\n",cnt);
 	fclose(stdin);  
 	fclose(stdout);  
