@@ -34,7 +34,7 @@ def get_tran_(index, tuple, len):
     return new_index
 
 # 获取行排列的逆序数与本身符号的乘积
-def get_sign(permdata, dimension):
+def get_sign(permdata):
     sign = 1
     for i in range(4):
         for j in range(dimension):
@@ -109,7 +109,7 @@ def dfs(i):
                 f.write("%2d " % (pfaffian[i1,j1]))
             f.write("\n")
         f.write("\n")
-        cnt = cnt + 1#get_sign(pfaffian)
+        cnt = cnt + get_sign(pfaffian)
     else:
         for ind_s in range(i, set_num):
             if i >= 1 and indexSet[ind_s].cols[0] < pfaffian[0, i - 1]:

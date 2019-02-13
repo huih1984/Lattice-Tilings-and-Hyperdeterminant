@@ -1,59 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bae84a4d-1345-4e20-8f72-5514386a4f79" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/github-repo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/github-repo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.log" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tex/lattice tilings and hyperdeterminant.tex.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.opensdf" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.opensdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.sdf" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.sdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/cl.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/cl.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.log" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.pch" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/hdmatrix.pch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/mt.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/stdafx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/stdafx.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/vc100.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/vc100.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/vc100.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Debug/vc100.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/cl.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/cl.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.log" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.pch" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.pch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.vcxprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/hdmatrix.vcxprojResolveAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/mt.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/stdafx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/stdafx.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/vc100.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/Release/vc100.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/data1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/data1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/hdmatrix.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/some results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../vc++2/hdmatrix/hdmatrix/some results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/ipch/hdmatrix-5f90499b/hdmatrix-1a2484a7.ipch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vc++2/hdmatrix/ipch/hdmatrix-5f90499b/hdmatrix-c31ae96d.ipch" beforeDir="false" />
-    </list>
+    <list default="true" id="bae84a4d-1345-4e20-8f72-5514386a4f79" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,16 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="compute_proj.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compute_proj.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="kenel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kenel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="115" column="24" lean-forward="true" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+            <state relative-caret-position="3429">
+              <caret line="128" column="43" lean-forward="false" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -100,25 +55,72 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+      <file leaf-file-name="kenel.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kenel.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6754">
-              <caret line="308" selection-start-line="308" selection-end-line="308" />
+            <state relative-caret-position="245970">
+              <caret line="9110" column="17" lean-forward="false" selection-start-line="9110" selection-start-column="17" selection-end-line="9110" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8316">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11232">
+              <caret line="416" column="28" lean-forward="false" selection-start-line="416" selection-start-column="28" selection-end-line="416" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="determinant.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/determinant.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="459">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,12 +140,14 @@
       <find>indexSystem</find>
       <find>, ind_s]</find>
       <find>indexSet[0].cols[ind_s]</find>
+      <find>,,</find>
     </findStrings>
     <replaceStrings>
       <replace>indexSet</replace>
       <replace>pfaffian</replace>
       <replace>].cols[ind_s]</replace>
       <replace>indexSet[ind_s].cols[0]</replace>
+      <replace>,</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -152,24 +156,38 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/out.txt" />
         <option value="$PROJECT_DIR$/compute_proj.py" />
+        <option value="$PROJECT_DIR$/out.txt" />
         <option value="$PROJECT_DIR$/kenel.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/result" />
+        <option value="$PROJECT_DIR$/determinant.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,12 +199,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="E:/workspace/MTCNN-Tensorflow-master" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,9 +217,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kenel">
+  <component name="RunManager" selected="Python.determinant">
     <configuration name="compute_proj" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="github-repo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -213,17 +229,13 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="github-repo" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compute_proj.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
-    <configuration name="kenel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="github-repo" />
+    <configuration name="determinant" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -234,25 +246,63 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="github-repo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/determinant.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="kenel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="github-repo" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kenel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.compute_proj" />
-      <item itemvalue="Python.kenel" />
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="github-repo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.compute_proj" />
+      <item index="1" class="java.lang.String" itemvalue="Python.kenel" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.determinant" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Python.kenel" />
-        <item itemvalue="Python.compute_proj" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.determinant" />
+        <item index="1" class="java.lang.String" itemvalue="Python.kenel" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.compute_proj" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -268,61 +318,486 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3297062" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/kenel.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/determinant.py</url>
+          <line>192</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/determinant.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="pfaffian" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/1412029153/builtins.py" />
-    <entry file="file://$PROJECT_DIR$/compute_proj.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6754">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        <state relative-caret-position="8316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="1431">
+          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245700">
+          <caret line="9100" column="17" lean-forward="false" selection-start-line="9100" selection-start-column="17" selection-end-line="9100" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kenel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="115" column="24" lean-forward="true" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+        <state relative-caret-position="1026">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245700">
+          <caret line="9100" column="17" lean-forward="true" selection-start-line="9100" selection-start-column="17" selection-end-line="9100" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="60" column="2" lean-forward="true" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2727">
+          <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2727">
+          <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2187">
+          <caret line="82" column="4" lean-forward="true" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/1412029153/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="4431" column="8" lean-forward="false" selection-start-line="4431" selection-start-column="8" selection-end-line="4431" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8316">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11232">
+          <caret line="416" column="28" lean-forward="false" selection-start-line="416" selection-start-column="28" selection-end-line="416" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_proj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245970">
+          <caret line="9110" column="17" lean-forward="false" selection-start-line="9110" selection-start-column="17" selection-end-line="9110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kenel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3429">
+          <caret line="128" column="43" lean-forward="false" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/determinant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
