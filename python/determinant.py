@@ -2,18 +2,20 @@ import numpy as np
 import itertools
 import random
 import os
-dimension = 4
+dimension = 16
+m = 4
+n = 4
 def random_matrix():
     matrix = np.zeros([dimension, dimension, dimension, dimension], np.int)
     for i in range(dimension):
         for j in range(dimension):
             for k in range(dimension):
                 for l in range(dimension):
-                    if np.mod(i,4) == np.mod(j,4) + 1 and np.mod(i,4) == np.mod(k,4) + 2 and np.mod(i,4) == np.mod(l,4) + 3:
-                        matrix[l,i,j,k] = 1
-                        matrix[i, j, k, l] = -matrix[l, i, j, k]
-                        matrix[j, k, l, i] =  matrix[l, i, j, k]
-                        matrix[k, l, i, j] = -matrix[l, i, j, k]
+                    if (np.mod(i, 4) == 0 and i+1 == j and j+1 == k and k+1 == l) or (i <= 3 and i+4 == j and j+4 == k and k+4 == l):
+                        matrix[i,j,k,l] = 1
+                        matrix[j, k, l, i] =  -matrix[i,j,k,l]
+                        matrix[k, l, i, j] = matrix[i,j,k,l]
+                        matrix[l, i, j, k] = - matrix[i, j, k, l]
     return matrix
 
 
@@ -66,7 +68,7 @@ def determinant2(matrix):
             for k in range(matrix.shape[0]):
                 for l in range(matrix.shape[0]):
                     if matrix[0,j,k,l] != 0:
-                        det += matrix[0,j,k,l]*determinant2(coMatrix(matrix, 0,j,k,l))*(-1)^(np.mod(j+k+l, 2))
+                        det += matrix[0,j,k,l]*determinant2(coMatrix(matrix, 0,j,k,l))*np.power(-1, j+k+l)
         return det
 
 def determinant(matrix):
