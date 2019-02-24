@@ -11,14 +11,17 @@ def random_matrixA():
         for j in range(dimension):
             for k in range(dimension):
                 for l in range(dimension):
-                    if (np.mod(i +1, 4) == np.mod(j, 4)  and np.mod(j+1, 4)  == np.mod(k, 4) and np.mod(k+1, 4)  == np.mod(l, 4)): #or (i+n == j and j+n == k and k+n == l):
-                        matrix[i,j,k,l] = np.random.random_integers(10)# 2
-                        # matrix[j, k, l, i] =  -matrix[i,j,k,l]
-                        # matrix[k, l, i, j] =  matrix[i,j,k,l]
-                        # matrix[l, i, j, k] = - matrix[i, j, k, l]
-                        matrix[j, i, l, k] =  matrix[i,j,k,l]
+                    if (
+                            # (np.mod(i+1, 2) == np.mod(j, 2)  and np.mod(j+1, 2)  == np.mod(k, 2) and np.mod(k+1, 2)  == np.mod(l, 2))
+                    (np.mod(i, 4)+1 == np.mod(j, 4)  and np.mod(k, 4)+1  == np.mod(l, 4))
+                    ): #or (i+n == j and j+n == k and k+n == l):
+                        matrix[i,j,k,l] = 1#np.random.random_integers(10)# 2
+                        matrix[j, k, l, i] =  -matrix[i,j,k,l]
                         matrix[k, l, i, j] =  matrix[i,j,k,l]
-                        matrix[l, k, j, i] =  matrix[i, j, k, l]
+                        matrix[l, i, j, k] = - matrix[i, j, k, l]
+                        # matrix[j, i, l, k] =  matrix[i,j,k,l]
+                        # matrix[k, l, i, j] =  matrix[i,j,k,l]
+                        # matrix[l, k, j, i] =  matrix[i, j, k, l]
     return matrix
 def random_matrixB():
     matrix = np.zeros([dimension, dimension, dimension, dimension], np.int)
@@ -68,14 +71,64 @@ def coMatrix(A, i,j,k,l):
                         s44 = s4
                     matrix[s1, s2, s3, s4] = A[s11, s22, s33, s44]
     return matrix
+deter_deep = 0
+element_list = []
+
+def append_current_index(j,k,l):
+    j_list = []
+    k_list = []
+    l_list = []
+    for ind in range(len(element_list)):
+        j_list.append(element_list[ind][1])
+        k_list.append(element_list[ind][2])
+        l_list.append(element_list[ind][3])
+    indj = 0
+    indk = 0
+    indl = 0
+    for ind in range(m * n):
+        if ind in j_list:
+            continue
+        elif ind not in j_list and indj < j:
+            indj += 1
+        elif indj == j:
+            current_j = ind
+            break
+
+    for ind in range(m * n):
+        if ind in k_list:
+            continue
+        elif ind not in k_list and indk < k:
+            indk += 1
+        elif indk == k:
+            current_k = ind
+            break
+    for ind in range(m * n):
+        if ind in l_list:
+            continue
+        elif ind not in l_list and indl < l:
+            indl += 1
+        elif indl == l:
+            current_l = ind
+            break
+    element_list.append((deter_deep, current_j, current_k, current_l))
 
 def determinant2(matrix):
+    global deter_deep
+    global element_list
     '''
 
     :param matrix:
     :return:
     '''
     if matrix.shape[0] == 1:
+        append_current_index(0, 0, 0)
+        for ind in range(4):
+            for ind2 in range(m*n):
+                print(element_list[ind2][ind], end=' ')
+            print('')
+        # print('\n')
+        # print((element_list))
+        element_list.pop()
         return matrix[0,0,0,0]
     else:
         for i in range(matrix.shape[0]):
@@ -139,7 +192,14 @@ def determinant2(matrix):
             for k in range(matrix.shape[0]):
                 for l in range(matrix.shape[0]):
                     if matrix[0,j,k,l] != 0:
-                        det += matrix[0,j,k,l]*determinant2(coMatrix(matrix, 0,j,k,l))*np.power(-1, j+k+l)
+                        append_current_index(j, k, l)
+                        deter_deep += 1
+                        temp = determinant2(coMatrix(matrix, 0,j,k,l))*np.power(-1, j+k+l)
+                        if temp != 0:
+                            det += matrix[0,j,k,l]*temp
+                        element_list.pop()
+                        deter_deep -= 1
+
         return det
 
 def determinant(matrix):
@@ -243,13 +303,13 @@ def inverse_number(string):
 
 A = random_matrixA()
 print(('det(A)=',determinant2(A)))
-# for i in range(dimension):
-#     for j in range(dimension):
-#         for k in range(dimension):
-#             for l in range(dimension):
-#                 if A[i,j,k,l] != 0:
-#                     print((i,j,k,l))
-# print(('A', A))
+for i in range(dimension):
+    for j in range(dimension):
+        for k in range(dimension):
+            for l in range(dimension):
+                if A[i,j,k,l] != 0:
+                    print((i,j,k,l))
+print(('A', A))
 #
 # coA = random_matrixB()#
 # for i in range(dimension):
