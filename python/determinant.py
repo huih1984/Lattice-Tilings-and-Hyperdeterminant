@@ -3,7 +3,7 @@ import itertools
 import random
 import os
 m = 1
-n = 4
+n = 8
 dimension = m*n
 def random_matrixA():
     matrix = np.zeros([dimension, dimension, dimension, dimension], np.int)
@@ -12,16 +12,17 @@ def random_matrixA():
             for k in range(dimension):
                 for l in range(dimension):
                     if (
-                            # (np.mod(i+1, 2) == np.mod(j, 2)  and np.mod(j+1, 2)  == np.mod(k, 2) and np.mod(k+1, 2)  == np.mod(l, 2))
-                    (np.mod(i, 4)+1 == np.mod(j, 4)  and np.mod(k, 4)+1  == np.mod(l, 4))
+                            # (np.mod(i+1, 2) == np.mod(j, 2)  and np.mod(j+1, 2)  == np.mod(k, 2) and np.mod(k+1, 2)  == np.mod(l, 2)) and(i!=k)and(j!=l)
+                    (np.mod(i+1, 4) == np.mod(j, 4)  and np.mod(j+1, 4) == np.mod(k, 4) and np.mod(k+1, 4)  == np.mod(l, 4)) and(i+2!=k)and(j+2!=l)
                     ): #or (i+n == j and j+n == k and k+n == l):
-                        matrix[i,j,k,l] = 1#np.random.random_integers(10)# 2
-                        matrix[j, k, l, i] =  -matrix[i,j,k,l]
-                        matrix[k, l, i, j] =  matrix[i,j,k,l]
-                        matrix[l, i, j, k] = - matrix[i, j, k, l]
-                        # matrix[j, i, l, k] =  matrix[i,j,k,l]
-                        # matrix[k, l, i, j] =  matrix[i,j,k,l]
-                        # matrix[l, k, j, i] =  matrix[i, j, k, l]
+                        # if matrix[i,j,k,l] == 0:
+                            matrix[i,j,k,l] = 1#np.random.random_integers(3)# 2
+                            matrix[j, k, l, i] = -  matrix[i,j,k,l]
+                            matrix[k, l, i, j] =  matrix[i,j,k,l]
+                            matrix[l, i, j, k] = -  matrix[i, j, k, l]
+                            # matrix[j, i, l, k] =  matrix[i,j,k,l]
+                            # matrix[k, l, i, j] =  matrix[i,j,k,l]
+                            # matrix[l, k, j, i] =  matrix[i, j, k, l]
     return matrix
 def random_matrixB():
     matrix = np.zeros([dimension, dimension, dimension, dimension], np.int)
@@ -121,14 +122,17 @@ def determinant2(matrix):
     :return:
     '''
     if matrix.shape[0] == 1:
-        append_current_index(0, 0, 0)
-        for ind in range(4):
-            for ind2 in range(m*n):
-                print(element_list[ind2][ind], end=' ')
-            print('')
-        # print('\n')
-        # print((element_list))
-        element_list.pop()
+        if matrix[0,0,0,0] != 0:
+            append_current_index(0, 0, 0)
+            for ind in range(4):
+                for ind2 in range(m*n):
+                    # print(element_list[ind2][ind], end=' ')
+                    f.write(np.str(element_list[ind2][ind]) + ' ')
+                f.write('\n')
+            # print('\n', end='')
+            f.write('\n')
+            # print((element_list))
+            element_list.pop()
         return matrix[0,0,0,0]
     else:
         for i in range(matrix.shape[0]):
@@ -301,37 +305,40 @@ def inverse_number(string):
                 ans *= -1
     return ans
 
-A = random_matrixA()
-print(('det(A)=',determinant2(A)))
-for i in range(dimension):
-    for j in range(dimension):
-        for k in range(dimension):
-            for l in range(dimension):
-                if A[i,j,k,l] != 0:
-                    print((i,j,k,l))
-print(('A', A))
-#
-# coA = random_matrixB()#
-# for i in range(dimension):
-#     for j in range(dimension):
-#         for k in range(dimension):
-#             for l in range(dimension):
-#                 if coA[i,j,k,l] != 0:
-#                     print((i,j,k,l))
-# print(('coA', coA))
-# def multip(A,B):
-#     C = np.zeros([dimension, dimension], np.int64)
-#     for i in range(dimension):
-#         for j in range(dimension):
-#             for s1 in range(dimension):
-#                 for s2 in range(dimension):
-#                     for s3 in range(dimension):
-#                         C[i,j] += A[i,s1,s2,s3]*B[j,s1,s2,s3]
-#     return C
-#
-# C = multip(A, coA)
-# print(('C', C))
-# det_c = np.linalg.det(C)
-# print(('det(A)=',determinant2(A), 'det(coA)=',determinant2(coA)))
-# print(('det(C)=',det_c))
+if __name__ == '__main__':
+    f = open('out.txt', 'w')
+    A = random_matrixA()
+    print(('det(A)=',determinant2(A)))
+    f.close()
+    for i in range(dimension):
+        for j in range(dimension):
+            for k in range(dimension):
+                for l in range(dimension):
+                    if A[i,j,k,l] != 0:
+                        print((i,j,k,l))
+    # print(('A', A))
+    #
+    # coA = random_matrixB()#
+    # for i in range(dimension):
+    #     for j in range(dimension):
+    #         for k in range(dimension):
+    #             for l in range(dimension):
+    #                 if coA[i,j,k,l] != 0:
+    #                     print((i,j,k,l))
+    # print(('coA', coA))
+    # def multip(A,B):
+    #     C = np.zeros([dimension, dimension], np.int64)
+    #     for i in range(dimension):
+    #         for j in range(dimension):
+    #             for s1 in range(dimension):
+    #                 for s2 in range(dimension):
+    #                     for s3 in range(dimension):
+    #                         C[i,j] += A[i,s1,s2,s3]*B[j,s1,s2,s3]
+    #     return C
+    #
+    # C = multip(A, coA)
+    # print(('C', C))
+    # det_c = np.linalg.det(C)
+    # print(('det(A)=',determinant2(A), 'det(coA)=',determinant2(coA)))
+    # print(('det(C)=',det_c))
 
