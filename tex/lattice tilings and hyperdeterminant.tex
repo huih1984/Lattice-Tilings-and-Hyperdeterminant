@@ -29,68 +29,70 @@
 
 \Author{惠慧}
  {南京大学\  南京\ 210093\\
-E-mail: huih1984@163.com}
+E-mail: huih1984@outlook.com}
 
-\Abstract{在文章\cite{Kly} 中，$Kasteleyn$($Fisher$和$Temperley$ 同时独立)开创性研究了长方块在栅格上的覆盖数计算问题，这后来被称为FKT算术，它在平面图上的全息算法中得到广泛应用。但是作者研究的是$1 \times 2$ 的长方块覆盖问题，关于更多形式的覆盖问题的研究，有很多相关文章。本文作者这里提出如何泛化到$1 \times n$ 长方块覆盖？文章只讨论$1 \times 4$ 长方块的情况，从而可以自然推广到$1 \times 2n$ 的覆盖计算，奇数形式的覆盖难度较大，文章不予讨论。在4 的情况下，计数表达方法存在一个显而易见的推广，从而让问题的研究更集中在延拓后的性质探讨和计算上。文章对内维数为2 的情形$det(A)=pfaffian^{2}(A)$ 的结果做了推广，得出本文的一个关键结果即在内维数为4 的情况下，延拓矩阵、行列式以及$pfaffian$ 定义，得到 $det(A)=pfaffian^{4}(A)$。 从形式上看，这个结果相当完美！但是如何计算这种形式的矩阵行列式还需要进一步的研究，本文的后半部分初步讨论了一些计算相关的超矩阵的性质。}
+\Abstract{在文章\cite{Kly} 中，$Kasteleyn$($Fisher$和$Temperley$ 同时独立)开创性研究了多米诺覆盖计数问题，这后来被称为$FKT$算术，它在平面图上的全息算法中得到广泛应用。本文作者这里提出如何将 $dimer$覆盖问题泛化到$1 \times 2N$ 长方块覆盖，文章主要讨论$1 \times 4$ 长方块的覆盖问题，从而可以自然推广到$1 \times 2N$ 的覆盖计算，之所以奇数形式的覆盖问题不讨论是其不具有自然泛化的特性，而在偶数的情况下，计数表达方法存在自然的形式泛化。本文的一个关键结果即在内维数为$4$ 的情况下，延拓矩阵、行列式以及$pf$ 定义，得到 $det(A)=pf^{4}(A)$， 从而进一步得出内维数为$2N$ 时，$det(A)=pf^{2N}(A)$，从形式上看，这个结果是$Cayley$给出的$det(A)=pf^{2}(A)$证明的一个完美推广！}
 
-\Keywords{双重维数矩阵; 内维数; 多米诺覆盖; 外积; $pfaffian$;}
+\Keywords{双重维数矩阵; 内维数; 多米诺覆盖; 外积; $pf$;}
 
 
-\ETitle{lattice tilings and hyperdeterminant} %英文标题
+\ETitle{counting number of lattice tilings and hyperdeterminant} %英文标题
 
 \EAuthor{Hui \uppercase{Hui}} % 作者姓名的拼音,名在前,姓在后
 {Nanjing University, Nanjing $100190$, P. R. China \\            % 如 Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing $100190$, P. R. China \\
-E-mail\,$:$ huih1984$1$@163.com}
+E-mail\,$:$ huih1984@outlook.com}
 
-\EAbstract{
-The article \cite{Kly} transfer dimer tiling to determinant of matrix ingenious, finally, get formula of it.
-so, what about of three,four?this is intreseting.}
-
-\EKeywords{double dimension matrix; inner dimension; domino tiling; wedge product; pfaffian; trimer; dimer; tertramer}
+\EAbstract{Kasteleyn(Fisher \& Temperley independently) start the question about counting number of domino tiling, which is called as FKT algorithm later, The FKT algorithm has seen extensive use in holographic algorithms on planar graphs. Author introduce a new question how to extend the counting number about $1 \times 2N$ pane tiling? Author focus the question on $ 1 \times 4$, because the counting method can easy be extended to $1 \times 2N$, the odd case is not be discussed because of that is not easy to extend. The article's main result is $det(A)=pf^{4}(A)$, when inner dimension is 4, and matrix, determinant is extended. Similarly, when inner dimension is $2N$, $det(A)=pf^{2N}(A)$，the result is perfect extended as Cayley's formula in form!}
+\EKeywords{double dimension matrix; inner dimension; domino tiling; wedge product; pf;}
 
 \EndTitle
 
 
 \Section{引言}
-关于$dimer$覆盖数的计算问题，起源于\cite{Kly}的文章，文章给出了$dimer$在$m \times n$的块状上和环面上的覆盖数的计算公式。但是用$tetramer$覆盖的公式却没有研究结果,用$1\times n$覆盖的文章有\cite{MA}，但是文章只讨论了被覆盖为$9 \times n$的计算公式，本文关注$1 \times 2n$覆盖一般性的计算问题。
+关于$dimer$覆盖数的计算问题，起源于统计力学和分子化学，物理学家们提出的原始问题是双原子分子被吸附在一个平面上，形成一个单层，那么有多少种排列方式？\cite{Kly}的文章给出了$dimer$在$m \times n$ 的块状上和环面上的覆盖数的计算公式,并且$dimer$覆盖问题被泛化到所有平面图\cite{Kly2}。但是另外一类问题就是$trimer，tetramer$等覆盖计数问题没有更多涉及，用$1\times n$ 覆盖的文章有\cite{MA}，但是文章只讨论了被覆盖为$9 \times n$ 的计算公式，本文关注$1 \times 2n$ 骨牌覆盖一般性的计数问题。
 %数学公式在推广到更高阶的情形，情况往往变得复杂，比如方程解的问题，在小于五次时，有比较简单根式形式，而高于五次的方程一般而言没有根式解，给出深刻的约束条件，高阶方程的根式解依然存在，这个
 % 数学历史上的著名问题给人深深的哲思启发。理论的推广几乎总是去除局限的部分，余下的情形就可以拓展开来，发现更多的现象和本质，本文接下来就讨论$1 \times 4$骨牌覆盖数的计算公式。
 
-%很容易得到类似于$pfaffian$的表达形式,进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学符号的形式美，经过一番努力，终于找到了相应的矩阵形式。而这种拓展的矩阵形式本身却更有耐人寻味的结构美，作者没有见过有什么文献对这种形式的矩阵有深入的研究，这里作者只得出了一些少量的结果，作者能力有限，希望有更多的研究者参与其中来研究这种矩阵。
+%很容易得到类似于$pf$的表达形式,进而作者一直在寻找转换成矩阵表达形式，之所以这么做是因为从形式上来看，这种矩阵的存在完全符合数学符号的形式美，经过一番努力，终于找到了相应的矩阵形式。而这种拓展的矩阵形式本身却更有耐人寻味的结构美，作者没有见过有什么文献对这种形式的矩阵有深入的研究，这里作者只得出了一些少量的结果，作者能力有限，希望有更多的研究者参与其中来研究这种矩阵。
 
 \Section{表示方法}
 
 \begin{center}
-\begin{tikzpicture}[radius=0.1cm]
-\selectcolormodel{cmyk}
 
-\node[opacity=0.5] at (.25,-.25) {$1$};
-\draw[green, step=.5] (0,0)grid(2,.5);
-\node[opacity=0.5] at (.25,.25) {$p_{1}$};
-\node[opacity=0.5] at (.75,.25) {$p_{2}$};
-\node[opacity=0.5] at (1.25,.25) {$p_{3}$};
-\node[opacity=0.5] at (1.75,.25) {$p_{4}$};
-\draw[red, step=.5] (2,0)grid(2.5,2);
-\node[opacity=0.5] at (2.25,.25) {$p_{5}$};
-\node[opacity=0.5] at (2.25,.75) {$p_{6}$};
-\node[opacity=0.5] at (2.25,1.25) {$p_{7}$};
-\node[opacity=0.5] at (2.25,1.75) {$p_{8}$};
-\draw[orange, step=.5] (0,0.5)grid(2,1);
-\node[opacity=0.5] at (.25,.75) {$p_{9}$};
-\node[opacity=0.5] at (.75,.75) {$p_{10}$};
-\node[opacity=0.5] at (1.25,.75) {$p_{11}$};
-\node[opacity=0.5] at (1.75,.75) {$p_{12}$};
-\draw[blue, step=.5] (0,1)grid(2,1.5);
-\node[opacity=0.5] at (.25,1.25) {$p_{13}$};
-\node[opacity=0.5] at (.75,1.25) {$p_{14}$};
-\node[opacity=0.5] at (1.25,1.25) {$p_{15}$};
-\node[opacity=0.5] at (1.75,1.25) {$p_{16}$};
-\draw[cyan, step=.5] (0,1.5)grid(2,2);
-\node[opacity=0.5] at (.25,1.75) {$p_{17}$};
-\node[opacity=0.5] at (.75,1.75) {$p_{18}$};
-\node[opacity=0.5] at (1.25,1.75) {$p_{19}$};
-\node[opacity=0.5] at (1.75,1.75) {$p_{20}$};
-\node[opacity=0.5] at (2.25,2.25) {$20$};
+\begin{tikzpicture}
+\selectcolormodel{cmyk}
+\node at (.25,-.25) {$1$};
+\path [fill=black](0,0) rectangle (2,.5);
+\draw [fill=green](0,0) rectangle (2,.5);
+\node at (.25,.25) {$p_{1}$};
+\node at (.75,.25) {$p_{2}$};
+\node at (1.25,.25) {$p_{3}$};
+\node at (1.75,.25) {$p_{4}$};
+\path [fill=black] (0,0.5)rectangle(2,1);
+\draw [fill=green] (0,0.5)rectangle(2,1);
+\node at (.25,.75) {$p_{9}$};
+\node at (.75,.75) {$p_{10}$};
+\node at (1.25,.75) {$p_{11}$};
+\node at (1.75,.75) {$p_{12}$};
+\path [fill=black] (0,1)rectangle(2,1.5);
+\draw [fill=green] (0,1)rectangle(2,1.5);
+\node at (.25,1.25) {$p_{13}$};
+\node at (.75,1.25) {$p_{14}$};
+\node at (1.25,1.25) {$p_{15}$};
+\node at (1.75,1.25) {$p_{16}$};
+\path [fill=black] (2,0)rectangle(2.5,2);
+\draw [fill=green] (2,0)rectangle(2.5,2);
+\node at (2.25,.25) {$p_{5}$};
+\node at (2.25,.75) {$p_{6}$};
+\node at (2.25,1.25) {$p_{7}$};
+\node at (2.25,1.75) {$p_{8}$};
+\path [fill=black] (0,1.5)rectangle(2,2);
+\draw [fill=green] (0,1.5)rectangle(2,2);
+\node at (.25,1.75) {$p_{17}$};
+\node at (.75,1.75) {$p_{18}$};
+\node at (1.25,1.75) {$p_{19}$};
+\node at (1.75,1.75) {$p_{20}$};
+\node at (1.75,2.25) {$20$};
 \end{tikzpicture}
 \end{center}
 采用$Kasteleyn^{[1]}$相同的表示方法，$C=(p_{1},p_{2},p_{3},p_{4})(p_{5},p_{6},p_{7},p_{8})...(p_{N-3},p_{N-2},p_{N-1},p_{N})$.\\
@@ -105,13 +107,13 @@ so, what about of three,four?this is intreseting.}
    \begin{equation}a_{(i,j;i,j+1;i,j+2;i,j+3)}=1,1\leq i \leq m,1\leq j\leq n-3\end{equation}
    \begin{equation}a_{(i,j;i^{'},j^{'};i^{''},j^{''};i^{'''},j^{'''})}=0,other \end{equation}
 
-   \begin{equation}\label{c}pfaffian(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
+   \begin{equation}\label{c}pf(A_{4})=\sum\limits_{\sigma=p_{1}p_{2}...p_{N}satisfy(1)(2)}sgn\sigma a_{p_{1}p_{2}p_{3}p_{4}}a_{p_{5}p_{6}p_{7}p_{8}}...a_{p_{N-3}p_{N-2}p_{N-1}p_{N}}\end{equation}
 
    对应的矩阵记为$A_{4}=(a_{ijkl})$,满足$a_{jikl}=-a_{ijkl}$，$i,j,k,l$的任意一个序关系都满足逆序数正负号。
-   这样得到的表达式$\ref{c}$，仍然称为$pfaffian$。
+   这样得到的表达式$\ref{c}$，仍然称为$pf$。
 
 
-\Section{$pfaffian \rightarrow det$的转换}
+\Section{$pf \rightarrow det$的转换}
 
 \begin{definition} 矩阵的内维数和外维数:
 
@@ -738,7 +740,7 @@ C_{14}&C_{34}&C_{24}\\
 \end{prof}
 
 \begin{theorem}
-栅格为$N$列，$M$行，$N = 4K,n=MN,M \equiv M_{1} \pmod{4},N \equiv 0 (mod 4)$，矩阵$A$的外维数为$n=MN$，如果除$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ 外, 其它都为0。那么$$det(A)=pfaffian(A)^{4}$$
+栅格为$N$列，$M$行，$N = 4K,n=MN,M \equiv M_{1} \pmod{4},N \equiv 0 (mod 4)$，矩阵$A$的外维数为$n=MN$，如果除$$a_{i(i+1)(i+2)(i+3)}=-a_{(i+1)(i+2)(i+3)i}=a_{(i+2)(i+3)i(i+1)}=-a_{(i+3)i(i+1)(i+2)},$$$$a_{i(i+\eta)(i+2\eta)(i+3\eta)}=-a_{(i+\eta)(i+2\eta)(i+3\eta)i}=a_{(i+2\eta)(i+3\eta)i(i+\eta)}=-a_{(i+3\eta)i(i+\eta)(i+2\eta)}$$ 外, 其它都为0。那么$$det(A)=pf^{4}(A)$$
 \end{theorem}
 
 \begin{prof}
@@ -773,7 +775,7 @@ C_{l} = \left\{
 \mid \sigma,\tau,\gamma \text{为任意}(1 \cdots n)\text{排列}\right\}
 \end{equation}
 
-$pfaffian(A)$定义右侧和式单项下标作为元素构成集合:
+$pf(A)$定义右侧和式单项下标作为元素构成集合:
 
 \begin{equation}\label{8}
 C_{r} =
@@ -935,44 +937,44 @@ $C_{l}=(C_{r},C_{r}*g,C_{r}*g^2,C_{r}*g^3) \mapsto C_{r}\times C_{r}\times C_{r}
 \begin{center}
 \begin{tikzpicture}[radius=0.1cm]
 \selectcolormodel{cmyk}
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,0) rectangle (2,0.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,0) rectangle (4,.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,.5) rectangle (4,1);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,.5) rectangle (4,1);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,1) rectangle (2,1.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,1) rectangle (4,1.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,1.5) rectangle (2,2);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,1.5) rectangle (4,2);
+\draw [fill=green] (0,0) rectangle (2,0.5);
+\draw [fill=green] (2,0) rectangle (4,.5);
+\draw [fill=green] (0,.5) rectangle (4,1);
+\draw [fill=green] (2,.5) rectangle (4,1);
+\draw [fill=green] (0,1) rectangle (2,1.5);
+\draw [fill=green] (2,1) rectangle (4,1.5);
+\draw [fill=green] (0,1.5) rectangle (2,2);
+\draw [fill=green] (2,1.5) rectangle (4,2);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,2) rectangle (2,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,2) rectangle (4,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,2.5) rectangle (2,3);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,2.5) rectangle (4,3);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,3) rectangle (2,3.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,3) rectangle (4,3.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (0,3.5) rectangle (2,4);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (2,3.5) rectangle (4,4);
+\draw [fill=green] (0,2) rectangle (2,2.5);
+\draw [fill=green] (2,2) rectangle (4,2.5);
+\draw [fill=green] (0,2.5) rectangle (2,3);
+\draw [fill=green] (2,2.5) rectangle (4,3);
+\draw [fill=green] (0,3) rectangle (2,3.5);
+\draw [fill=green] (2,3) rectangle (4,3.5);
+\draw [fill=green] (0,3.5) rectangle (2,4);
+\draw [fill=green] (2,3.5) rectangle (4,4);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5,0) rectangle (7,.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (7,0) rectangle (9,.5);
+\draw [fill=green] (5,0) rectangle (7,.5);
+\draw [fill=green] (7,0) rectangle (9,.5);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5,.5) rectangle (5.5,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5.5,.5) rectangle (7.5,1);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5.5,1) rectangle (7.5,1.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5.5,1.5) rectangle (7.5,2);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5.5,2) rectangle (7.5,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (7.5,.5) rectangle (8,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (8,.5) rectangle (8.5,2.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (8.5,.5) rectangle (9,2.5);
+\draw [fill=green] (5,.5) rectangle (5.5,2.5);
+\draw [fill=green] (5.5,.5) rectangle (7.5,1);
+\draw [fill=green] (5.5,1) rectangle (7.5,1.5);
+\draw [fill=green] (5.5,1.5) rectangle (7.5,2);
+\draw [fill=green] (5.5,2) rectangle (7.5,2.5);
+\draw [fill=green] (7.5,.5) rectangle (8,2.5);
+\draw [fill=green] (8,.5) rectangle (8.5,2.5);
+\draw [fill=green] (8.5,.5) rectangle (9,2.5);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5,2.5) rectangle (7,3);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (7,2.5) rectangle (9,3);
+\draw [fill=green] (5,2.5) rectangle (7,3);
+\draw [fill=green] (7,2.5) rectangle (9,3);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5,3) rectangle (7,3.5);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (7,3) rectangle (9,3.5);
+\draw [fill=green] (5,3) rectangle (7,3.5);
+\draw [fill=green] (7,3) rectangle (9,3.5);
 
-\filldraw[fill=gray!20!white, draw=gray!50!black] (5,3.5) rectangle (7,4);
-\filldraw[fill=gray!20!white, draw=gray!50!black] (7,3.5) rectangle (9,4);
+\draw [fill=green] (5,3.5) rectangle (7,4);
+\draw [fill=green] (7,3.5) rectangle (9,4);
 \filldraw
 (0,0) circle (1pt) node[align=left,   below] {1}
 (2,0) circle (1pt) node[align=center, below] {4}
@@ -1011,39 +1013,41 @@ $$\left[\begin{array}{cccccccccccccccccc}
 通过计算机编程，可以验证定理中的部分结果如下：
 
 \begin{align*}
-&1 \times4，det(A) = pfaffian(A)^{4} = 1^{4}=1\\
-&4 \times4，det(A) = pfaffian(A)^{4} = 2^{4}=16\\
-&5 \times4，det(A) = pfaffian(A)^{4} = 3^{4}=81\\
-&6 \times4，det(A) = pfaffian(A)^{4} = 4^{4}=256\\
-&7 \times4，det(A) = pfaffian(A)^{4} = 5^{4}=625\\
-&8 \times4，det(A) = pfaffian(A)^{4} = 7^{4}=2401\\
-&8 \times3，det(A) = pfaffian(A)^{4} = 1^{4}=1
+&1 \times4，det(A) = pf^{4}(A) = 1^{4}=1\\
+&4 \times4，det(A) = pf^{4}(A) = 2^{4}=16\\
+&5 \times4，det(A) = pf^{4}(A) = 3^{4}=81\\
+&6 \times4，det(A) = pf^{4}(A) = 4^{4}=256\\
+&7 \times4，det(A) = pf^{4}(A) = 5^{4}=625\\
+&8 \times4，det(A) = pf^{4}(A) = 7^{4}=2401\\
+&8 \times3，det(A) = pf^{4}(A) = 1^{4}=1
 \end{align*}
 代码参考 \cite{IM}.
 同时计算了一些不是4的倍数的情况：
 \begin{align*}
-&5 \times5，det(A) = pfaffian(A)^{4} =0\\
-&6 \times5，det(A) = pfaffian(A)^{4} =0\\
-&7 \times5，det(A) = pfaffian(A)^{4} =0\\
+&5 \times5，det(A) = pf^{4}(A) =0\\
+&6 \times5，det(A) = pf^{4}(A) =0\\
+&7 \times5，det(A) = pf^{4}(A) =0\\
 \end{align*}
 由上述证明定理自然推广为下述定理：
 
 \begin{theorem}
-令$p^{'}_{i}\equiv p_{i} (mod 4)$，将\ref{a},\ref{b}修改为
-\begin{equation}\label{aa}p^{'}_{1}<p^{'}_{2}<p^{'}_{3}<p^{'}_{4},p^{'}_{5}<p^{'}_{6}<p^{'}_{7}<p^{'}_{8}
-   ,...,p^{'}_{N-3}<p^{'}_{N-2}<p^{'}_{N-1}<p^{'}_{N}\end{equation}
-\begin{equation}\label{bb}p^{'}_{1}<p^{'}_{5}<...<p^{'}_{N-3}\end{equation}，除满足\ref{table1}的元素以外，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
+\begin{equation}p_{i_{k}} \equiv k (mod 4) \end{equation}，除$C_{r}*G_{4}$下标的元素外其余元素都为0，那么仍然有$$det(A)=pf^{4}(A)$$
 \end{theorem}
 
 \begin{theorem}\label{theorem_pf3}
-将$1, \dots, n$分成四个相等的集合$S_{1},S_{2},S_{3},S_{4}$,将\ref{a},\ref{b}修改为
+将$1, \dots, n$分成四个个数相等的集合$S_{1},S_{2},S_{3},S_{4}$,
 \begin{equation}p_{i_{1}} \in S_{1}, p_{i_{2}} \in S_{2}, p_{i_{3}} \in S_{3}, p_{i_{4}} \in S_{4}\end{equation}
-\begin{equation}\label{bb}p_{1}<p_{5}<...<p_{N-3}\end{equation}，除满足\ref{table1}的元素以外，其余都为0，那么仍然有$$det(A)=pfaffian(A)^{4}$$
+\begin{equation}\label{bb}p_{1}<p_{5}<...<p_{N-3}\end{equation}，满足性质的$C_{r}*G_{4}$元素以外其余都为0，那么仍然有$$det(A)=pf^{4}(A)$$
+\end{theorem}
+证明方法完全类似可以得到：
+\begin{theorem}\label{theorem_pf4}
+将$1, \dots, n$分成$2N$个相等的集合$S_{1},S_{2},\cdots,S_{2N}$,
+\begin{equation}p_{i_{1}} \in S_{1}, p_{i_{2}} \in S_{2}, \cdots, p_{i_{2N}} \in S_{2N}\end{equation}
+\begin{equation}\label{bb}p_{1}<p_{2N+1}<...<p_{n-2N+1}\end{equation}，满足性质的$C_{r}*G_{2N}$元素以外其余都为0，那么仍然有$$det(A)=pf^{2N}(A)$$
 \end{theorem}
 
-
 尽管得到\ref{theorem_pf3}，它还不够强，从形式上讲它还不是二维等式在四维下的自然推广。
-回顾$\det(A)=pfaffian (A)^{2}$的条件，
+回顾$\det(A)=pf^{2}(A)$的条件，
 $$\alpha =\{(i_{1},j_{1}),(i_{2},j_{2}),\cdots ,(i_{n},j_{n})\}$$
 $i_{k}<j_{k}$和$i_{1}<i_{2}<\cdots <i_{n}$
 $${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &2n-1&2n\\i_{1}&j_{1}&i_{2}&j_{2}&\cdots &i_{n}&j_{n}\end{bmatrix}}}$$
@@ -1053,249 +1057,27 @@ $$\alpha =\{(i_{1},j_{1},k_{1},l_{1}),(i_{2},j_{2},k_{2},l_{2}),\cdots ,(i_{n},j
 $i_{s}<j_{s}<k_{s}<l_{s}$和$i_{1}<i_{2}<\cdots <i_{n}$
 $${\displaystyle \pi _{\alpha }={\begin{bmatrix}1&2&3&4&\cdots &4n-3&4n-2&4n-1&4n\\i_{1}&j_{1}&k_{1}&l_{1}&\cdots &i_{n}&j_{n}&k_{n}&l_{n}\end{bmatrix}}}$$
 则
-$$det(A)=pfaffian(A)^{4}$$
+$$det(A)=pf^{4}(A)$$
+
+
 
 在$4 \times 2$,\cite{VAL42}这个猜测是正确的，但是维数稍大一些，如$4 \times 3$,\cite{VAL34}，$4 \times 4$,\cite{VAL44}，则不成立。
 
-\Section{超行列式一些性质}
+从另外一方面，尝试将从属关系做一个变更，通过一些数据检验，得到如下猜测：
+\begin{question}\label{guess_pf1}
+将$1, \dots, n$分成两个个数相等的集合$S_{1},S_{2}$,
+\begin{equation}p_{i_{1}} ， p_{i_{3}} \in S_{1}, p_{i_{2}}, p_{i_{4}} \in S_{2}\end{equation}
+\begin{equation}\label{bb}p_{1}<p_{5}<...<p_{N-3}\end{equation}，满足性质的$C_{r}*G_{4}$元素以外其余都为0，那么$$det(A)$$在内维数为2*(2n)时为平方数，为2*(2n+1)时为负的平方数
+\end{question}
 
-\begin{definition}  双重维数矩阵的乘法:
-   $$[a_{ij}][b_{ijkl}]=[c_{ijkl}]$$
-   $$c_{ijkl} = \sum_{\xi}^{n}a_{i\xi}b_{\xi jkl}$$
-\end{definition}
-
-\begin{theorem}\   乘法定理:
-
-    $$det(A_{ij}B_{ijkl})=det(A_{ij})det(B_{ijkl})$$
-\end{theorem}
-
-\begin{prof}
-
-法一：
-
-\begin{align*}
-det(C_{ijkl})&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma c_{\sigma(1)\tau(1)\gamma(1)1} c_{\sigma(2)\tau(2)\gamma(2)2}\cdots c_{\sigma(n)\tau(n)\gamma(n)n}\\
-&=\sum \limits_{\sigma\tau\gamma}sgn\sigma sgn\tau sgn\gamma (\sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\ &\cdots\sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(\sum \limits_{\sigma}sgn\sigma  \sum_{\xi}^{n}a_{\sigma(1)\xi}b_{\xi \tau(1)\gamma(1)1} \sum_{\xi}^{n}a_{\sigma(2)\xi}b_{\xi \tau(2)\gamma(2)2} \\
-&\cdots \sum_{\xi}^{n}a_{\sigma(n)\xi}b_{\xi \tau(n)\gamma(n)n})\\
-&=\sum \limits_{\tau\gamma}sgn\tau sgn\gamma(det(A_{ij})\sum \limits_{\sigma}sgn\sigma b_{\sigma(1) \tau(1)\gamma(1)1} b_{\sigma(2) \tau(2)\gamma(2)1} \cdots b_{\sigma(n) \tau(n)\gamma(n)n})\\
-&=det(A_{ij})det(B_{ijkl})
-\end{align*}
-
-法二：用外积来证明.
-
-令
-
-\begin{equation}
-\begin{aligned}
-\omega_{i}
-&= \sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}} f_{1}^{j_{\sigma}} \wedge f_{2}^{k_{\sigma}} \wedge f_{3}^{l_{\sigma}}
-\end{aligned}
-\end{equation}
-
-做基底变换如下：
-$$(f_{1}^{1},f_{1}^{2},...,f_{1}^{n})=(e_{1}^{1},e_{1}^{2},...,e_{1}^{n})X_{1}$$
-$$(f_{2}^{1},f_{2}^{2},...,f_{2}^{n})=(e_{2}^{1},e_{2}^{2},...,e_{2}^{n})X_{2}$$
-$$(f_{3}^{1},f_{3}^{2},...,f_{3}^{n})=(e_{3}^{1},e_{3}^{2},...,e_{3}^{n})X_{3}$$
-
-则
-
-\begin{equation}
-f_{1}^{j_{\sigma}}\wedge f_{2}^{k_{\sigma}}\wedge f_{3}^{l_{\sigma}}
-\begin{aligned}
-& = \sum_{\xi_{1}=1}^{n}\sum_{\xi_{2}=1}^{n}\sum_{\xi_{3}=1}^{n}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{
-3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
-\end{aligned}
-\end{equation}
-
-从而，
-
-\begin{equation}
-\begin{aligned}
-\omega_{i}
-&= \sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n} b_{ij_{\sigma}k_{\sigma}l_{\sigma}} f_{1}^{j_{\sigma}} \wedge f_{2}^{k_{\sigma}} \wedge f_{3}^{l_{\sigma}} \\
-&= \sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n} b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
-\sum_{\xi_{1}=1}^{n}\sum_{\xi_{2}=1}^{n}\sum_{\xi_{3}=1}^{n}x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}\\
-&= \sum_{\xi_{1}=1}^{n}\sum_{\xi_{2}=1}^{n}\sum_{\xi_{3}=1}^{n}\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}
-x_{1}^{\xi_{1}j_{\sigma}}x_{2}^{\xi_{2}k_{\sigma}}x_{3}^{\xi_{3}l_{\sigma}}e_{1}^{\xi_{1}}\wedge e_{2}^{\xi_{2}}\wedge e_{3}^{\xi_{3}}
-\end{aligned}\end{equation}
-
-进而得到
-
-$$a_{ijkl}=\sum_{j_{\sigma}=1}^{n}\sum_{k_{\sigma}=1}^{n}\sum_{l_{\sigma}=1}^{n}b_{ij_{\sigma}k_{\sigma}l_{\sigma}}x_{1}^{jj_{\sigma}}x_{2}^{kk_{\sigma}}x_{3}^{ll_{\sigma}}$$
-
-由前述定理得到
-
-\begin{equation}
-\begin{aligned}
-\omega_{1}\wedge\omega_{2}\wedge\cdots\wedge\omega_{n}
-& = det(B) f_{1}^1\wedge f_{1}^2 \cdots \wedge f_{1}^n \wedge f_{2}^1\wedge f_{2}^2 \cdots \wedge f_{2}^n
-\wedge f_{3}^1\wedge f_{3}^2 \cdots \wedge f_{3}^n\\
-& = det(B)det(X_{1})det(X_{2})det(X_{3}) \\
-&e_{1}^1\wedge e_{1}^2 \cdots \wedge e_{1}^n \wedge e_{2}^1\wedge e_{2}^2 \cdots \wedge e_{2}^n
-\wedge e_{3}^1\wedge e_{3}^2 \cdots \wedge e_{3}^n\\
-\end{aligned}
-\end{equation}
-
-即证 $det(A) = det(B)det(X_{1})det(X_{2})det(X_{3})$
-\end{prof}
-
-\begin{theorem}  $A_{ijkl}$的拉普拉斯定理
-$$det(A)=\sum\limits_{j=1}^n \sum\limits_{k=1}^n \sum\limits_{l=1}^n (-1)^{i+j+k+l} a_{i,j,k,l} A^{*}_{i,j,k,l} $$
-\end{theorem}
-\begin{prof}
-左边单项都属于右边且符号相同，项数也是相同的，结果是显而易见的。
-\end{prof}
-
-推广的命题是，
-$$detA=\sum\limits_{j_{1}j_{2}...j_{p}} \sum\limits_{k_{1}k_{2}...k_{p}} \sum\limits_{l_{1}l_{2}...l_{p}}
-(-1)^{\sum_{t=1}^{p}(i_{t}+j_{t}+k_{t}+l_{t})}
-M_{\left(\begin{array}{cccc}
-i_{1} & i_{2} & \cdots & i_{p} \\
-j_{1} & j_{2} & \cdots & j_{p} \\
-k_{1} & k_{2} & \cdots & k_{p} \\
-l_{1} & l_{2} & \cdots & l_{p} \\
-\end{array}\right)}
-A^{*}_{\left(\begin{array}{cccc}
-i_{p+1} & i_{p+2} & \cdots & i_{n} \\
-j_{p+1} & j_{p+2} & \cdots & j_{n} \\
-k_{p+1} & k_{p+2} & \cdots & k_{n} \\
-l_{p+1} & l_{p+2} & \cdots & l_{n} \\
-\end{array}\right)}$$
-项数上的关系是左边$(n!)^{3}$,右边是$(\frac{(n!)^{3}}{(p!(n-p)!))^{3}})(p!)^{3}[(n-p)!]^{3}$结论也比较显然。
-
-\begin{definition}
-矩阵的克罗内克积
-\\
-   $$\begin{bmatrix}\begin{smallmatrix}
-  A_{11}& A_{12}& \cdots&A_{1n}\\
-  A_{21}& A_{22}& \cdots&A_{2n}\\
-  & & \cdots&\\&\\
-  A_{n1}& A_{n2}& \cdots&A_{nn}\\
- \end{smallmatrix}\end{bmatrix}
- \times
- \begin{bmatrix}\begin{smallmatrix}
-  B_{11}& B_{12}& \cdots&B_{1m}\\
-  B_{21}& B_{22}& \cdots&B_{2m}\\
-  & & \cdots&\\&\\
-  B_{m1}& B_{m2}& \cdots&B_{mm}\\
- \end{smallmatrix}\end{bmatrix}\\$$
- $$=\\
- \begin{bmatrix}\begin{smallmatrix}
-  A_{11} \times B_{11}& A_{12} \times B_{11}& \cdots&A_{1n} \times B_{11}
-  & & \cdots&
-  A_{11} \times B_{1m}& A_{12} \times B_{1m}& \cdots&A_{1n} \times B_{1m}\\
-  A_{21} \times B_{11}& A_{22} \times B_{11}& \cdots&A_{2n} \times B_{11}
-  & & \cdots&
-  A_{21} \times B_{1m}& A_{22} \times B_{1m}& \cdots&A_{2n} \times B_{1m}\\
-  & & & & &\cdots& &\\
-  A_{n1} \times B_{11}& A_{n2} \times B_{11}& \cdots&A_{nn} \times B_{11}
-  & & \cdots&
-  A_{n1} \times B_{1m}& A_{n2} \times B_{1m}& \cdots&A_{nn} \times B_{1m}\\
-  \cdots &\cdots &\cdots &\cdots &\cdots  &\cdots  &\cdots &\cdots  &\cdots &\cdots \\
-  A_{11} \times B_{m1}& A_{12} \times B_{m1}& \cdots&A_{1n} \times B_{m1}
-  & & \cdots&
-  A_{11} \times B_{mm}& A_{12} \times B_{mm}& \cdots&A_{1n} \times B_{mm}\\
-  A_{21} \times B_{m1}& A_{22} \times B_{m1}& \cdots&A_{2n} \times B_{m1}
-  & & \cdots&
-  A_{21} \times B_{mm}& A_{22} \times B_{mm}& \cdots&A_{2n} \times B_{mm}\\
-  & & & & &\cdots& &\\
-  A_{n1} \times B_{m1}& A_{n2} \times B_{m1}& \cdots&A_{nn} \times B_{m1}
-  & & \cdots&
-  A_{n1} \times B_{mm}& A_{n2} \times B_{mm}& \cdots&A_{nn} \times B_{mm}\\
-  \end{smallmatrix}\end{bmatrix}$$
-\end{definition}
-
-\Section{计算相关}
-类似 Kasteleyn$^{[1]}$中将计算的矩阵表达成
-$D=z(Q_{n}\times E_{m})  +  z^{'} (F_{n} \times Q_{m})$
-由上面的定义，这里关于$tetramer$的计算也可以表达成两个类型的和式。
-假设矩形方块为$n\times m$,
-$$
- \tiny
-  Q_{n} = \begin{bmatrix}\begin{smallmatrix}
-  0& 0&
-  \begin{bmatrix}\begin{smallmatrix}
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&1&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0&0& 0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}& 0& 0& 0& \cdots&\\
- 0& 0& 0&
-   \begin{bmatrix}\begin{smallmatrix}
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 1& 0& 0&0&1&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0&0& 0&0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}&0& 0&\cdots\\
- \begin{bmatrix}\begin{smallmatrix}
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 1& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0& 0& 0&0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}&
- 0& 0& 0&
- \begin{bmatrix}\begin{smallmatrix}
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 1& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0& 0& 0&0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}&
- 0& \cdots&\\
- 0& \begin{bmatrix}\begin{smallmatrix}
-  0& 0& 1&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 1&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0& 0& 0&0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}& 0& 0& 0&
- \begin{bmatrix}\begin{smallmatrix}
-  0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 0&0&0&\cdots&0\\
- 0& 0& 1&0&0&\cdots&0\\
- & & \cdots& &\\
-0& 0& 0& 0&0&\cdots&0\\
- \end{smallmatrix}\end{bmatrix}& \cdots&\\
- 0& 0& \ddots &0 &0 &0 &\ddots \\
-\end{smallmatrix}\end{bmatrix}$$
-
-$$= \begin{bmatrix}\begin{smallmatrix}
- 0& 0& A^{1}_{n} & 0 &\cdots& 0\\
-  0& 0& 0 & A^{2}_{n} &\cdots& 0\\
- A^{1T}_{n} & 0& 0 & 0 &\cdots& 0\\
- 0& A^{2T}_{n} & 0 & 0 &\cdots& 0\\
- & & \cdots & &\\
-\end{smallmatrix}\end{bmatrix}_{n} $$
-$Q_{n}\times E_{m}$
-那么有结果
-$D=z(Q_{n}\times E_{m})  +  z^{'} (E_{n} \times Q_{m})$。\\
-\Section{展望}
-在内维数为2的情形，特征值和特征向量是研究矩阵非常有用的工具，在内维数为4的情形如何展开研究？
-显然，仍可以通过$det(\lambda E - A) = 0$求出特征值，并满足这些特征值的乘积恰好等于$det(A)$。但是对任意的可逆矩阵却没有相似变换保证对$E$做完变换后保持不变。什么样的变换能保证$E$不变？什么样的矩阵可以通过类似内维数为2的情况进行相似变换后对角化？这些问题很值得研究。
-\Thanks{感谢郭学军教授给予我相关的硕士论文开题，以及指导和鼓励.}
+\Thanks{感谢南京大学郭学军教授给予我相关的硕士论文开题,指导我研究的是关于多米诺骨牌覆盖的$2-adic$性质分析，但是在给出$2-adic$一些计算性质后，我却对此文中提出的泛化问题非常感兴趣，2010年至今已近十年，本人离开了大学校园，从事软件开发工作，一直在利用业余时间尝试将结论推广到更多维数的可能性，做了很多错误的尝试，如今终于有所突破，虽然本文结论还未和其他理论建立起联系，用途也不明确，但是结论比较理想的实现了本人最初的构想，甚感欣慰！尤其最近在计算时发现此种形式的矩阵在具有特殊形式时似乎行列式是负的平方数，感觉到和复数似乎有关联，如果能够在证明上有更大突破，对矩阵理论可能也将是一个重大丰富}
 
 \BeginRef
 \bibitem{Kly} P. W. Kasteleyn, The statistics of dimers on a lattice, {\it Physica.}, 1961, 27.
-
+\bibitem{Kly2}  Kasteleyn, P. W. . "Dimer statistics and phase Transitions". Journal of Mathematical Physics. 4 (2): 287–293 1963.
 \bibitem{KO} Richard Kenyon, Andrei Okounkov,  What is ... a dimer?, {\it Notices of the American Mathematical Society} MARCH 2005 VOLUME 52, NUMBER 3.
 
-\bibitem{MA} RICHARD J. MATHAR PAVING RECTANGULAR REGIONS WITH RECTANGULAR TILES: TATAMI AND NON-TATAMI TILINGS.{\it arXiv:1311.6135v1 [math.CO]},  24 Nov 2013
+\bibitem{MA} Richard J. Mathar Paving rectangular regions with rectangular tiles: tatami and non-tatami tilings.{\it arXiv:1311.6135v1 [math.CO]},  24 Nov 2013
 
 \bibitem{IM} \href{https://github.com/huih1984/Lattice-Tilings-and-Hyperdeterminant/blob/master/vc\%2B\%2B/high\%20dimension\%20matrix/IndexMatrix.cpp}{IndexMatrix}
 
